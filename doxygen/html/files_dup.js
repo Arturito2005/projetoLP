@@ -1,0 +1,25 @@
+var files_dup =
+[
+    [ ".dep.inc", "_8dep_8inc.html", null ],
+    [ "branchs.c", "branchs_8c.html", "branchs_8c" ],
+    [ "branchs.h", "branchs_8h.html", "branchs_8h" ],
+    [ "companies.c", "companies_8c.html", "companies_8c" ],
+    [ "companies.h", "companies_8h.html", "companies_8h" ],
+    [ "inputs_branch.c", "inputs__branch_8c.html", "inputs__branch_8c" ],
+    [ "inputs_branch.h", "inputs__branch_8h.html", "inputs__branch_8h" ],
+    [ "inputs_comp.c", "inputs__comp_8c.html", "inputs__comp_8c" ],
+    [ "inputs_comp.h", "inputs__comp_8h.html", "inputs__comp_8h" ],
+    [ "inputs_file_memory.c", "inputs__file__memory_8c.html", "inputs__file__memory_8c" ],
+    [ "inputs_file_memory.h", "inputs__file__memory_8h.html", "inputs__file__memory_8h" ],
+    [ "inputs_geral.c", "inputs__geral_8c.html", "inputs__geral_8c" ],
+    [ "inputs_geral.h", "inputs__geral_8h.html", "inputs__geral_8h" ],
+    [ "inputs_user.c", "inputs__user_8c.html", "inputs__user_8c" ],
+    [ "inputs_user.h", "inputs__user_8h.html", "inputs__user_8h" ],
+    [ "main.c", "main_8c.html", "main_8c" ],
+    [ "op_admins.c", "op__admins_8c.html", "op__admins_8c" ],
+    [ "op_admins.h", "op__admins_8h.html", "op__admins_8h" ],
+    [ "op_user.c", "op__user_8c.html", "op__user_8c" ],
+    [ "op_user.h", "op__user_8h.html", "op__user_8h" ],
+    [ "reports.c", "reports_8c.html", "reports_8c" ],
+    [ "reports.h", "reports_8h.html", "reports_8h" ]
+];

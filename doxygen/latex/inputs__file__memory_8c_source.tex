@@ -1,0 +1,200 @@
+\doxysection{inputs\+\_\+file\+\_\+memory.\+c}
+\hypertarget{inputs__file__memory_8c_source}{}\label{inputs__file__memory_8c_source}\mbox{\hyperlink{inputs__file__memory_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__file__memory_8h}{inputs\_file\_memory.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{op__user_8h}{op\_user.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00021}00021\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ i\ =\ 0,\ y\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00046}\mbox{\hyperlink{inputs__file__memory_8c_a50dfabc824a8692a181638a22c35b06e}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__file__memory_8c_a50dfabc824a8692a181638a22c35b06e}{load\_file}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs,\ \mbox{\hyperlink{struct_search__comp}{Search\_comp}}\ *\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00047}00047\ \ \ \ \ FILE\ *file\_comp\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_a4017556da0527ada6c00f7d5e95743d3}{FILE\_COMPANY}},\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_comp\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ FILE\ *new\_file\_comp\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_a4017556da0527ada6c00f7d5e95743d3}{FILE\_COMPANY}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_file\_comp\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ criar\ o\ novo\ ficheiro.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ficheiro\ para\ as\ empresas\ criado\ com\ sucesso!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ferror(new\_file\_comp))\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro:"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ fclose(new\_file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00063}00063\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ fseek(file\_comp,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ fread(\&companies-\/>\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies-\/>\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a55b08d24c8aef8b45c7fb70141d50ef0}{size\_company}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a55b08d24c8aef8b45c7fb70141d50ef0}{size\_company}}\ =\ companies-\/>\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00074}00074\ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}\ =\ (\mbox{\hyperlink{struct_data__companies}{Data\_companies}}\ *)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_data__companies}{Data\_companies}})\ *\ companies-\/>\mbox{\hyperlink{struct_companies_a55b08d24c8aef8b45c7fb70141d50ef0}{size\_company}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{if}\ (companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ a\ alocar\ memoria\ para\ as\ empresas.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00078}00078\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ companies-\/>\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ fread(\&companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i],\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_data__companies}{Data\_companies}}),\ 1,\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a214c26d0b5feef38db4cbb07193421fe}{cont\_coments}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_acf81f605920044dcc47d89ff3f72700c}{size\_comments}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_acf81f605920044dcc47d89ff3f72700c}{size\_comments}}\ =\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a214c26d0b5feef38db4cbb07193421fe}{cont\_coments}};}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{comment}}\ =\ (\mbox{\hyperlink{struct_comments}{Comments}}\ *)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_comments}{Comments}})\ *\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_acf81f605920044dcc47d89ff3f72700c}{size\_comments}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{comment}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro:\ Falha\ ao\ realocar\ memória,\ para\ os\ comentarios.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fread(companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{comment}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_comments}{Comments}}),\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a214c26d0b5feef38db4cbb07193421fe}{cont\_coments}},\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a99ed2a7269507dfbe023d55872908e1a}{cont\_classi}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a5a20aaf54724e6f0e19a6305683000d9}{size\_classi}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a5a20aaf54724e6f0e19a6305683000d9}{size\_classi}}\ =\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a99ed2a7269507dfbe023d55872908e1a}{cont\_classi}};}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}\ =\ (\mbox{\hyperlink{struct_classification}{Classification}}\ *)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_classification}{Classification}})\ *\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a5a20aaf54724e6f0e19a6305683000d9}{size\_classi}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro:\ Falha\ ao\ realocar\ memória,\ para\ as\ classificações.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fread(companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_classification}{Classification}}),\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a99ed2a7269507dfbe023d55872908e1a}{cont\_classi}},\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00110}00110\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00111}00111\ \ \ \ \ fclose(file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00112}00112\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00113}00113\ \ \ \ \ FILE\ *file\_bran\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_ab9863c5413effb59724582282d3c1299}{FILE\_BRANCH}},\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00114}00114\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{if}(file\_bran\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ FILE\ *new\_file\_bran\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_ab9863c5413effb59724582282d3c1299}{FILE\_BRANCH}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_file\_bran\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ criar\ o\ novo\ ficheiro.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00122}00122\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ficheiro\ para\ os\ ramos\ criado\ com\ sucesso!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ferror(new\_file\_bran))\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro:"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ fclose(new\_file\_bran);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00129}00129\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ fseek(file\_bran,0,SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ fread(\&branchs-\/>\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}},\ sizeof\ (\textcolor{keywordtype}{int}),\ 1,\ file\_bran);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (branchs-\/>\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}}\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a94c1df2f3dcbe5fbe10fa198ab9b343e}{size\_branch}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a94c1df2f3dcbe5fbe10fa198ab9b343e}{size\_branch}}\ =\ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}};}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00138}00138\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00139}00139\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00140}00140\ \ \ \ \ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}\ =\ (\mbox{\hyperlink{struct_data___branch}{Data\_Branch}}\ *)\ malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_data___branch}{Data\_Branch}})\ *\ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a94c1df2f3dcbe5fbe10fa198ab9b343e}{size\_branch}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00141}00141\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (branchs-\/>\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ a\ alocar\ memoria\ para\ os\ ramos.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00144}00144\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}};\ i++)\{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ fread(\&branchs-\/>\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[i],\ sizeof\ (\mbox{\hyperlink{struct_data___branch}{Data\_Branch}}),\ 1,\ file\_bran);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00150}00150\ \ \ \ \ fclose(file\_bran);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00151}00151\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00152}00152\ \ \ \ \ FILE\ *file\_search\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_a17a43525a99411f40d7181967e383a8e}{FILE\_SEARCH}},\ \textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00153}00153\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{if}(file\_search\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00155}00155\ \ \ \ \ \ \ \ \ FILE\ *new\_file\_search\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_a17a43525a99411f40d7181967e383a8e}{FILE\_SEARCH}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00156}00156\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00157}00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (new\_file\_search\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ criar\ o\ novo\ ficheiro.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00159}00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00161}00161\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ficheiro\ para\ os\ procurar\ empresa\ criado\ com\ sucesso!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00162}00162\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00163}00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ferror(new\_file\_search))\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro:"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00165}00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00166}00166\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00167}00167\ \ \ \ \ \ \ \ \ fclose(new\_file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00168}00168\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00169}00169\ \ \ \ \ \ \ \ \ fseek(file\_search,0,SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ fread(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}-\/>cont\_name,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ fread(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}-\/>cont\_category,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ fread(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}-\/>cont\_loc,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00173}00173\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00174}00174\ \ \ \ \ fclose(file\_search);\ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00175}00175\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00188}\mbox{\hyperlink{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f}{00188}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f}{save\_file\_comp}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00189}00189\ \ \ \ \ FILE\ *file\_comp\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_a4017556da0527ada6c00f7d5e95743d3}{FILE\_COMPANY}},\ \textcolor{stringliteral}{"{}rb+"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00190}00190\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00191}00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_comp\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ ficheiro\ das\ empresas\ não\ existe!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00193}00193\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00194}00194\ \ \ \ \ \ \ \ \ fseek(file\_comp,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00195}00195\ \ \ \ \ \ \ \ \ fwrite(\&companies-\/>\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00196}00196\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ companies-\/>\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i],\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_data__companies}{Data\_companies}}),\ 1,\ file\_comp);\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(y\ =\ 0;\ y\ <\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a214c26d0b5feef38db4cbb07193421fe}{cont\_coments}};\ y++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{comment}}[y],\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_comments}{Comments}}),\ 1,\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(y\ =\ 0;\ y\ <\ companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a99ed2a7269507dfbe023d55872908e1a}{cont\_classi}};\ y++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}[y],\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_classification}{Classification}}),\ 1,\ file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00206}00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00209}00209\ \ \ \ \ fclose(file\_comp);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00210}00210\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00223}\mbox{\hyperlink{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86}{00223}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86}{save\_file\_branchs}}(\mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00224}00224\ \ \ \ \ FILE\ *file\_branch\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_ab9863c5413effb59724582282d3c1299}{FILE\_BRANCH}},\ \textcolor{stringliteral}{"{}rb+"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00226}00226\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_branch\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ ficheiro\ dos\ ramos\ não\ existe!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00228}00228\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ fseek(file\_branch,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00230}00230\ \ \ \ \ \ \ \ \ fwrite(\&branchs-\/>\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}},\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_branch);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00231}00231\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ 0;\ i\ <\ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&branchs-\/>\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[i],\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_data___branch}{Data\_Branch}}),\ 1,\ file\_branch);\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00234}00234\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00237}00237\ \ \ \ \ fclose(file\_branch);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00238}00238\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00251}\mbox{\hyperlink{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047}{00251}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047}{save\_search\_comp}}(\mbox{\hyperlink{struct_search__comp}{Search\_comp}}\ *\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00252}00252\ \ \ \ \ FILE\ *file\_search\ =\ fopen(\mbox{\hyperlink{inputs__file__memory_8h_a17a43525a99411f40d7181967e383a8e}{FILE\_SEARCH}},\ \textcolor{stringliteral}{"{}rb+"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00254}00254\ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_search\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00255}00255\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ ficheiro\ dos\ procura\ de\ empresas\ não\ existe!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00256}00256\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00257}00257\ \ \ \ \ \ \ \ \ fseek(file\_search,\ 0,\ SEEK\_SET);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00258}00258\ \ \ \ \ \ \ \ \ fwrite(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}-\/>cont\_name,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00259}00259\ \ \ \ \ \ \ \ \ fwrite(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}-\/>cont\_category,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00260}00260\ \ \ \ \ \ \ \ \ fwrite(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}-\/>cont\_loc,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00261}00261\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00263}00263\ \ \ \ \ fclose(file\_search);}
+\DoxyCodeLine{\Hypertarget{inputs__file__memory_8c_source_l00264}00264\ \}}
+
+\end{DoxyCode}

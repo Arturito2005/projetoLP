@@ -1,0 +1,123 @@
+\doxysection{companies.\+h}
+\hypertarget{companies_8h_source}{}\label{companies_8h_source}\mbox{\hyperlink{companies_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00016}00016\ \textcolor{preprocessor}{\#ifndef\ EMPRESAS\_H}}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ EMPRESAS\_H}}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00019}\mbox{\hyperlink{companies_8h_a0535c9c0b5831c0ab2bb413a11f508a7}{00019}}\ \textcolor{preprocessor}{\#define\ SIZE\_NAME\_COMP\ 10\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00020}\mbox{\hyperlink{companies_8h_aab174c65bed8df778a7abef8da5599b8}{00020}}\ \textcolor{preprocessor}{\#define\ SIZE\_ROAD\ 25\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00021}\mbox{\hyperlink{companies_8h_aca1cde1c4cb1defdd1c509d20dacf279}{00021}}\ \textcolor{preprocessor}{\#define\ SIZE\_LOC\ 15\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00022}\mbox{\hyperlink{companies_8h_a755ed272b0176e22c933b4623f80271f}{00022}}\ \textcolor{preprocessor}{\#define\ SIZE\_COD\_POS\ 9\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00023}\mbox{\hyperlink{companies_8h_ae5f5b5d78d6c085d8ad94144100142c4}{00023}}\ \textcolor{preprocessor}{\#define\ SIZE\_CATEGORY\ 20\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00025}\mbox{\hyperlink{companies_8h_a3d277f5a5dec260aa85c464f96800b9e}{00025}}\ \textcolor{preprocessor}{\#define\ SIZE\_TITLE\ 15\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00026}\mbox{\hyperlink{companies_8h_a030cb2fa4e90214b6a9ea5b9d8135afb}{00026}}\ \textcolor{preprocessor}{\#define\ SIZE\_TEXT\ 50\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00028}\mbox{\hyperlink{companies_8h_a6768bf6f369cbebbd1f38341a84e4026}{00028}}\ \textcolor{preprocessor}{\#define\ SIZE\_NAME\_BRANCH\ 20\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00030}\mbox{\hyperlink{companies_8h_a47c9e0048d1aada7c32107a2ca81eda5}{00030}}\ \textcolor{preprocessor}{\#define\ SIZE\_USER\ 25\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00031}\mbox{\hyperlink{companies_8h_a5c8530d423a8a17bc84937d5f568e55f}{00031}}\ \textcolor{preprocessor}{\#define\ SIZE\_EMAIL\ 50\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00033}\mbox{\hyperlink{companies_8h_a948086a7ecc0d1e8547fefc1f6300a48}{00033}}\ \textcolor{preprocessor}{\#define\ MIN\_VALUE\_NIF\ 100000000\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00034}\mbox{\hyperlink{companies_8h_ae13e239eb58852372039e69c548e4d51}{00034}}\ \textcolor{preprocessor}{\#define\ MAX\_VALUE\_NIF\ 999999999\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00036}\mbox{\hyperlink{companies_8h_a39dbd54c443fa719ad1fc9129154810c}{00036}}\ \textcolor{preprocessor}{\#define\ SIZE\_MAX\_EMAIL\ 29\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00037}\mbox{\hyperlink{companies_8h_aefed403d5a68a9f73fe66b784d3e49bb}{00037}}\ \textcolor{preprocessor}{\#define\ SIZE\_MIN\_EMAIL\ 5\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00039}\mbox{\hyperlink{companies_8h_a1c7fa236130f79df5237a12640ed43d2}{00039}}\ \textcolor{preprocessor}{\#define\ MIN\_CATEGORY\ 1\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00040}\mbox{\hyperlink{companies_8h_a48a7acb6850168cf4ee361f21741951f}{00040}}\ \textcolor{preprocessor}{\#define\ MAX\_CATEGORY\ 5\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00042}\mbox{\hyperlink{companies_8h_a5a6115e6b4b122c14c6f1d3393cbdf54}{00042}}\ \textcolor{preprocessor}{\#define\ POS\_COMENT\ companies-\/>company[pos\_nif].cont\_coments\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00044}\mbox{\hyperlink{companies_8h_a5d46e62c74f86a4859b634bca1ab2617}{00044}}\ \textcolor{preprocessor}{\#define\ ERROR\_MSG\_NIF\_NOT\_FIND\ "{}O\ nif\ \%d\ não\ está\ associado\ a\ nenhuma\ empresa!\(\backslash\)n"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00046}\mbox{\hyperlink{companies_8h_a00f3f39f888ac40959d84025ff5cb928}{00046}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_NIF\_COMPANY\ "{}Introduza\ o\ nif\ da\ empresa\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00047}\mbox{\hyperlink{companies_8h_aabc323b2b215d845015811c849190aa7}{00047}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_NAME\_COMAPNY\ "{}Introduza\ o\ nome\ da\ empresa\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00048}\mbox{\hyperlink{companies_8h_a5671e84f02e81bac726ec80c83837560}{00048}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_CATEGORY\_COMPANY\ "{}Introduza\ a\ categoria\ da\ empresa\ (1:\ Micro/\ 2:\ Empresa\ de\ Pequeno\ Porte/\ 3:\ PME/\ 4:\ Grande\ empresa/\ 5:\ Sociedade\ Limitada)-\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00049}\mbox{\hyperlink{companies_8h_abfa672abc204d6863b6de84540a76b58}{00049}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_ROAD\_COMPANY\ "{}Introduza\ a\ rua\ da\ empresa\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00050}\mbox{\hyperlink{companies_8h_a510c274fe3a5daa840608bd5f6b417a8}{00050}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_LOC\_COMPANY\ "{}Introduza\ a\ localidade\ da\ empresa\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00051}\mbox{\hyperlink{companies_8h_a968f4c1f8293fd89ce16fbaa2181fc6f}{00051}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_COD\_POSTAL\_COMPANY\ "{}Introduza\ o\ codigo\ postal\ da\ empresa\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00052}\mbox{\hyperlink{companies_8h_a76c7337d985d5b07de46d7ab038327e0}{00052}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_STATE\_COMPANY\ "{}Introduza\ o\ estado\ da\ empresa\ (0:\ Ativa/\ 1:\ Inativa)-\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00057}\mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{00057}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00058}\mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f}{00058}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f}{ACTIVE}}\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}{INACTIVE}}\ =\ 1\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00060}\mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}{00060}}\ \}\ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00065}\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359}{00065}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00066}\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a44fead913cf8397fe4cf15b7c8962a8f}{00066}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a44fead913cf8397fe4cf15b7c8962a8f}{MICRO}}\ =\ 1,\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00067}\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359ade3826ee8c45faa2a6eb354ae1620640}{00067}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359ade3826ee8c45faa2a6eb354ae1620640}{SMALL\_BUSINESS}}\ =\ 2,\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00068}\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463}{00068}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463}{PME}}\ =\ 3,\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00069}\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a1a3d07ca49173a7075bbca7ffe07d10b}{00069}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a1a3d07ca49173a7075bbca7ffe07d10b}{BIG\_COMPANY}}\ =\ 4,\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a48383f0ddd960740834865bbb010c226}{LIMITED\_SOCIETY}}\ =\ 5\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00071}\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a48383f0ddd960740834865bbb010c226}{00071}}\ \}\ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359}{categories}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00076}\mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a}{00076}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00077}\mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aa882790f9beae78847942fc92a067ad46}{00077}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aa882790f9beae78847942fc92a067ad46}{HIDE}}\ =\ 0,\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aab2dcb868aa4a6f4a6a60f691f808bb66}{NOT\_HIDE}}\ =\ 1\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00079}\mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aab2dcb868aa4a6f4a6a60f691f808bb66}{00079}}\ \}\ \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a}{Hide}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00084}\mbox{\hyperlink{struct_search__comp}{00084}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00085}\mbox{\hyperlink{struct_search__comp_a82494171f02faf01e14a3eaf40429f2d}{00085}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_search__comp_a82494171f02faf01e14a3eaf40429f2d}{cont\_name}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00086}\mbox{\hyperlink{struct_search__comp_ae6a3e85d813d3e7e9c6365c828b1dca1}{00086}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_search__comp_ae6a3e85d813d3e7e9c6365c828b1dca1}{cont\_category}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00087}\mbox{\hyperlink{struct_search__comp_a56a521929cfd0fb56efaebd6b6ee668c}{00087}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_search__comp_a56a521929cfd0fb56efaebd6b6ee668c}{cont\_loc}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00088}00088\ \}\ \mbox{\hyperlink{struct_search__comp}{Search\_comp}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00093}\mbox{\hyperlink{struct_data___user}{00093}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00094}\mbox{\hyperlink{struct_data___user_a318afdc48dc02309bc2e63ba070a5cfc}{00094}}\ \ \ \ \ \textcolor{keywordtype}{char}\ user\_name[\mbox{\hyperlink{companies_8h_a47c9e0048d1aada7c32107a2ca81eda5}{SIZE\_USER}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00095}\mbox{\hyperlink{struct_data___user_a9acc9746c08a2ad3aef45ba3d77fc5bc}{00095}}\ \ \ \ \ \textcolor{keywordtype}{char}\ email\_user[\mbox{\hyperlink{companies_8h_a5c8530d423a8a17bc84937d5f568e55f}{SIZE\_EMAIL}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00096}00096\ \}\ \mbox{\hyperlink{struct_data___user}{Data\_User}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00101}\mbox{\hyperlink{struct_classification}{00101}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00102}\mbox{\hyperlink{struct_classification_a40f3e25fe8c516c8026cc6c3b6908e12}{00102}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{class};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00103}\mbox{\hyperlink{struct_classification_a22a3044a20940ca1113c81ecd0e92aef}{00103}}\ \ \ \ \ \mbox{\hyperlink{struct_data___user}{Data\_User}}\ \mbox{\hyperlink{struct_classification_a22a3044a20940ca1113c81ecd0e92aef}{data\_user}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00104}00104\ \}\ \mbox{\hyperlink{struct_classification}{Classification}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00109}\mbox{\hyperlink{struct_comments}{00109}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00110}\mbox{\hyperlink{struct_comments_a7ba41680944307bc3c73a7e71b38bf64}{00110}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_comments_a7ba41680944307bc3c73a7e71b38bf64}{id\_comen}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00111}\mbox{\hyperlink{struct_comments_a22a3044a20940ca1113c81ecd0e92aef}{00111}}\ \ \ \ \ \mbox{\hyperlink{struct_data___user}{Data\_User}}\ \mbox{\hyperlink{struct_comments_a22a3044a20940ca1113c81ecd0e92aef}{data\_user}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00112}\mbox{\hyperlink{struct_comments_ab7a9b7c0ff6e8d7f4917cde174cf87d8}{00112}}\ \ \ \ \ \textcolor{keywordtype}{char}\ title[\mbox{\hyperlink{companies_8h_a3d277f5a5dec260aa85c464f96800b9e}{SIZE\_TITLE}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00113}\mbox{\hyperlink{struct_comments_a6855affd9ad713a14e972015fa968c80}{00113}}\ \ \ \ \ \textcolor{keywordtype}{char}\ text[\mbox{\hyperlink{companies_8h_a030cb2fa4e90214b6a9ea5b9d8135afb}{SIZE\_TEXT}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00114}\mbox{\hyperlink{struct_comments_a4843d2161732aec5b2edf0599dae32a4}{00114}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a}{Hide}}\ \mbox{\hyperlink{struct_comments_a4843d2161732aec5b2edf0599dae32a4}{hide}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00115}00115\ \}\ \mbox{\hyperlink{struct_comments}{Comments}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00120}\mbox{\hyperlink{struct_data___branch}{00120}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00121}\mbox{\hyperlink{struct_data___branch_a0c693a3127c9b5d01779d51b686df3fd}{00121}}\ \ \ \ \ \textcolor{keywordtype}{char}\ name\_branch[\mbox{\hyperlink{companies_8h_a6768bf6f369cbebbd1f38341a84e4026}{SIZE\_NAME\_BRANCH}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00122}\mbox{\hyperlink{struct_data___branch_a876b486d3a5241a126bd5751c5f70f79}{00122}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ \mbox{\hyperlink{struct_data___branch_a876b486d3a5241a126bd5751c5f70f79}{state}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00123}00123\ \}\ \mbox{\hyperlink{struct_data___branch}{Data\_Branch}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00128}\mbox{\hyperlink{struct_branch___activity}{00128}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00129}\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{00129}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00130}\mbox{\hyperlink{struct_branch___activity_a94c1df2f3dcbe5fbe10fa198ab9b343e}{00130}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_branch___activity_a94c1df2f3dcbe5fbe10fa198ab9b343e}{size\_branch}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00131}\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{00131}}\ \ \ \ \ \mbox{\hyperlink{struct_data___branch}{Data\_Branch}}\ *\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00132}00132\ \}\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00137}\mbox{\hyperlink{struct_data__companies}{00137}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00138}\mbox{\hyperlink{struct_data__companies_ad68c6985dce5a3d709f854778dedee19}{00138}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_data__companies_ad68c6985dce5a3d709f854778dedee19}{nif}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00139}\mbox{\hyperlink{struct_data__companies_a6e9d0a39153a271cd95192c505da10be}{00139}}\ \ \ \ \ \textcolor{keywordtype}{char}\ name\_compa[\mbox{\hyperlink{companies_8h_a0535c9c0b5831c0ab2bb413a11f508a7}{SIZE\_NAME\_COMP}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00140}\mbox{\hyperlink{struct_data__companies_a17bca996acae97af19ef1fefbd7f09de}{00140}}\ \ \ \ \ \textcolor{keywordtype}{char}\ road[\mbox{\hyperlink{companies_8h_aab174c65bed8df778a7abef8da5599b8}{SIZE\_ROAD}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00141}\mbox{\hyperlink{struct_data__companies_a910d044db07afe78a04ca05109ba3ca8}{00141}}\ \ \ \ \ \textcolor{keywordtype}{char}\ locality[\mbox{\hyperlink{companies_8h_aca1cde1c4cb1defdd1c509d20dacf279}{SIZE\_LOC}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00142}\mbox{\hyperlink{struct_data__companies_ab5ae1431a7dfd37c57cd4ddc2edfe344}{00142}}\ \ \ \ \ \textcolor{keywordtype}{char}\ cod\_postal[\mbox{\hyperlink{companies_8h_a755ed272b0176e22c933b4623f80271f}{SIZE\_COD\_POS}}];\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00143}\mbox{\hyperlink{struct_data__companies_af78d488b8ecd7766d53db402dfb3d075}{00143}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359}{categories}}\ \mbox{\hyperlink{struct_data__companies_af78d488b8ecd7766d53db402dfb3d075}{category}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00144}\mbox{\hyperlink{struct_data__companies_aa5dc2bfa3731e0eab22f0cee27e461a4}{00144}}\ \ \ \ \ \mbox{\hyperlink{struct_data___branch}{Data\_Branch}}\ \mbox{\hyperlink{struct_data__companies_aa5dc2bfa3731e0eab22f0cee27e461a4}{branch}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00145}\mbox{\hyperlink{struct_data__companies_a876b486d3a5241a126bd5751c5f70f79}{00145}}\ \ \ \ \ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ \mbox{\hyperlink{struct_data__companies_a876b486d3a5241a126bd5751c5f70f79}{state}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00146}\mbox{\hyperlink{struct_data__companies_a214c26d0b5feef38db4cbb07193421fe}{00146}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_data__companies_a214c26d0b5feef38db4cbb07193421fe}{cont\_coments}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00147}\mbox{\hyperlink{struct_data__companies_a99ed2a7269507dfbe023d55872908e1a}{00147}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_data__companies_a99ed2a7269507dfbe023d55872908e1a}{cont\_classi}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00148}\mbox{\hyperlink{struct_data__companies_acf81f605920044dcc47d89ff3f72700c}{00148}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_data__companies_acf81f605920044dcc47d89ff3f72700c}{size\_comments}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00149}\mbox{\hyperlink{struct_data__companies_a5a20aaf54724e6f0e19a6305683000d9}{00149}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_data__companies_a5a20aaf54724e6f0e19a6305683000d9}{size\_classi}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00150}\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{00150}}\ \ \ \ \ \mbox{\hyperlink{struct_comments}{Comments}}\ *\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{comment}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00151}\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{00151}}\ \ \ \ \ \mbox{\hyperlink{struct_classification}{Classification}}\ *\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00152}00152\ \}\ \mbox{\hyperlink{struct_data__companies}{Data\_companies}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00157}\mbox{\hyperlink{struct_companies}{00157}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00158}\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{00158}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00159}\mbox{\hyperlink{struct_companies_a55b08d24c8aef8b45c7fb70141d50ef0}{00159}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_companies_a55b08d24c8aef8b45c7fb70141d50ef0}{size\_company}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00160}\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{00160}}\ \ \ \ \ \mbox{\hyperlink{struct_data__companies}{Data\_companies}}\ *\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}};\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00161}00161\ \}\ \mbox{\hyperlink{struct_companies}{Companies}};}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00169}00169\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{companies_8h_ad19e13f0866de5cc825e1bced7bbba38}{add\_companies}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs);}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00176}00176\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{companies_8h_a0eca070a14cc9422f420177bd9eff0ce}{delete\_companies}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies);}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00184}00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{companies_8h_a7ad630e5ccf562fc1dd91402eecd7fcb}{edit\_companies}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs);}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00191}00191\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{companies_8h_a2b67d5b5f301f80678ee3f060a24c7ef}{list\_companies}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies);}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00198}00198\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{companies_8h_a829c4a3d78689c474b342fe868113082}{consult\_companies}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies);}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00206}00206\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{companies_8h_a807c63babb17c2df948c5153ebfa5062}{ocul\_del\_companies}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs);}
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{companies_8h_source_l00208}00208\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ EMPRESAS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

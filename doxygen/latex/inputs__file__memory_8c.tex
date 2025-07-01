@@ -1,0 +1,169 @@
+\doxysection{inputs\+\_\+file\+\_\+memory.\+c File Reference}
+\hypertarget{inputs__file__memory_8c}{}\label{inputs__file__memory_8c}\index{inputs\_file\_memory.c@{inputs\_file\_memory.c}}
+
+
+\doxylink{inputs__file__memory_8c}{inputs\+\_\+file\+\_\+memory.\+c} file, Manage program memory and data storage  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}inputs\+\_\+file\+\_\+memory.\+h"{}}\newline
+{\ttfamily \#include "{}op\+\_\+user.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inputs__file__memory_8c_a50dfabc824a8692a181638a22c35b06e}{load\+\_\+file}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Load the information saved in the file and allocate dynamic memory based on it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f}{save\+\_\+file\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Saves the company data to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86}{save\+\_\+file\+\_\+branchs}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Saves the branch activity data to a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047}{save\+\_\+search\+\_\+comp}} (\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Saves the search data to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{inputs__file__memory_8c}{inputs\+\_\+file\+\_\+memory.\+c} file, Manage program memory and data storage 
+
+\begin{DoxyAuthor}{Author}
+Studentes\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+In \doxylink{inputs__file__memory_8c}{inputs\+\_\+file\+\_\+memory.\+c}, there are all the inputs, responsible for saving all the data from the program into a file, and also the necessary input to load the data from the file into the corresponding struct and to allocate dynamic memory for them. 
+
+Definition in file \mbox{\hyperlink{inputs__file__memory_8c_source}{inputs\+\_\+file\+\_\+memory.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputs__file__memory_8c_a50dfabc824a8692a181638a22c35b06e}\label{inputs__file__memory_8c_a50dfabc824a8692a181638a22c35b06e} 
+\index{inputs\_file\_memory.c@{inputs\_file\_memory.c}!load\_file@{load\_file}}
+\index{load\_file@{load\_file}!inputs\_file\_memory.c@{inputs\_file\_memory.c}}
+\doxysubsubsection{\texorpdfstring{load\_file()}{load\_file()}}
+{\footnotesize\ttfamily void load\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Load the information saved in the file and allocate dynamic memory based on it. 
+
+Loads data from files and allocates memory for the respective struct.
+
+In this option, all the information saved in the files "{}ficheiro\+\_\+empresas.\+bin"{}, "{}ficheiro\+\_\+branch.\+bin"{} and "{}ficheiro\+\_\+procurar.\+bin"{} is loaded and based on the value of their counters, memory is allocated for the fields that need it and all information saved in them is loaded into the corresponding struct(s). The function starts by opening one file at a time, first opening the companies file and when the process of loading the data from the file, if any, and allocating memory for the companies is finished, the same file is closed and the file of the branches of activity is opened, which performs the same process until it is closed (of loading the branches of activity and allocating memory), finally after the branches file is closed, the search companies file is opened and only the data from the file is loaded because in this struct none of the fields need dynamic memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em search\+\_\+comp} & Pointer to the \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If the counter of the companies, branches, ratings or comments comes to 0 the value of the respective size will be 1. 
+
+If any of the mentioned files is not created, it is created in this function. 
+
+The fields that need dynamic memory of the companies are\+: companies.\+company (For the companies), companies.\+company\mbox{[}i\mbox{]}.comment (For each company comment), companies.\+company\mbox{[}i\mbox{]}.comp\+\_\+class (For the company ratings) 
+
+The field that needs dynamic memory of the branches of activity is\+: branchs.\+branch (For the branches of activity) ~\newline
+ 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__file__memory_8c_source_l00046}{46}} of file \mbox{\hyperlink{inputs__file__memory_8c_source}{inputs\+\_\+file\+\_\+memory.\+c}}.
+
+\Hypertarget{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86}\label{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86} 
+\index{inputs\_file\_memory.c@{inputs\_file\_memory.c}!save\_file\_branchs@{save\_file\_branchs}}
+\index{save\_file\_branchs@{save\_file\_branchs}!inputs\_file\_memory.c@{inputs\_file\_memory.c}}
+\doxysubsubsection{\texorpdfstring{save\_file\_branchs()}{save\_file\_branchs()}}
+{\footnotesize\ttfamily void save\+\_\+file\+\_\+branchs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Saves the branch activity data to a file. 
+
+Saves the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct to a file.
+
+This function stores in the file "{}ficheiro\+\_\+branch.\+bin"{} all data from the branchs activity and the branchs counter. This function takes all the data from the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct and rewrites each one in the branchs file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the fopen, fseek, fwrite, and fclose functions from the standard library. 
+
+This function uses the "{}rb+"{} file opening mode to read and write branchs in the file. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__file__memory_8c_source_l00223}{223}} of file \mbox{\hyperlink{inputs__file__memory_8c_source}{inputs\+\_\+file\+\_\+memory.\+c}}.
+
+\Hypertarget{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f}\label{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f} 
+\index{inputs\_file\_memory.c@{inputs\_file\_memory.c}!save\_file\_comp@{save\_file\_comp}}
+\index{save\_file\_comp@{save\_file\_comp}!inputs\_file\_memory.c@{inputs\_file\_memory.c}}
+\doxysubsubsection{\texorpdfstring{save\_file\_comp()}{save\_file\_comp()}}
+{\footnotesize\ttfamily void save\+\_\+file\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Saves the company data to a file. 
+
+Saves the \doxylink{struct_companies}{Companies} struct to a file.
+
+This function stores in the file "{}ficheiro\+\_\+empresas.\+bin"{} all data from the companies\textquotesingle{} struct (their information, their comments and their ratings) and the companies\textquotesingle{} counter. This function takes all the data from the company struct and rewrites each one in the company file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the fopen, fseek, fwrite, and fclose functions from the standard library. 
+
+This function uses the "{}rb+"{} file opening mode to read and write companies in the file. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__file__memory_8c_source_l00188}{188}} of file \mbox{\hyperlink{inputs__file__memory_8c_source}{inputs\+\_\+file\+\_\+memory.\+c}}.
+
+\Hypertarget{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047}\label{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047} 
+\index{inputs\_file\_memory.c@{inputs\_file\_memory.c}!save\_search\_comp@{save\_search\_comp}}
+\index{save\_search\_comp@{save\_search\_comp}!inputs\_file\_memory.c@{inputs\_file\_memory.c}}
+\doxysubsubsection{\texorpdfstring{save\_search\_comp()}{save\_search\_comp()}}
+{\footnotesize\ttfamily void save\+\_\+search\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Saves the search data to a file. 
+
+Saves the \doxylink{struct_search__comp}{Search\+\_\+comp} struct to a file.
+
+This function stores in the file "{}ficheiro\+\_\+procurar.\+bin"{} all data from the \doxylink{struct_search__comp}{Search\+\_\+comp} struct. This function takes all the data from the \doxylink{struct_search__comp}{Search\+\_\+comp} struct and rewrites each one in the search comp file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+\_\+comp} & Pointer to the \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the fopen, fseek, fwrite, and fclose functions from the standard library. 
+
+This function uses the "{}rb+"{} file opening mode to read and write searh\+\_\+\+Comp struct in the file. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__file__memory_8c_source_l00251}{251}} of file \mbox{\hyperlink{inputs__file__memory_8c_source}{inputs\+\_\+file\+\_\+memory.\+c}}.
+

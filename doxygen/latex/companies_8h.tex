@@ -1,0 +1,670 @@
+\doxysection{companies.\+h File Reference}
+\hypertarget{companies_8h}{}\label{companies_8h}\index{companies.h@{companies.h}}
+
+
+Header file with all the structs of the program and functions for the management of companies.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}}
+\begin{DoxyCompactList}\small\item\em Struct to store company search information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_data___user}{Data\+\_\+\+User}}
+\begin{DoxyCompactList}\small\item\em Struct to store the user\textquotesingle{}s information. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_classification}{Classification}}
+\begin{DoxyCompactList}\small\item\em Struct to store the user\textquotesingle{}s rating. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_comments}{Comments}}
+\begin{DoxyCompactList}\small\item\em Struct to store the user\textquotesingle{}s comments. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_data___branch}{Data\+\_\+\+Branch}}
+\begin{DoxyCompactList}\small\item\em Struct to store the activity branch data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}
+\begin{DoxyCompactList}\small\item\em Struct to store the activity branches. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_data__companies}{Data\+\_\+companies}}
+\begin{DoxyCompactList}\small\item\em Struct to store the company data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_companies}{Companies}}
+\begin{DoxyCompactList}\small\item\em Struct to store the companies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{companies_8h_a0535c9c0b5831c0ab2bb413a11f508a7}{SIZE\+\_\+\+NAME\+\_\+\+COMP}}~10
+\item 
+\#define \mbox{\hyperlink{companies_8h_aab174c65bed8df778a7abef8da5599b8}{SIZE\+\_\+\+ROAD}}~25
+\item 
+\#define \mbox{\hyperlink{companies_8h_aca1cde1c4cb1defdd1c509d20dacf279}{SIZE\+\_\+\+LOC}}~15
+\item 
+\#define \mbox{\hyperlink{companies_8h_a755ed272b0176e22c933b4623f80271f}{SIZE\+\_\+\+COD\+\_\+\+POS}}~9
+\item 
+\#define \mbox{\hyperlink{companies_8h_ae5f5b5d78d6c085d8ad94144100142c4}{SIZE\+\_\+\+CATEGORY}}~20
+\item 
+\#define \mbox{\hyperlink{companies_8h_a3d277f5a5dec260aa85c464f96800b9e}{SIZE\+\_\+\+TITLE}}~15
+\item 
+\#define \mbox{\hyperlink{companies_8h_a030cb2fa4e90214b6a9ea5b9d8135afb}{SIZE\+\_\+\+TEXT}}~50
+\item 
+\#define \mbox{\hyperlink{companies_8h_a6768bf6f369cbebbd1f38341a84e4026}{SIZE\+\_\+\+NAME\+\_\+\+BRANCH}}~20
+\item 
+\#define \mbox{\hyperlink{companies_8h_a47c9e0048d1aada7c32107a2ca81eda5}{SIZE\+\_\+\+USER}}~25
+\item 
+\#define \mbox{\hyperlink{companies_8h_a5c8530d423a8a17bc84937d5f568e55f}{SIZE\+\_\+\+EMAIL}}~50
+\item 
+\#define \mbox{\hyperlink{companies_8h_a948086a7ecc0d1e8547fefc1f6300a48}{MIN\+\_\+\+VALUE\+\_\+\+NIF}}~100000000
+\item 
+\#define \mbox{\hyperlink{companies_8h_ae13e239eb58852372039e69c548e4d51}{MAX\+\_\+\+VALUE\+\_\+\+NIF}}~999999999
+\item 
+\#define \mbox{\hyperlink{companies_8h_a39dbd54c443fa719ad1fc9129154810c}{SIZE\+\_\+\+MAX\+\_\+\+EMAIL}}~29
+\item 
+\#define \mbox{\hyperlink{companies_8h_aefed403d5a68a9f73fe66b784d3e49bb}{SIZE\+\_\+\+MIN\+\_\+\+EMAIL}}~5
+\item 
+\#define \mbox{\hyperlink{companies_8h_a1c7fa236130f79df5237a12640ed43d2}{MIN\+\_\+\+CATEGORY}}~1
+\item 
+\#define \mbox{\hyperlink{companies_8h_a48a7acb6850168cf4ee361f21741951f}{MAX\+\_\+\+CATEGORY}}~5
+\item 
+\#define \mbox{\hyperlink{companies_8h_a5a6115e6b4b122c14c6f1d3393cbdf54}{POS\+\_\+\+COMENT}}~companies-\/$>$company\mbox{[}pos\+\_\+nif\mbox{]}.cont\+\_\+coments
+\item 
+\#define \mbox{\hyperlink{companies_8h_a5d46e62c74f86a4859b634bca1ab2617}{ERROR\+\_\+\+MSG\+\_\+\+NIF\+\_\+\+NOT\+\_\+\+FIND}}~"{}O nif \%d não está associado a nenhuma empresa!\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_a00f3f39f888ac40959d84025ff5cb928}{MSG\+\_\+\+INSERT\+\_\+\+NIF\+\_\+\+COMPANY}}~"{}Introduza o nif da empresa -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_aabc323b2b215d845015811c849190aa7}{MSG\+\_\+\+INSERT\+\_\+\+NAME\+\_\+\+COMAPNY}}~"{}Introduza o nome da empresa -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_a5671e84f02e81bac726ec80c83837560}{MSG\+\_\+\+INSERT\+\_\+\+CATEGORY\+\_\+\+COMPANY}}~"{}Introduza a categoria da empresa (1\+: Micro/ 2\+: Empresa de Pequeno Porte/ 3\+: \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463}{PME}}/ 4\+: Grande empresa/ 5\+: Sociedade Limitada)-\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_abfa672abc204d6863b6de84540a76b58}{MSG\+\_\+\+INSERT\+\_\+\+ROAD\+\_\+\+COMPANY}}~"{}Introduza a rua da empresa -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_a510c274fe3a5daa840608bd5f6b417a8}{MSG\+\_\+\+INSERT\+\_\+\+LOC\+\_\+\+COMPANY}}~"{}Introduza a localidade da empresa -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_a968f4c1f8293fd89ce16fbaa2181fc6f}{MSG\+\_\+\+INSERT\+\_\+\+COD\+\_\+\+POSTAL\+\_\+\+COMPANY}}~"{}Introduza o codigo postal da empresa -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{companies_8h_a76c7337d985d5b07de46d7ab038327e0}{MSG\+\_\+\+INSERT\+\_\+\+STATE\+\_\+\+COMPANY}}~"{}Introduza o estado da empresa (0\+: Ativa/ 1\+: Inativa)-\/-\/$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f}{ACTIVE}} = 0
+, \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}{INACTIVE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the usage state of the activity branch and companies. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359}{categories}} \{ \newline
+\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a44fead913cf8397fe4cf15b7c8962a8f}{MICRO}} = 1
+, \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359ade3826ee8c45faa2a6eb354ae1620640}{SMALL\+\_\+\+BUSINESS}} = 2
+, \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463}{PME}} = 3
+, \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a1a3d07ca49173a7075bbca7ffe07d10b}{BIG\+\_\+\+COMPANY}} = 4
+, \newline
+\mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a48383f0ddd960740834865bbb010c226}{LIMITED\+\_\+\+SOCIETY}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the company categories. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a}{Hide}} \{ \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aa882790f9beae78847942fc92a067ad46}{HIDE}} = 0
+, \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aab2dcb868aa4a6f4a6a60f691f808bb66}{NOT\+\_\+\+HIDE}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the comment hide state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{companies_8h_ad19e13f0866de5cc825e1bced7bbba38}{add\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Adds companies to the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8h_a0eca070a14cc9422f420177bd9eff0ce}{delete\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Deletes companies from the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8h_a7ad630e5ccf562fc1dd91402eecd7fcb}{edit\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Edits companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8h_a2b67d5b5f301f80678ee3f060a24c7ef}{list\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Lists the companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8h_a829c4a3d78689c474b342fe868113082}{consult\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Consults companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8h_a807c63babb17c2df948c5153ebfa5062}{ocul\+\_\+del\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Hides or deletes comments from companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file with all the structs of the program and functions for the management of companies. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+In this header file you can find all the structs present in the program, such as the company struct, comments, rating and comments, as well as all the constants at the level of the size of some variables of these structs. You can also find in this header file, all the functions for the management of companies and also the function to hide/delete comments from companies. 
+
+Definition in file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{companies_8h_a5d46e62c74f86a4859b634bca1ab2617}\label{companies_8h_a5d46e62c74f86a4859b634bca1ab2617} 
+\index{companies.h@{companies.h}!ERROR\_MSG\_NIF\_NOT\_FIND@{ERROR\_MSG\_NIF\_NOT\_FIND}}
+\index{ERROR\_MSG\_NIF\_NOT\_FIND@{ERROR\_MSG\_NIF\_NOT\_FIND}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_MSG\_NIF\_NOT\_FIND}{ERROR\_MSG\_NIF\_NOT\_FIND}}
+{\footnotesize\ttfamily \#define ERROR\+\_\+\+MSG\+\_\+\+NIF\+\_\+\+NOT\+\_\+\+FIND~"{}O nif \%d não está associado a nenhuma empresa!\textbackslash{}n"{}}
+
+Defines the error message when the NIF is not associated with any company. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00044}{44}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a48a7acb6850168cf4ee361f21741951f}\label{companies_8h_a48a7acb6850168cf4ee361f21741951f} 
+\index{companies.h@{companies.h}!MAX\_CATEGORY@{MAX\_CATEGORY}}
+\index{MAX\_CATEGORY@{MAX\_CATEGORY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_CATEGORY}{MAX\_CATEGORY}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+CATEGORY~5}
+
+Defines the maximum category for the company. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00040}{40}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_ae13e239eb58852372039e69c548e4d51}\label{companies_8h_ae13e239eb58852372039e69c548e4d51} 
+\index{companies.h@{companies.h}!MAX\_VALUE\_NIF@{MAX\_VALUE\_NIF}}
+\index{MAX\_VALUE\_NIF@{MAX\_VALUE\_NIF}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_VALUE\_NIF}{MAX\_VALUE\_NIF}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+VALUE\+\_\+\+NIF~999999999}
+
+Defines the maximum value for the company\textquotesingle{}s NIF. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00034}{34}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a1c7fa236130f79df5237a12640ed43d2}\label{companies_8h_a1c7fa236130f79df5237a12640ed43d2} 
+\index{companies.h@{companies.h}!MIN\_CATEGORY@{MIN\_CATEGORY}}
+\index{MIN\_CATEGORY@{MIN\_CATEGORY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_CATEGORY}{MIN\_CATEGORY}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+CATEGORY~1}
+
+Defines the minimum category for the company. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00039}{39}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a948086a7ecc0d1e8547fefc1f6300a48}\label{companies_8h_a948086a7ecc0d1e8547fefc1f6300a48} 
+\index{companies.h@{companies.h}!MIN\_VALUE\_NIF@{MIN\_VALUE\_NIF}}
+\index{MIN\_VALUE\_NIF@{MIN\_VALUE\_NIF}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_VALUE\_NIF}{MIN\_VALUE\_NIF}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+VALUE\+\_\+\+NIF~100000000}
+
+Defines the minimum value for the company\textquotesingle{}s NIF. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00033}{33}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a5671e84f02e81bac726ec80c83837560}\label{companies_8h_a5671e84f02e81bac726ec80c83837560} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_CATEGORY\_COMPANY@{MSG\_INSERT\_CATEGORY\_COMPANY}}
+\index{MSG\_INSERT\_CATEGORY\_COMPANY@{MSG\_INSERT\_CATEGORY\_COMPANY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_CATEGORY\_COMPANY}{MSG\_INSERT\_CATEGORY\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+CATEGORY\+\_\+\+COMPANY~"{}Introduza a categoria da empresa (1\+: Micro/ 2\+: Empresa de Pequeno Porte/ 3\+: \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463}{PME}}/ 4\+: Grande empresa/ 5\+: Sociedade Limitada)-\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s category. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00048}{48}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a968f4c1f8293fd89ce16fbaa2181fc6f}\label{companies_8h_a968f4c1f8293fd89ce16fbaa2181fc6f} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_COD\_POSTAL\_COMPANY@{MSG\_INSERT\_COD\_POSTAL\_COMPANY}}
+\index{MSG\_INSERT\_COD\_POSTAL\_COMPANY@{MSG\_INSERT\_COD\_POSTAL\_COMPANY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_COD\_POSTAL\_COMPANY}{MSG\_INSERT\_COD\_POSTAL\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+COD\+\_\+\+POSTAL\+\_\+\+COMPANY~"{}Introduza o codigo postal da empresa -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s postal code. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00051}{51}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a510c274fe3a5daa840608bd5f6b417a8}\label{companies_8h_a510c274fe3a5daa840608bd5f6b417a8} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_LOC\_COMPANY@{MSG\_INSERT\_LOC\_COMPANY}}
+\index{MSG\_INSERT\_LOC\_COMPANY@{MSG\_INSERT\_LOC\_COMPANY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_LOC\_COMPANY}{MSG\_INSERT\_LOC\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+LOC\+\_\+\+COMPANY~"{}Introduza a localidade da empresa -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s locality. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00050}{50}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_aabc323b2b215d845015811c849190aa7}\label{companies_8h_aabc323b2b215d845015811c849190aa7} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_NAME\_COMAPNY@{MSG\_INSERT\_NAME\_COMAPNY}}
+\index{MSG\_INSERT\_NAME\_COMAPNY@{MSG\_INSERT\_NAME\_COMAPNY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_NAME\_COMAPNY}{MSG\_INSERT\_NAME\_COMAPNY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+NAME\+\_\+\+COMAPNY~"{}Introduza o nome da empresa -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s name. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00047}{47}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a00f3f39f888ac40959d84025ff5cb928}\label{companies_8h_a00f3f39f888ac40959d84025ff5cb928} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_NIF\_COMPANY@{MSG\_INSERT\_NIF\_COMPANY}}
+\index{MSG\_INSERT\_NIF\_COMPANY@{MSG\_INSERT\_NIF\_COMPANY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_NIF\_COMPANY}{MSG\_INSERT\_NIF\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+NIF\+\_\+\+COMPANY~"{}Introduza o nif da empresa -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s NIF. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00046}{46}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_abfa672abc204d6863b6de84540a76b58}\label{companies_8h_abfa672abc204d6863b6de84540a76b58} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_ROAD\_COMPANY@{MSG\_INSERT\_ROAD\_COMPANY}}
+\index{MSG\_INSERT\_ROAD\_COMPANY@{MSG\_INSERT\_ROAD\_COMPANY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_ROAD\_COMPANY}{MSG\_INSERT\_ROAD\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+ROAD\+\_\+\+COMPANY~"{}Introduza a rua da empresa -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s street. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00049}{49}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a76c7337d985d5b07de46d7ab038327e0}\label{companies_8h_a76c7337d985d5b07de46d7ab038327e0} 
+\index{companies.h@{companies.h}!MSG\_INSERT\_STATE\_COMPANY@{MSG\_INSERT\_STATE\_COMPANY}}
+\index{MSG\_INSERT\_STATE\_COMPANY@{MSG\_INSERT\_STATE\_COMPANY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_STATE\_COMPANY}{MSG\_INSERT\_STATE\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+STATE\+\_\+\+COMPANY~"{}Introduza o estado da empresa (0\+: Ativa/ 1\+: Inativa)-\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s state. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00052}{52}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a5a6115e6b4b122c14c6f1d3393cbdf54}\label{companies_8h_a5a6115e6b4b122c14c6f1d3393cbdf54} 
+\index{companies.h@{companies.h}!POS\_COMENT@{POS\_COMENT}}
+\index{POS\_COMENT@{POS\_COMENT}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{POS\_COMENT}{POS\_COMENT}}
+{\footnotesize\ttfamily \#define POS\+\_\+\+COMENT~companies-\/$>$company\mbox{[}pos\+\_\+nif\mbox{]}.cont\+\_\+coments}
+
+Defines the position of the comment in the company. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00042}{42}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_ae5f5b5d78d6c085d8ad94144100142c4}\label{companies_8h_ae5f5b5d78d6c085d8ad94144100142c4} 
+\index{companies.h@{companies.h}!SIZE\_CATEGORY@{SIZE\_CATEGORY}}
+\index{SIZE\_CATEGORY@{SIZE\_CATEGORY}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_CATEGORY}{SIZE\_CATEGORY}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+CATEGORY~20}
+
+Defines the maximum size of the company\textquotesingle{}s category. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00023}{23}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a755ed272b0176e22c933b4623f80271f}\label{companies_8h_a755ed272b0176e22c933b4623f80271f} 
+\index{companies.h@{companies.h}!SIZE\_COD\_POS@{SIZE\_COD\_POS}}
+\index{SIZE\_COD\_POS@{SIZE\_COD\_POS}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_COD\_POS}{SIZE\_COD\_POS}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+COD\+\_\+\+POS~9}
+
+Defines the maximum size of the company\textquotesingle{}s postal code. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00022}{22}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a5c8530d423a8a17bc84937d5f568e55f}\label{companies_8h_a5c8530d423a8a17bc84937d5f568e55f} 
+\index{companies.h@{companies.h}!SIZE\_EMAIL@{SIZE\_EMAIL}}
+\index{SIZE\_EMAIL@{SIZE\_EMAIL}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_EMAIL}{SIZE\_EMAIL}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+EMAIL~50}
+
+Defines the maximum size of the user email. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00031}{31}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_aca1cde1c4cb1defdd1c509d20dacf279}\label{companies_8h_aca1cde1c4cb1defdd1c509d20dacf279} 
+\index{companies.h@{companies.h}!SIZE\_LOC@{SIZE\_LOC}}
+\index{SIZE\_LOC@{SIZE\_LOC}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_LOC}{SIZE\_LOC}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+LOC~15}
+
+Defines the maximum size of the company\textquotesingle{}s locality name. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00021}{21}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a39dbd54c443fa719ad1fc9129154810c}\label{companies_8h_a39dbd54c443fa719ad1fc9129154810c} 
+\index{companies.h@{companies.h}!SIZE\_MAX\_EMAIL@{SIZE\_MAX\_EMAIL}}
+\index{SIZE\_MAX\_EMAIL@{SIZE\_MAX\_EMAIL}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_MAX\_EMAIL}{SIZE\_MAX\_EMAIL}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+MAX\+\_\+\+EMAIL~29}
+
+Defines the maximum size of the user\textquotesingle{}s email. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00036}{36}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_aefed403d5a68a9f73fe66b784d3e49bb}\label{companies_8h_aefed403d5a68a9f73fe66b784d3e49bb} 
+\index{companies.h@{companies.h}!SIZE\_MIN\_EMAIL@{SIZE\_MIN\_EMAIL}}
+\index{SIZE\_MIN\_EMAIL@{SIZE\_MIN\_EMAIL}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_MIN\_EMAIL}{SIZE\_MIN\_EMAIL}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+MIN\+\_\+\+EMAIL~5}
+
+Defines the minimum size of the user\textquotesingle{}s email. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00037}{37}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a6768bf6f369cbebbd1f38341a84e4026}\label{companies_8h_a6768bf6f369cbebbd1f38341a84e4026} 
+\index{companies.h@{companies.h}!SIZE\_NAME\_BRANCH@{SIZE\_NAME\_BRANCH}}
+\index{SIZE\_NAME\_BRANCH@{SIZE\_NAME\_BRANCH}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_NAME\_BRANCH}{SIZE\_NAME\_BRANCH}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+NAME\+\_\+\+BRANCH~20}
+
+Defines the maximum size of the activity branch name. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00028}{28}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a0535c9c0b5831c0ab2bb413a11f508a7}\label{companies_8h_a0535c9c0b5831c0ab2bb413a11f508a7} 
+\index{companies.h@{companies.h}!SIZE\_NAME\_COMP@{SIZE\_NAME\_COMP}}
+\index{SIZE\_NAME\_COMP@{SIZE\_NAME\_COMP}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_NAME\_COMP}{SIZE\_NAME\_COMP}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+NAME\+\_\+\+COMP~10}
+
+Defines the maximum size of the company name. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00019}{19}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_aab174c65bed8df778a7abef8da5599b8}\label{companies_8h_aab174c65bed8df778a7abef8da5599b8} 
+\index{companies.h@{companies.h}!SIZE\_ROAD@{SIZE\_ROAD}}
+\index{SIZE\_ROAD@{SIZE\_ROAD}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_ROAD}{SIZE\_ROAD}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+ROAD~25}
+
+Defines the maximum size of the company\textquotesingle{}s street name. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00020}{20}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a030cb2fa4e90214b6a9ea5b9d8135afb}\label{companies_8h_a030cb2fa4e90214b6a9ea5b9d8135afb} 
+\index{companies.h@{companies.h}!SIZE\_TEXT@{SIZE\_TEXT}}
+\index{SIZE\_TEXT@{SIZE\_TEXT}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_TEXT}{SIZE\_TEXT}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+TEXT~50}
+
+Defines the maximum size of the comment text. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00026}{26}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a3d277f5a5dec260aa85c464f96800b9e}\label{companies_8h_a3d277f5a5dec260aa85c464f96800b9e} 
+\index{companies.h@{companies.h}!SIZE\_TITLE@{SIZE\_TITLE}}
+\index{SIZE\_TITLE@{SIZE\_TITLE}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_TITLE}{SIZE\_TITLE}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+TITLE~15}
+
+Defines the maximum size of the comment title. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00025}{25}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a47c9e0048d1aada7c32107a2ca81eda5}\label{companies_8h_a47c9e0048d1aada7c32107a2ca81eda5} 
+\index{companies.h@{companies.h}!SIZE\_USER@{SIZE\_USER}}
+\index{SIZE\_USER@{SIZE\_USER}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_USER}{SIZE\_USER}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+USER~25}
+
+Defines the maximum size of the username. 
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00030}{30}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359}\label{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359} 
+\index{companies.h@{companies.h}!categories@{categories}}
+\index{categories@{categories}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{categories}{categories}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359}{categories}}}
+
+
+
+Enumeration for the company categories. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MICRO@{MICRO}!companies.h@{companies.h}}\index{companies.h@{companies.h}!MICRO@{MICRO}}}\Hypertarget{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a44fead913cf8397fe4cf15b7c8962a8f}\label{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a44fead913cf8397fe4cf15b7c8962a8f} 
+MICRO&Micro company. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SMALL\_BUSINESS@{SMALL\_BUSINESS}!companies.h@{companies.h}}\index{companies.h@{companies.h}!SMALL\_BUSINESS@{SMALL\_BUSINESS}}}\Hypertarget{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359ade3826ee8c45faa2a6eb354ae1620640}\label{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359ade3826ee8c45faa2a6eb354ae1620640} 
+SMALL\+\_\+\+BUSINESS&Small business. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PME@{PME}!companies.h@{companies.h}}\index{companies.h@{companies.h}!PME@{PME}}}\Hypertarget{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463}\label{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463} 
+PME&Small and medium-\/sized enterprises. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BIG\_COMPANY@{BIG\_COMPANY}!companies.h@{companies.h}}\index{companies.h@{companies.h}!BIG\_COMPANY@{BIG\_COMPANY}}}\Hypertarget{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a1a3d07ca49173a7075bbca7ffe07d10b}\label{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a1a3d07ca49173a7075bbca7ffe07d10b} 
+BIG\+\_\+\+COMPANY&Big company. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIMITED\_SOCIETY@{LIMITED\_SOCIETY}!companies.h@{companies.h}}\index{companies.h@{companies.h}!LIMITED\_SOCIETY@{LIMITED\_SOCIETY}}}\Hypertarget{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a48383f0ddd960740834865bbb010c226}\label{companies_8h_a6f5cbf57c3ca5e6c08887516b0b20359a48383f0ddd960740834865bbb010c226} 
+LIMITED\+\_\+\+SOCIETY&Limited society. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00065}{65}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a}\label{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a} 
+\index{companies.h@{companies.h}!Hide@{Hide}}
+\index{Hide@{Hide}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{Hide}{Hide}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5a}{Hide}}}
+
+
+
+Enumeration for the comment hide state. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIDE@{HIDE}!companies.h@{companies.h}}\index{companies.h@{companies.h}!HIDE@{HIDE}}}\Hypertarget{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aa882790f9beae78847942fc92a067ad46}\label{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aa882790f9beae78847942fc92a067ad46} 
+HIDE&The comment is hidden. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOT\_HIDE@{NOT\_HIDE}!companies.h@{companies.h}}\index{companies.h@{companies.h}!NOT\_HIDE@{NOT\_HIDE}}}\Hypertarget{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aab2dcb868aa4a6f4a6a60f691f808bb66}\label{companies_8h_a6ddf544a529a7b2b424dc981b1e28a5aab2dcb868aa4a6f4a6a60f691f808bb66} 
+NOT\+\_\+\+HIDE&The comment is not hidden. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00076}{76}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+\Hypertarget{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8} 
+\index{companies.h@{companies.h}!State@{State}}
+\index{State@{State}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+
+
+Enumeration for the usage state of the activity branch and companies. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACTIVE@{ACTIVE}!companies.h@{companies.h}}\index{companies.h@{companies.h}!ACTIVE@{ACTIVE}}}\Hypertarget{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f}\label{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f} 
+ACTIVE&The State is active. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INACTIVE@{INACTIVE}!companies.h@{companies.h}}\index{companies.h@{companies.h}!INACTIVE@{INACTIVE}}}\Hypertarget{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}\label{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6} 
+INACTIVE&The State is inactive. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{companies_8h_source_l00057}{57}} of file \mbox{\hyperlink{companies_8h_source}{companies.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{companies_8h_ad19e13f0866de5cc825e1bced7bbba38}\label{companies_8h_ad19e13f0866de5cc825e1bced7bbba38} 
+\index{companies.h@{companies.h}!add\_companies@{add\_companies}}
+\index{add\_companies@{add\_companies}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{add\_companies()}{add\_companies()}}
+{\footnotesize\ttfamily void add\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Adds companies to the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+This function adds a new company to the \doxylink{struct_companies}{Companies} struct. The function checks if there are valid activity branches before adding the company. If the current capacity of the \doxylink{struct_companies}{Companies} struct is reached, the function reallocates memory to accommodate more companies. The function also initializes the company\textquotesingle{}s comments and ratings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that stores all activity branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print an error message and return if memory reallocation fails. 
+
+The function will print a message and return if there are no active activity branches. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00040}{40}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8h_a829c4a3d78689c474b342fe868113082}\label{companies_8h_a829c4a3d78689c474b342fe868113082} 
+\index{companies.h@{companies.h}!consult\_companies@{consult\_companies}}
+\index{consult\_companies@{consult\_companies}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{consult\_companies()}{consult\_companies()}}
+{\footnotesize\ttfamily void consult\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Consults companies in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+This function consults an existing company in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to consult one. If the company to be consulted is found, the function prints the company\textquotesingle{}s information, including comments and ratings. The function also calculates and prints the average of the company\textquotesingle{}s ratings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct that stores all companies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to consult. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00175}{175}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8h_a0eca070a14cc9422f420177bd9eff0ce}\label{companies_8h_a0eca070a14cc9422f420177bd9eff0ce} 
+\index{companies.h@{companies.h}!delete\_companies@{delete\_companies}}
+\index{delete\_companies@{delete\_companies}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{delete\_companies()}{delete\_companies()}}
+{\footnotesize\ttfamily void delete\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Deletes companies from the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+This function deletes an existing company from the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to delete one. If the company to be deleted has no comments, the function asks the user for confirmation before proceeding with the deletion. If the company to be deleted has comments, the function prints a message and does not delete the company. After a company is deleted, the function saves the updated \doxylink{struct_companies}{Companies} struct to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the struct \doxylink{struct_companies}{Companies} that stores all companies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to delete. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00088}{88}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8h_a7ad630e5ccf562fc1dd91402eecd7fcb}\label{companies_8h_a7ad630e5ccf562fc1dd91402eecd7fcb} 
+\index{companies.h@{companies.h}!edit\_companies@{edit\_companies}}
+\index{edit\_companies@{edit\_companies}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{edit\_companies()}{edit\_companies()}}
+{\footnotesize\ttfamily void edit\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Edits companies in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+This function edits an existing company in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies and valid activity branches before attempting to edit a company. If the company to be edited has no comments, the function asks the user for confirmation before proceeding with the edit. If the company to be edited has comments, the function allows the user to change the state of the company. After a company is edited, the function saves the updated \doxylink{struct_companies}{Companies} struct to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that stores all activity branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to edit. 
+
+The function will print a message and return if there are no active activity branches. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00132}{132}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8h_a2b67d5b5f301f80678ee3f060a24c7ef}\label{companies_8h_a2b67d5b5f301f80678ee3f060a24c7ef} 
+\index{companies.h@{companies.h}!list\_companies@{list\_companies}}
+\index{list\_companies@{list\_companies}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{list\_companies()}{list\_companies()}}
+{\footnotesize\ttfamily void list\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Lists the companies in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+This function lists all existing companies in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to list. For each company, the function prints the company\textquotesingle{}s information, the total number of comments, and the average of the ratings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct that stores all companies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to list. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00227}{227}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8h_a807c63babb17c2df948c5153ebfa5062}\label{companies_8h_a807c63babb17c2df948c5153ebfa5062} 
+\index{companies.h@{companies.h}!ocul\_del\_companies@{ocul\_del\_companies}}
+\index{ocul\_del\_companies@{ocul\_del\_companies}!companies.h@{companies.h}}
+\doxysubsubsection{\texorpdfstring{ocul\_del\_companies()}{ocul\_del\_companies()}}
+{\footnotesize\ttfamily void ocul\+\_\+del\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Hides or deletes comments from companies in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & A pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+This function hides or deletes comments from an existing company in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to hide or delete comments. If the company has comments, the function allows the user to choose between hiding or deleting a comment. If the user chooses to delete a comment, the function asks for confirmation before proceeding with the deletion. If the user chooses to hide a comment, the function allows the user to choose between hiding or unhiding the comment. After a comment is hidden or deleted, the function saves the updated \doxylink{struct_companies}{Companies} struct to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em branchs} & A pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that stores all activity branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to hide/delete comments. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00270}{270}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+

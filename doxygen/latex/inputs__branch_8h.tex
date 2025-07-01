@@ -1,0 +1,302 @@
+\doxysection{inputs\+\_\+branch.\+h File Reference}
+\hypertarget{inputs__branch_8h}{}\label{inputs__branch_8h}\index{inputs\_branch.h@{inputs\_branch.h}}
+
+
+Header file inputs branchs.  
+
+
+{\ttfamily \#include "{}branchs.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inputs__branch_8h_a0ba31c9c601e8c51599c5b69977a9553}{MSG\+\_\+\+INSERT\+\_\+\+STATE\+\_\+\+BRANCH}}~"{}Introduza o estado do ramo (0\+: Ativa/ 1\+: Inativa)-\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__branch_8h_abc69b774a936bd405c360817527b5e47}{USED\+\_\+\+BRANCH\+\_\+\+IN\+\_\+\+COMPANY}}~"{}Está associado a alguma empresa -\/-\/$>$ Sim\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{inputs__branch_8h_a9ba450406b3cb8f50d14a51d3f1cc689}{DONT\+\_\+\+USED\+\_\+\+BRANCH\+\_\+\+IN\+\_\+\+COMPANY}}~"{}Está associado a alguma empresa -\/-\/$>$ Não\textbackslash{}n"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{inputs__branch_8h_ac53f2a68723db5d68a060b001af0d698}{compare\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs, char \texorpdfstring{$\ast$}{*}Branch)
+\begin{DoxyCompactList}\small\item\em Compares the branch activity with the given branch. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__branch_8h_a6db633f2e5ee3121dfed621a23e700dd}{search\+\_\+branch\+\_\+pos}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs, char \texorpdfstring{$\ast$}{*}name\+\_\+branch)
+\begin{DoxyCompactList}\small\item\em Searches for the position of the branch in the branch activity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__branch_8h_a8070ec9ae1bbc7bb925140c3360d074f}{used\+\_\+bracnh\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, char \texorpdfstring{$\ast$}{*}name\+\_\+branch)
+\begin{DoxyCompactList}\small\item\em Checks if the branch is used in the given companies. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__branch_8h_abdd5e7487f42ac9d221fa46db1fef6de}{insert\+\_\+id\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Inserts an ID into the branch activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__branch_8h_aafd67ac96e6b5178a416e0f70385a41a}{information\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs, int pos)
+\begin{DoxyCompactList}\small\item\em Prints the information of the branch at the given position in the branch activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__branch_8h_ab71bd5aef9dadb1b6826cb16001e1f0f}{fields\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, int pos)
+\begin{DoxyCompactList}\small\item\em Fills the fields of the branch at the given position in the branch activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file inputs branchs. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+This header file stores the defined functions and messages, used in the \doxylink{inputs__branch_8c}{inputs\+\_\+branch.\+c} file. 
+
+Definition in file \mbox{\hyperlink{inputs__branch_8h_source}{inputs\+\_\+branch.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{inputs__branch_8h_a9ba450406b3cb8f50d14a51d3f1cc689}\label{inputs__branch_8h_a9ba450406b3cb8f50d14a51d3f1cc689} 
+\index{inputs\_branch.h@{inputs\_branch.h}!DONT\_USED\_BRANCH\_IN\_COMPANY@{DONT\_USED\_BRANCH\_IN\_COMPANY}}
+\index{DONT\_USED\_BRANCH\_IN\_COMPANY@{DONT\_USED\_BRANCH\_IN\_COMPANY}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{DONT\_USED\_BRANCH\_IN\_COMPANY}{DONT\_USED\_BRANCH\_IN\_COMPANY}}
+{\footnotesize\ttfamily \#define DONT\+\_\+\+USED\+\_\+\+BRANCH\+\_\+\+IN\+\_\+\+COMPANY~"{}Está associado a alguma empresa -\/-\/$>$ Não\textbackslash{}n"{}}
+
+Defines the message that the branch isn\textquotesingle{}t being used in some company. 
+
+Definition at line \mbox{\hyperlink{inputs__branch_8h_source_l00020}{20}} of file \mbox{\hyperlink{inputs__branch_8h_source}{inputs\+\_\+branch.\+h}}.
+
+\Hypertarget{inputs__branch_8h_a0ba31c9c601e8c51599c5b69977a9553}\label{inputs__branch_8h_a0ba31c9c601e8c51599c5b69977a9553} 
+\index{inputs\_branch.h@{inputs\_branch.h}!MSG\_INSERT\_STATE\_BRANCH@{MSG\_INSERT\_STATE\_BRANCH}}
+\index{MSG\_INSERT\_STATE\_BRANCH@{MSG\_INSERT\_STATE\_BRANCH}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_STATE\_BRANCH}{MSG\_INSERT\_STATE\_BRANCH}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+STATE\+\_\+\+BRANCH~"{}Introduza o estado do ramo (0\+: Ativa/ 1\+: Inativa)-\/-\/$>$"{}}
+
+Defines the message to enter the state of the branch. 
+
+Definition at line \mbox{\hyperlink{inputs__branch_8h_source_l00018}{18}} of file \mbox{\hyperlink{inputs__branch_8h_source}{inputs\+\_\+branch.\+h}}.
+
+\Hypertarget{inputs__branch_8h_abc69b774a936bd405c360817527b5e47}\label{inputs__branch_8h_abc69b774a936bd405c360817527b5e47} 
+\index{inputs\_branch.h@{inputs\_branch.h}!USED\_BRANCH\_IN\_COMPANY@{USED\_BRANCH\_IN\_COMPANY}}
+\index{USED\_BRANCH\_IN\_COMPANY@{USED\_BRANCH\_IN\_COMPANY}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{USED\_BRANCH\_IN\_COMPANY}{USED\_BRANCH\_IN\_COMPANY}}
+{\footnotesize\ttfamily \#define USED\+\_\+\+BRANCH\+\_\+\+IN\+\_\+\+COMPANY~"{}Está associado a alguma empresa -\/-\/$>$ Sim\textbackslash{}n"{}}
+
+Defines the message that the branch is being used in some company. 
+
+Definition at line \mbox{\hyperlink{inputs__branch_8h_source_l00019}{19}} of file \mbox{\hyperlink{inputs__branch_8h_source}{inputs\+\_\+branch.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputs__branch_8h_ac53f2a68723db5d68a060b001af0d698}\label{inputs__branch_8h_ac53f2a68723db5d68a060b001af0d698} 
+\index{inputs\_branch.h@{inputs\_branch.h}!compare\_branch@{compare\_branch}}
+\index{compare\_branch@{compare\_branch}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{compare\_branch()}{compare\_branch()}}
+{\footnotesize\ttfamily int compare\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs,  }\item[{char \texorpdfstring{$\ast$}{*}}]{branch\+\_\+o }\end{DoxyParamCaption})}
+
+
+
+Compares the branch activity with the given branch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The branch activity to compare. \\
+\hline
+{\em Branch} & The branch to compare with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer indicating the result of the comparison.
+\end{DoxyReturn}
+Compares the branch activity with the given branch.
+
+This function iterates over all the branches in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct and compares the given branch name with the name of each branch. If a match is found, it prints a message indicating that the branch already exists and returns 1. If no match is found, it prints a success message and returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em branch\+\_\+o} & The name of the branch to be compared with existing branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the branch already exists, and 0 otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function uses the strcmp function to compare the branch names. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__branch_8c_source_l00037}{37}} of file \mbox{\hyperlink{inputs__branch_8c_source}{inputs\+\_\+branch.\+c}}.
+
+\Hypertarget{inputs__branch_8h_ab71bd5aef9dadb1b6826cb16001e1f0f}\label{inputs__branch_8h_ab71bd5aef9dadb1b6826cb16001e1f0f} 
+\index{inputs\_branch.h@{inputs\_branch.h}!fields\_branch@{fields\_branch}}
+\index{fields\_branch@{fields\_branch}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{fields\_branch()}{fields\_branch()}}
+{\footnotesize\ttfamily void fields\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Fills the fields of the branch at the given position in the branch activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The branch activity to fill the fields in. \\
+\hline
+{\em pos} & The position of the branch in the branch activity.\\
+\hline
+\end{DoxyParams}
+Fills the fields of the branch at the given position in the branch activity.
+
+This function prompts the user to enter the state of the branch (0 or 1) and updates the \textquotesingle{}state\textquotesingle{} attribute of the branch at the given position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em pos} & The position of the branch in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the get\+Int function to get the state of the branch from the user. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__branch_8c_source_l00128}{128}} of file \mbox{\hyperlink{inputs__branch_8c_source}{inputs\+\_\+branch.\+c}}.
+
+\Hypertarget{inputs__branch_8h_aafd67ac96e6b5178a416e0f70385a41a}\label{inputs__branch_8h_aafd67ac96e6b5178a416e0f70385a41a} 
+\index{inputs\_branch.h@{inputs\_branch.h}!information\_branch@{information\_branch}}
+\index{information\_branch@{information\_branch}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{information\_branch()}{information\_branch()}}
+{\footnotesize\ttfamily void information\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Prints the information of the branch at the given position in the branch activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The branch activity to print the information from. \\
+\hline
+{\em pos} & The position of the branch in the branch activity.\\
+\hline
+\end{DoxyParams}
+Prints the information of the branch at the given position in the branch activity.
+
+This function prints the name of the branch and its state (active or inactive). The state is determined by checking the \textquotesingle{}state\textquotesingle{} attribute of the branch.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em pos} & The position of the branch in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the printf function to print the branch information. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__branch_8c_source_l00108}{108}} of file \mbox{\hyperlink{inputs__branch_8c_source}{inputs\+\_\+branch.\+c}}.
+
+\Hypertarget{inputs__branch_8h_abdd5e7487f42ac9d221fa46db1fef6de}\label{inputs__branch_8h_abdd5e7487f42ac9d221fa46db1fef6de} 
+\index{inputs\_branch.h@{inputs\_branch.h}!insert\_id\_branch@{insert\_id\_branch}}
+\index{insert\_id\_branch@{insert\_id\_branch}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{insert\_id\_branch()}{insert\_id\_branch()}}
+{\footnotesize\ttfamily int insert\+\_\+id\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Inserts an ID into the branch activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The branch activity to insert the ID into.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer indicating the success of the insertion. 
+\end{DoxyReturn}
+\Hypertarget{inputs__branch_8h_a6db633f2e5ee3121dfed621a23e700dd}\label{inputs__branch_8h_a6db633f2e5ee3121dfed621a23e700dd} 
+\index{inputs\_branch.h@{inputs\_branch.h}!search\_branch\_pos@{search\_branch\_pos}}
+\index{search\_branch\_pos@{search\_branch\_pos}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{search\_branch\_pos()}{search\_branch\_pos()}}
+{\footnotesize\ttfamily int search\+\_\+branch\+\_\+pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs,  }\item[{char \texorpdfstring{$\ast$}{*}}]{name\+\_\+branch }\end{DoxyParamCaption})}
+
+
+
+Searches for the position of the branch in the branch activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The branch activity to search in. \\
+\hline
+{\em name\+\_\+branch} & The name of the branch to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the branch in the branch activity.
+\end{DoxyReturn}
+Searches for the position of the branch in the branch activity.
+
+This function iterates over all the branches in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct and compares the given branch name with the name of each branch. If a match is found, it returns the position of the branch in the struct. If no match is found, it prints an error message and returns -\/1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em name\+\_\+branch} & The name of the branch to be searched.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the position of the branch if found, and -\/1 otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function uses the strcmp function to compare the branch names. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__branch_8c_source_l00062}{62}} of file \mbox{\hyperlink{inputs__branch_8c_source}{inputs\+\_\+branch.\+c}}.
+
+\Hypertarget{inputs__branch_8h_a8070ec9ae1bbc7bb925140c3360d074f}\label{inputs__branch_8h_a8070ec9ae1bbc7bb925140c3360d074f} 
+\index{inputs\_branch.h@{inputs\_branch.h}!used\_bracnh\_comp@{used\_bracnh\_comp}}
+\index{used\_bracnh\_comp@{used\_bracnh\_comp}!inputs\_branch.h@{inputs\_branch.h}}
+\doxysubsubsection{\texorpdfstring{used\_bracnh\_comp()}{used\_bracnh\_comp()}}
+{\footnotesize\ttfamily int used\+\_\+bracnh\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{char \texorpdfstring{$\ast$}{*}}]{name\+\_\+branch }\end{DoxyParamCaption})}
+
+
+
+Checks if the branch is used in the given companies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The companies to check in. \\
+\hline
+{\em name\+\_\+branch} & The name of the branch to check for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer indicating whether the branch is used in the companies.
+\end{DoxyReturn}
+Checks if the branch is used in the given companies.
+
+This function iterates over all the companies in the \doxylink{struct_companies}{Companies} struct and compares the given branch name with the branch name of each company. If a match is found, it prints a message indicating that the branch is being used by at least one company and returns 1. If no match is found, it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em name\+\_\+branch} & The name of the branch to be checked.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the branch is being used by any company, and 0 otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function uses the strcmp function to compare the branch names. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__branch_8c_source_l00087}{87}} of file \mbox{\hyperlink{inputs__branch_8c_source}{inputs\+\_\+branch.\+c}}.
+

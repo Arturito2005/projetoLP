@@ -1,0 +1,391 @@
+\doxysection{inputs\+\_\+geral.\+c File Reference}
+\hypertarget{inputs__geral_8c}{}\label{inputs__geral_8c}\index{inputs\_geral.c@{inputs\_geral.c}}
+
+
+File \doxylink{inputs__geral_8c}{inputs\+\_\+geral.\+c} contains functions that can be used in various parts of the code.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Clears the input buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8c_ac240ef6f312f499b9aff0e6381d97a08}{uppercase}} (char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em Converts a string to uppercase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8c_aa39cd337ece72af0da3f7df09c522ef8}{remove\+\_\+extra\+\_\+spaces}} (char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em Removes extra spaces from a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288}{read\+String}} (char \texorpdfstring{$\ast$}{*}string, unsigned int size, char \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Reads a string and removes extra spaces. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}{get\+Int}} (int min\+Value, int max\+Value, char \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Reads an integer value from the user that is within a range. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{inputs__geral_8c_a8fb1767df1e71af64fc13e5fbf4c6330}{get\+Char}} ()
+\begin{DoxyCompactList}\small\item\em Reads a character. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8c_a54c9da5d332c065776bc17c8072f4e09}{valid\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Checks if there is any active company with an active branch. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8c_ad01a8234298ac2cb534c4dae6972e7a9}{active\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Checks if there is any active company. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8c_a8e531ac33ef5023c7152d14ec1c0110a}{repet\+\_\+option}} (int op, char \texorpdfstring{$\ast$}{*}option, char \texorpdfstring{$\ast$}{*}structs)
+\begin{DoxyCompactList}\small\item\em This function performs the repetition of an option based on user input Then, it enters a do-\/while loop that continues until "{}rep"{} is \textquotesingle{}S\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}N\textquotesingle{} or \textquotesingle{}n\textquotesingle{}. Inside the loop, it uses a switch case structure to handle different cases based on the value of "{}op"{}. If "{}op"{} is 0, it prints a confirmation message. If "{}op"{} is 1, it prints a general message with "{}option"{} and "{}structs"{}. Then, it assigns a character value to "{}rep"{} using the "{}get\+Char()"{} function. If "{}rep"{} is a lowercase letter, it converts it to uppercase. If "{}rep"{} is not \textquotesingle{}S\textquotesingle{} or \textquotesingle{}N\textquotesingle{}, it prints an invalid option message. If "{}rep"{} is \textquotesingle{}S\textquotesingle{}, the function returns 0, and repeats the user\textquotesingle{}s option. If "{}rep"{} is \textquotesingle{}N\textquotesingle{}, the function returns 1. The loop continues until "{}rep"{} is \textquotesingle{}S\textquotesingle{} or \textquotesingle{}N\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8c_ad64d0b2161e4465d62f46f0b19219303}{compare\+\_\+nif}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int nif\+\_\+v)
+\begin{DoxyCompactList}\small\item\em Checks if the NIF (Fiscal Identification Number) provided by the user exists in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8c_aa9773f113f7a06f5c99507805648425a}{insert\+\_\+nif}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em This function prompts the user to enter a NIF (Fiscal Identification Number) and checks if it exists in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8c_a32bc1f93b697b28b628b105a0f02fd43}{fields\+\_\+user}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, int pos\+\_\+nif, int pos)
+\begin{DoxyCompactList}\small\item\em This function reads and validates the user\textquotesingle{}s email and username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8c_a1f7f728a4390e44779fa92ef11737a0e}{information\+\_\+classi}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int pos\+\_\+nif, int pos)
+\begin{DoxyCompactList}\small\item\em Prints the user\textquotesingle{}s name and the rating of a specific company. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File \doxylink{inputs__geral_8c}{inputs\+\_\+geral.\+c} contains functions that can be used in various parts of the code. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights Reserved under MIT License.
+\end{DoxyCopyright}
+
+
+In \doxylink{inputs__geral_8c}{inputs\+\_\+geral.\+c} there are functions that can be used in more than one .c file. 
+
+Definition in file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputs__geral_8c_ad01a8234298ac2cb534c4dae6972e7a9}\label{inputs__geral_8c_ad01a8234298ac2cb534c4dae6972e7a9} 
+\index{inputs\_geral.c@{inputs\_geral.c}!active\_comp@{active\_comp}}
+\index{active\_comp@{active\_comp}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{active\_comp()}{active\_comp()}}
+{\footnotesize\ttfamily int active\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Checks if there is any active company. 
+
+Checks if a company is active in the \doxylink{struct_companies}{Companies} struct.
+
+This function goes through the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct and counts how many are inactive. If all companies are inactive, the function returns 1, otherwise, it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies, to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if all companies are inactive, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00194}{194}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}\label{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d} 
+\index{inputs\_geral.c@{inputs\_geral.c}!cleanInputBuffer@{cleanInputBuffer}}
+\index{cleanInputBuffer@{cleanInputBuffer}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{cleanInputBuffer()}{cleanInputBuffer()}}
+{\footnotesize\ttfamily void clean\+Input\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the input buffer. 
+
+Cleans the input buffer.
+
+This function reads and discards all remaining characters in the input buffer. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00028}{28}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_ad64d0b2161e4465d62f46f0b19219303}\label{inputs__geral_8c_ad64d0b2161e4465d62f46f0b19219303} 
+\index{inputs\_geral.c@{inputs\_geral.c}!compare\_nif@{compare\_nif}}
+\index{compare\_nif@{compare\_nif}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{compare\_nif()}{compare\_nif()}}
+{\footnotesize\ttfamily int compare\+\_\+nif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{nif\+\_\+v }\end{DoxyParamCaption})}
+
+
+
+Checks if the NIF (Fiscal Identification Number) provided by the user exists in the \doxylink{struct_companies}{Companies} struct. 
+
+Compares a NIF with the NIFs in the \doxylink{struct_companies}{Companies} struct.
+
+It uses a loop to go through the entire \doxylink{struct_companies}{Companies} struct to check if the NIF of any of the companies stored in the struct is equal to the NIF entered by the user. If they are equal, it prints a message indicating that the entered NIF belongs to the company and returns the index \textquotesingle{}i\textquotesingle{} of the company in the struct. If "{}nif\+\_\+v"{} is not equal to the NIF of the current company and the loop has reached the last company in the struct, it prints an error message indicating that the NIF was not found and returns -\/1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies. \\
+\hline
+{\em nif\+\_\+v} & The NIF to be compared with the NIFs of the companies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the company if the NIF is found, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00269}{269}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a32bc1f93b697b28b628b105a0f02fd43}\label{inputs__geral_8c_a32bc1f93b697b28b628b105a0f02fd43} 
+\index{inputs\_geral.c@{inputs\_geral.c}!fields\_user@{fields\_user}}
+\index{fields\_user@{fields\_user}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{fields\_user()}{fields\_user()}}
+{\footnotesize\ttfamily void fields\+\_\+user (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{int}]{pos\+\_\+nif,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+This function reads and validates the user\textquotesingle{}s email and username. 
+
+Fills the fields of a user in the \doxylink{struct_companies}{Companies} struct.
+
+It first enters a do-\/while loop where it calls the "{}read\+String"{} function to read the user\textquotesingle{}s email. The loop continues until the "{}validation\+\_\+email"{} function returns 0, indicating that the entered email is valid. After the loop, it calls the "{}read\+String"{} function again to read the username. Both the username and the email are stored in the \doxylink{struct_companies}{Companies} struct in the \doxylink{struct_classification}{Classification} comp\+\_\+class field 
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies. \\
+\hline
+{\em pos\+\_\+nif} & The position of the specific company in the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct. \\
+\hline
+{\em pos} & The position of the specific user in the company. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00309}{309}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a8fb1767df1e71af64fc13e5fbf4c6330}\label{inputs__geral_8c_a8fb1767df1e71af64fc13e5fbf4c6330} 
+\index{inputs\_geral.c@{inputs\_geral.c}!getChar@{getChar}}
+\index{getChar@{getChar}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{getChar()}{getChar()}}
+{\footnotesize\ttfamily char get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads a character. 
+
+Gets a character from the user.
+
+This function reads a character from stdin and stores it in the value variable. Then, the \doxylink{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer()} function is called to clear the input buffer. The function returns the read character.
+
+\begin{DoxyReturn}{Returns}
+The character read from the user. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00154}{154}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}\label{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833} 
+\index{inputs\_geral.c@{inputs\_geral.c}!getInt@{getInt}}
+\index{getInt@{getInt}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{getInt()}{getInt()}}
+{\footnotesize\ttfamily int get\+Int (\begin{DoxyParamCaption}\item[{int}]{min\+Value,  }\item[{int}]{max\+Value,  }\item[{char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Reads an integer value from the user that is within a range. 
+
+Gets an integer from the user.
+
+This function displays a message to the user, reads an integer value from stdin and checks if the value is within the specified range. If the reading fails or if the read value is outside the range, an error message is displayed and the reading is repeated. The function continues to read until a valid value is provided by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Value} & The minimum value that the user can enter. \\
+\hline
+{\em max\+Value} & The maximum value that the user can enter. \\
+\hline
+{\em msg} & The message to be displayed to the user before reading the input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer value read from the user. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00134}{134}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a1f7f728a4390e44779fa92ef11737a0e}\label{inputs__geral_8c_a1f7f728a4390e44779fa92ef11737a0e} 
+\index{inputs\_geral.c@{inputs\_geral.c}!information\_classi@{information\_classi}}
+\index{information\_classi@{information\_classi}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{information\_classi()}{information\_classi()}}
+{\footnotesize\ttfamily void information\+\_\+classi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{pos\+\_\+nif,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Prints the user\textquotesingle{}s name and the rating of a specific company. 
+
+Displays information about a classification in the \doxylink{struct_companies}{Companies} struct.
+
+This function prints the user\textquotesingle{}s name and the rating of a specific company. The rating and the user\textquotesingle{}s name are identified by the position of the company in the array of ratings (comp\+\_\+class) of the struct companies.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all companies. \\
+\hline
+{\em pos\+\_\+nif} & Position of the company in the \textquotesingle{}companies\textquotesingle{} struct. \\
+\hline
+{\em pos} & Position of the rating in the array of ratings (comp\+\_\+class) of the struct companies. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00327}{327}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_aa9773f113f7a06f5c99507805648425a}\label{inputs__geral_8c_aa9773f113f7a06f5c99507805648425a} 
+\index{inputs\_geral.c@{inputs\_geral.c}!insert\_nif@{insert\_nif}}
+\index{insert\_nif@{insert\_nif}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{insert\_nif()}{insert\_nif()}}
+{\footnotesize\ttfamily int insert\+\_\+nif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+This function prompts the user to enter a NIF (Fiscal Identification Number) and checks if it exists in the \doxylink{struct_companies}{Companies} struct. 
+
+Inserts a NIF into the \doxylink{struct_companies}{Companies} struct.
+
+Then, it calls the "{}get\+Int"{} function to prompt the user to enter a NIF. Finally, it calls the "{}compare\+\_\+nif"{} function with \textquotesingle{}companies\textquotesingle{} and \textquotesingle{}nif\textquotesingle{} as parameters and returns the result of the compare\+\_\+nif function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the company if the NIF is found, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00290}{290}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288}\label{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288} 
+\index{inputs\_geral.c@{inputs\_geral.c}!readString@{readString}}
+\index{readString@{readString}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}}
+{\footnotesize\ttfamily void read\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{string,  }\item[{unsigned int}]{size,  }\item[{char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Reads a string and removes extra spaces. 
+
+Reads a string from the user.
+
+This function displays a message to the user, reads a string from stdin and stores it in the string variable. If the read string ends with a newline character, it is replaced by a null character. If the read string does not end with a newline character, the \doxylink{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer()} function is called to clear the input buffer. If the read string is empty, a message is displayed to the user and the reading is repeated. Finally, the \doxylink{inputs__geral_8h_aa39cd337ece72af0da3f7df09c522ef8}{remove\+\_\+extra\+\_\+spaces()} function is called to remove any extra spaces from the read string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string in which the user\textquotesingle{}s input should be stored. The string is passed by reference, therefore, the changes made in the function will affect the original string. \\
+\hline
+{\em size} & The maximum number of characters to be read, including the final null character. \\
+\hline
+{\em msg} & The message to be displayed to the user before reading the input. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00102}{102}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_aa39cd337ece72af0da3f7df09c522ef8}\label{inputs__geral_8c_aa39cd337ece72af0da3f7df09c522ef8} 
+\index{inputs\_geral.c@{inputs\_geral.c}!remove\_extra\_spaces@{remove\_extra\_spaces}}
+\index{remove\_extra\_spaces@{remove\_extra\_spaces}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{remove\_extra\_spaces()}{remove\_extra\_spaces()}}
+{\footnotesize\ttfamily void remove\+\_\+extra\+\_\+spaces (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+Removes extra spaces from a string. 
+
+This function goes through the string and removes all extra spaces. It removes spaces at the beginning of the string, at the end of the string, and multiple spaces between words.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string from which extra spaces should be removed. The string is passed by reference, therefore, the changes made in the function will affect the original string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00059}{59}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a8e531ac33ef5023c7152d14ec1c0110a}\label{inputs__geral_8c_a8e531ac33ef5023c7152d14ec1c0110a} 
+\index{inputs\_geral.c@{inputs\_geral.c}!repet\_option@{repet\_option}}
+\index{repet\_option@{repet\_option}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{repet\_option()}{repet\_option()}}
+{\footnotesize\ttfamily int repet\+\_\+option (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{char \texorpdfstring{$\ast$}{*}}]{option,  }\item[{char \texorpdfstring{$\ast$}{*}}]{structs }\end{DoxyParamCaption})}
+
+
+
+This function performs the repetition of an option based on user input Then, it enters a do-\/while loop that continues until "{}rep"{} is \textquotesingle{}S\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}N\textquotesingle{} or \textquotesingle{}n\textquotesingle{}. Inside the loop, it uses a switch case structure to handle different cases based on the value of "{}op"{}. If "{}op"{} is 0, it prints a confirmation message. If "{}op"{} is 1, it prints a general message with "{}option"{} and "{}structs"{}. Then, it assigns a character value to "{}rep"{} using the "{}get\+Char()"{} function. If "{}rep"{} is a lowercase letter, it converts it to uppercase. If "{}rep"{} is not \textquotesingle{}S\textquotesingle{} or \textquotesingle{}N\textquotesingle{}, it prints an invalid option message. If "{}rep"{} is \textquotesingle{}S\textquotesingle{}, the function returns 0, and repeats the user\textquotesingle{}s option. If "{}rep"{} is \textquotesingle{}N\textquotesingle{}, the function returns 1. The loop continues until "{}rep"{} is \textquotesingle{}S\textquotesingle{} or \textquotesingle{}N\textquotesingle{}. 
+
+Repeats an option.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operation code to determine the type of message to be printed. \\
+\hline
+{\em option} & A pointer to a character string representing the option. \\
+\hline
+{\em structs} & A pointer to a character string representing the structs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the repetition character is \textquotesingle{}S\textquotesingle{}, 1 if it is \textquotesingle{}N\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00223}{223}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_ac240ef6f312f499b9aff0e6381d97a08}\label{inputs__geral_8c_ac240ef6f312f499b9aff0e6381d97a08} 
+\index{inputs\_geral.c@{inputs\_geral.c}!uppercase@{uppercase}}
+\index{uppercase@{uppercase}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{uppercase()}{uppercase()}}
+{\footnotesize\ttfamily void uppercase (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+Converts a string to uppercase. 
+
+This function goes through each character of the string. If the first character of each word in the string is lowercase, it is converted to uppercase. (e.\+g., it receives "{}joao pedro"{} and transforms it into "{}\+Joao Pedro"{})
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to be converted to uppercase. The string is passed by reference, therefore, the changes made in the function will affect the original string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00040}{40}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8c_a54c9da5d332c065776bc17c8072f4e09}\label{inputs__geral_8c_a54c9da5d332c065776bc17c8072f4e09} 
+\index{inputs\_geral.c@{inputs\_geral.c}!valid\_comp@{valid\_comp}}
+\index{valid\_comp@{valid\_comp}!inputs\_geral.c@{inputs\_geral.c}}
+\doxysubsubsection{\texorpdfstring{valid\_comp()}{valid\_comp()}}
+{\footnotesize\ttfamily int valid\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Checks if there is any active company with an active branch. 
+
+Validates a company in the \doxylink{struct_companies}{Companies} struct.
+
+This function goes through the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct and counts how many are inactive or have their branches also inactive. If all companies are inactive or have an inactive branch, the function returns 1, otherwise, it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies, to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if all companies are inactive or have an inactive branch, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00170}{170}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+

@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['main_0',['main',['../main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.c']]],
+  ['manage_5fbranch_1',['manage_branch',['../op__admins_8c.html#a529621795c92f1caa4997c4415db0fab',1,'manage_branch(int *op_branch, Branch_Activity *branchs, Companies *companies):&#160;op_admins.c'],['../op__admins_8h.html#a529621795c92f1caa4997c4415db0fab',1,'manage_branch(int *op_branch, Branch_Activity *branchs, Companies *companies):&#160;op_admins.c']]],
+  ['manage_5fcat_2',['manage_cat',['../op__admins_8c.html#ae5adb1b1b690f1aec7795ad71ca78c33',1,'manage_cat(int *op_cat, Companies *companies, Branch_Activity *branchs):&#160;op_admins.c'],['../op__admins_8h.html#ae5adb1b1b690f1aec7795ad71ca78c33',1,'manage_cat(int *op_cat, Companies *companies, Branch_Activity *branchs):&#160;op_admins.c']]],
+  ['menu_5fadmin_3',['menu_admin',['../op__admins_8c.html#a13eb975900573e45a0c65c20ed81600f',1,'menu_admin(int *op_adm, int *op_cat, int *op_branch, int *op_report, Companies *companies, Branch_Activity *branchs, Search_comp search_comp):&#160;op_admins.c'],['../op__admins_8h.html#a13eb975900573e45a0c65c20ed81600f',1,'menu_admin(int *op_adm, int *op_cat, int *op_branch, int *op_report, Companies *companies, Branch_Activity *branchs, Search_comp search_comp):&#160;op_admins.c']]],
+  ['menu_5fuser_4',['menu_user',['../op__user_8c.html#a05ea2c2b5232892cc1cfd6c7ad9b908e',1,'menu_user(int *op_user, Companies *companies, Branch_Activity *branchs, Search_comp *search_comps):&#160;op_user.c'],['../op__user_8h.html#a05ea2c2b5232892cc1cfd6c7ad9b908e',1,'menu_user(int *op_user, Companies *companies, Branch_Activity *branchs, Search_comp *search_comps):&#160;op_user.c']]]
+];

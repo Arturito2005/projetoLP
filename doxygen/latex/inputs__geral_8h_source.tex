@@ -1,0 +1,70 @@
+\doxysection{inputs\+\_\+geral.\+h}
+\hypertarget{inputs__geral_8h_source}{}\label{inputs__geral_8h_source}\mbox{\hyperlink{inputs__geral_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ INPUTS\_GERAL\_H}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ INPUTS\_GERAL\_H}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{companies_8h}{companies.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{branchs_8h}{branchs.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00019}\mbox{\hyperlink{inputs__geral_8h_a35a8a571b374cc7adae7fe767b8f39f0}{00019}}\ \textcolor{preprocessor}{\#define\ INVALID\_VALUE\ "{}O\ número\ que\ introduziu\ não\ é\ válido\ (Introduza\ um\ numero\ de\ \%d\ a\ \%d)!\(\backslash\)n"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00020}\mbox{\hyperlink{inputs__geral_8h_a73d785e3416bde27fd672215b239d24d}{00020}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_NIF\ "{}Introduza\ o\ nif\ da\ empresa\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00022}\mbox{\hyperlink{inputs__geral_8h_ac0110c765db69c9ab502a230cf651c91}{00022}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_INSERT\ "{}inserir"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00023}\mbox{\hyperlink{inputs__geral_8h_ac3f4a95c9d71891c4506b6b5ce0dae10}{00023}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_EDIT\ "{}editar"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00024}\mbox{\hyperlink{inputs__geral_8h_a8ff45dc740ec3611521bcd4b4fb6ec91}{00024}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_CONSULT\ "{}consultar"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00025}\mbox{\hyperlink{inputs__geral_8h_ab5c2e85eeed313f21e47dd6d6a8028c5}{00025}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_DELET\ "{}apagar"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00027}\mbox{\hyperlink{inputs__geral_8h_aff8e2ecb55e422a776841a3cfb8bc9e5}{00027}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_RANK\ "{}outra\ classificação"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00028}\mbox{\hyperlink{inputs__geral_8h_acdadc1ddc8d2e657fce7cfc9beb52b56}{00028}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_COMMENT\ "{}outro\ comentario"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00029}\mbox{\hyperlink{inputs__geral_8h_acdd0c5d84b24a347dfa113b63f4a0d17}{00029}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_COMPANY\ "{}outra\ empresa"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00030}\mbox{\hyperlink{inputs__geral_8h_ae56335535f048fc2a89fc147eb7bfac2}{00030}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_BRANCH\ "{}outro\ ramo"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00032}\mbox{\hyperlink{inputs__geral_8h_a37d8c32b9b2cea7c63947d3b1f866a57}{00032}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_GENERAL\ "{}Deseja\ \%s\ \%s\ (S:\ Sim/\ N:\ Não)?\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00033}\mbox{\hyperlink{inputs__geral_8h_a2d4c299514262e9be642bd1474037d6a}{00033}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_CONFIRME\ "{}S:\ Sim/\ N:\ Não\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00035}\mbox{\hyperlink{inputs__geral_8h_afbf08fd15631527e239b514c3766ca6d}{00035}}\ \textcolor{preprocessor}{\#define\ MSG\_COMP\_WITH\_COMMENTARY\_DEL\ "{}Não\ é\ possível\ eliminar\ a\ empresa\ \%s,\ porque\ a\ mesma\ já\ possui\ \%d\ comentarios\ de\ utilizadores!\(\backslash\)n"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00036}\mbox{\hyperlink{inputs__geral_8h_af283e5e11cedb011f72eb12acf918a14}{00036}}\ \textcolor{preprocessor}{\#define\ MSG\_COMP\_WITH\_COMMENTARY\_ED\ "{}Só\ é\ possível\ editar\ o\ estado\ da\ empresa\ \%s,\ porque\ a\ mesma\ já\ possui\ \%d\ comentarios\ de\ utilizadores!\(\backslash\)n\ "{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00038}\mbox{\hyperlink{inputs__geral_8h_a38c25be29f9b729e29f5c07672034d2b}{00038}}\ \textcolor{preprocessor}{\#define\ MSG\_REP\_OP\_OCULT\_DEL\_COMMENT\ "{}Pretende\ eliminar\ ou\ ocultar\ comentario\ (Eliminar:\ 1/\ Ocultar:\ 2)-\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00039}\mbox{\hyperlink{inputs__geral_8h_a261e6bfcdb8ab0dc7cede3dd9d5d4454}{00039}}\ \textcolor{preprocessor}{\#define\ MSG\_POS\_COMMENT\ "{}Introduza\ o\ id\ do\ comentario\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00040}\mbox{\hyperlink{inputs__geral_8h_ad4c8fceb2eff1e017f0471a6d7132ddc}{00040}}\ \textcolor{preprocessor}{\#define\ MSG\_HIDE\_COMMENT\ "{}Estado\ do\ comentaio\ -\/-\/>\ \%s"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00041}\mbox{\hyperlink{inputs__geral_8h_a24844dce9a67370a536083987cdd36a6}{00041}}\ \textcolor{preprocessor}{\#define\ MSG\_OP\_HIDE\_COMMENT\ "{}Deseja\ ocultar\ ou\ desocultar\ o\ comentario\ (0:\ Ocultar\ /\ 1:Desocultar)?\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00043}\mbox{\hyperlink{inputs__geral_8h_a25821f8b5284520bfdf0bf19e89152a9}{00043}}\ \textcolor{preprocessor}{\#define\ VALUE\_HIDE\ 0\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00044}\mbox{\hyperlink{inputs__geral_8h_a754cbe7ec5e72988a300def0395a0b2f}{00044}}\ \textcolor{preprocessor}{\#define\ VALUE\_NOT\_HIDE\ 1\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00046}\mbox{\hyperlink{inputs__geral_8h_a314deecc2d4c2ecfc90c147b5b08dca4}{00046}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_USER\_NAME\ "{}Introduza\ o\ nome\ do\ utilizador\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00047}\mbox{\hyperlink{inputs__geral_8h_afa8ed37cccd576727deb6204f1041616}{00047}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_EMAIL\_USER\ "{}Introduza\ o\ email\ do\ utilizador\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00048}\mbox{\hyperlink{inputs__geral_8h_a20de4bc2b286cd8440615da3aa9837cf}{00048}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_TITLE\_COMMENT\ "{}Introduza\ o\ titulo\ do\ comentario\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00049}\mbox{\hyperlink{inputs__geral_8h_a4d60c057217442b6bb50a80002576843}{00049}}\ \textcolor{preprocessor}{\#define\ MSG\_INSER\_TEXT\_COMMENT\ "{}Introduza\ o\ texto\ do\ comentario\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00051}\mbox{\hyperlink{inputs__geral_8h_a1a874331884a5f958db72c4445b94eed}{00051}}\ \textcolor{preprocessor}{\#define\ MSG\_INSERT\_CLASSI\ "{}Introduza\ a\ calssificação\ da\ empresas\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00053}\mbox{\hyperlink{inputs__geral_8h_af9613ce149536349fd47dea87b2b8612}{00053}}\ \textcolor{preprocessor}{\#define\ MSG\_IMP\_OPERATION\_INSERT\_COMP\ "{}Ainda\ não\ foi\ criada\ nenhuma\ empresa,\ logo\ não\ é\ possivel\ \%s\ nenhuma\ empresa!\(\backslash\)n"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00055}\mbox{\hyperlink{inputs__geral_8h_a695dd637b37252af2a517ba8bae8d2c4}{00055}}\ \textcolor{preprocessor}{\#define\ STATE\_ACTIVE\ "{}Estado\ -\/-\/>\ Ativa\(\backslash\)n"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00056}\mbox{\hyperlink{inputs__geral_8h_a5dcbfcad8d6ba73bbf6fe2d08f3e3ae4}{00056}}\ \textcolor{preprocessor}{\#define\ STATE\_INACTIVE\ "{}Estado\ -\/-\/>\ Inativa\(\backslash\)n"{}\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00058}\mbox{\hyperlink{inputs__geral_8h_a26e3d4c1f6b64bd9e3f7632324fd177f}{00058}}\ \textcolor{preprocessor}{\#define\ POS\_CLASSI\ companies-\/>company[pos\_nif].cont\_classi\ }}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00063}00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00070}00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8h_ac240ef6f312f499b9aff0e6381d97a08}{uppercase}}(\textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00077}00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8h_aa39cd337ece72af0da3f7df09c522ef8}{remove\_extra\_spaces}}(\textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00086}00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8h_a23b09558cc791d82d0251b8cc10ae288}{readString}}(\textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{char}\ *msg);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00096}00096\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_aa7b5b8a79d5ded97fc99955d1f827833}{getInt}}(\textcolor{keywordtype}{int}\ minValue,\ \textcolor{keywordtype}{int}\ maxValue,\ \textcolor{keywordtype}{char}\ *msg);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00103}00103\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{inputs__geral_8h_a8fb1767df1e71af64fc13e5fbf4c6330}{getChar}}();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00111}00111\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_a54c9da5d332c065776bc17c8072f4e09}{valid\_comp}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00119}00119\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_ad01a8234298ac2cb534c4dae6972e7a9}{active\_comp}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00129}00129\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_a8e531ac33ef5023c7152d14ec1c0110a}{repet\_option}}(\textcolor{keywordtype}{int}\ op,\ \textcolor{keywordtype}{char}\ *option,\ \textcolor{keywordtype}{char}\ *structs);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00139}\mbox{\hyperlink{inputs__geral_8h_a152492680c654c18912dfeb86b85ce4a}{00139}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_a152492680c654c18912dfeb86b85ce4a}{branch\_active}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs,\ \textcolor{keywordtype}{int}\ pos\_nif);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00148}00148\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_ad64d0b2161e4465d62f46f0b19219303}{compare\_nif}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies,\ \textcolor{keywordtype}{int}\ nif\_v);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00156}00156\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8h_aa9773f113f7a06f5c99507805648425a}{insert\_nif}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00165}00165\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8h_a32bc1f93b697b28b628b105a0f02fd43}{fields\_user}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \textcolor{keywordtype}{int}\ pos\_nif,\ \textcolor{keywordtype}{int}\ pos);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00174}00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8h_a1f7f728a4390e44779fa92ef11737a0e}{information\_classi}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies,\ \textcolor{keywordtype}{int}\ pos\_nif,\ \textcolor{keywordtype}{int}\ pos);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8h_source_l00176}00176\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INPUTS\_GERAL\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

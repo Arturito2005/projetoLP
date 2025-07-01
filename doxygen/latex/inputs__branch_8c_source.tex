@@ -1,0 +1,63 @@
+\doxysection{inputs\+\_\+branch.\+c}
+\hypertarget{inputs__branch_8c_source}{}\label{inputs__branch_8c_source}\mbox{\hyperlink{inputs__branch_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{companies_8h}{companies.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__branch_8h}{inputs\_branch.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__geral_8h}{inputs\_geral.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00021}00021\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00037}\mbox{\hyperlink{inputs__branch_8c_af8f18a226aee1de19ad788e4a811b9e5}{00037}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__branch_8c_af8f18a226aee1de19ad788e4a811b9e5}{compare\_branch}}\ (\mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs,\ \textcolor{keywordtype}{char}\ *branch\_o)\ \{\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ branchs.\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(branch\_o,\ branchs.\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[i].\mbox{\hyperlink{struct_data___branch_a0c693a3127c9b5d01779d51b686df3fd}{name\_branch}})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ ramo\ de\ atividade\ ja\ existe!\(\backslash\)n"{}});\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00045}00045\ \ \ \ \ printf(\mbox{\hyperlink{branchs_8h_a945ad054d93f24cd86ebabb61a81887c}{INEX\_BRANCH}});}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00062}\mbox{\hyperlink{inputs__branch_8c_a6db633f2e5ee3121dfed621a23e700dd}{00062}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__branch_8c_a6db633f2e5ee3121dfed621a23e700dd}{search\_branch\_pos}}(\mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs,\ \textcolor{keywordtype}{char}\ *name\_branch)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ branchs.\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(name\_branch,\ branchs.\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[i].\mbox{\hyperlink{struct_data___branch_a0c693a3127c9b5d01779d51b686df3fd}{name\_branch}})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00069}00069\ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ ramo\ que\ introduziu\ não\ existe\ ou\ o\ ramo\ encontra-\/se\ inativo!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00087}\mbox{\hyperlink{inputs__branch_8c_a8070ec9ae1bbc7bb925140c3360d074f}{00087}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__branch_8c_a8070ec9ae1bbc7bb925140c3360d074f}{used\_bracnh\_comp}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies,\ \textcolor{keywordtype}{char}\ *name\_branch)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(name\_branch,\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_aa5dc2bfa3731e0eab22f0cee27e461a4}{branch}}.\mbox{\hyperlink{struct_data___branch_a0c693a3127c9b5d01779d51b686df3fd}{name\_branch}})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ ramo\ \%s\ já\ está\ a\ ser\ usado\ por\ pelo\ menos\ uma\ empresa!\(\backslash\)n"{}},\ name\_branch);}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00094}00094\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00108}\mbox{\hyperlink{inputs__branch_8c_aafd67ac96e6b5178a416e0f70385a41a}{00108}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__branch_8c_aafd67ac96e6b5178a416e0f70385a41a}{information\_branch}}(\mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs,\ \textcolor{keywordtype}{int}\ pos)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00109}00109\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nome\ do\ ramo\ -\/-\/>\ \%s\(\backslash\)n"{}},\ branchs.\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[pos].\mbox{\hyperlink{struct_data___branch_a0c693a3127c9b5d01779d51b686df3fd}{name\_branch}});}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00110}00110\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (branchs.\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[pos].\mbox{\hyperlink{struct_data___branch_a876b486d3a5241a126bd5751c5f70f79}{state}}\ ==\ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f}{ACTIVE}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ printf(\mbox{\hyperlink{inputs__geral_8h_a695dd637b37252af2a517ba8bae8d2c4}{STATE\_ACTIVE}});}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00113}00113\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ printf(\mbox{\hyperlink{inputs__geral_8h_a5dcbfcad8d6ba73bbf6fe2d08f3e3ae4}{STATE\_INACTIVE}});}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00128}\mbox{\hyperlink{inputs__branch_8c_ab71bd5aef9dadb1b6826cb16001e1f0f}{00128}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__branch_8c_ab71bd5aef9dadb1b6826cb16001e1f0f}{fields\_branch}}(\mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs,\ \textcolor{keywordtype}{int}\ pos)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00129}00129\ \ \ \ \ branchs-\/>\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}}[pos].\mbox{\hyperlink{struct_data___branch_a876b486d3a5241a126bd5751c5f70f79}{state}}\ =\ \mbox{\hyperlink{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}{getInt}}(0,\ 1,\ \mbox{\hyperlink{inputs__branch_8h_a0ba31c9c601e8c51599c5b69977a9553}{MSG\_INSERT\_STATE\_BRANCH}});}
+\DoxyCodeLine{\Hypertarget{inputs__branch_8c_source_l00130}00130\ \}}
+
+\end{DoxyCode}

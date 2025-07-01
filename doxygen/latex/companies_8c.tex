@@ -1,0 +1,210 @@
+\doxysection{companies.\+c File Reference}
+\hypertarget{companies_8c}{}\label{companies_8c}\index{companies.c@{companies.c}}
+
+
+File \doxylink{companies_8c}{companies.\+c}, contains the functions for managing companies.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}companies.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+file\+\_\+memory.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{companies_8c_ad19e13f0866de5cc825e1bced7bbba38}{add\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Adds companies to the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8c_a0eca070a14cc9422f420177bd9eff0ce}{delete\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Deletes companies from the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8c_a7ad630e5ccf562fc1dd91402eecd7fcb}{edit\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Edits companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8c_a829c4a3d78689c474b342fe868113082}{consult\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Consults companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8c_a2b67d5b5f301f80678ee3f060a24c7ef}{list\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Lists the companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{companies_8c_a807c63babb17c2df948c5153ebfa5062}{ocul\+\_\+del\+\_\+companies}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Hides or deletes comments from companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File \doxylink{companies_8c}{companies.\+c}, contains the functions for managing companies. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+This file contains all the necessary functions to manage companies in the program (Insert, Delete, Update, Consult, List) and also to delete/hide the comments of the companies. 
+
+Definition in file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{companies_8c_ad19e13f0866de5cc825e1bced7bbba38}\label{companies_8c_ad19e13f0866de5cc825e1bced7bbba38} 
+\index{companies.c@{companies.c}!add\_companies@{add\_companies}}
+\index{add\_companies@{add\_companies}!companies.c@{companies.c}}
+\doxysubsubsection{\texorpdfstring{add\_companies()}{add\_companies()}}
+{\footnotesize\ttfamily void add\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Adds companies to the \doxylink{struct_companies}{Companies} struct. 
+
+This function adds a new company to the \doxylink{struct_companies}{Companies} struct. The function checks if there are valid activity branches before adding the company. If the current capacity of the \doxylink{struct_companies}{Companies} struct is reached, the function reallocates memory to accommodate more companies. The function also initializes the company\textquotesingle{}s comments and ratings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that stores all activity branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print an error message and return if memory reallocation fails. 
+
+The function will print a message and return if there are no active activity branches. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00040}{40}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8c_a829c4a3d78689c474b342fe868113082}\label{companies_8c_a829c4a3d78689c474b342fe868113082} 
+\index{companies.c@{companies.c}!consult\_companies@{consult\_companies}}
+\index{consult\_companies@{consult\_companies}!companies.c@{companies.c}}
+\doxysubsubsection{\texorpdfstring{consult\_companies()}{consult\_companies()}}
+{\footnotesize\ttfamily void consult\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Consults companies in the \doxylink{struct_companies}{Companies} struct. 
+
+This function consults an existing company in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to consult one. If the company to be consulted is found, the function prints the company\textquotesingle{}s information, including comments and ratings. The function also calculates and prints the average of the company\textquotesingle{}s ratings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct that stores all companies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to consult. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00175}{175}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8c_a0eca070a14cc9422f420177bd9eff0ce}\label{companies_8c_a0eca070a14cc9422f420177bd9eff0ce} 
+\index{companies.c@{companies.c}!delete\_companies@{delete\_companies}}
+\index{delete\_companies@{delete\_companies}!companies.c@{companies.c}}
+\doxysubsubsection{\texorpdfstring{delete\_companies()}{delete\_companies()}}
+{\footnotesize\ttfamily void delete\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Deletes companies from the \doxylink{struct_companies}{Companies} struct. 
+
+This function deletes an existing company from the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to delete one. If the company to be deleted has no comments, the function asks the user for confirmation before proceeding with the deletion. If the company to be deleted has comments, the function prints a message and does not delete the company. After a company is deleted, the function saves the updated \doxylink{struct_companies}{Companies} struct to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the struct \doxylink{struct_companies}{Companies} that stores all companies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to delete. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00088}{88}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8c_a7ad630e5ccf562fc1dd91402eecd7fcb}\label{companies_8c_a7ad630e5ccf562fc1dd91402eecd7fcb} 
+\index{companies.c@{companies.c}!edit\_companies@{edit\_companies}}
+\index{edit\_companies@{edit\_companies}!companies.c@{companies.c}}
+\doxysubsubsection{\texorpdfstring{edit\_companies()}{edit\_companies()}}
+{\footnotesize\ttfamily void edit\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Edits companies in the \doxylink{struct_companies}{Companies} struct. 
+
+This function edits an existing company in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies and valid activity branches before attempting to edit a company. If the company to be edited has no comments, the function asks the user for confirmation before proceeding with the edit. If the company to be edited has comments, the function allows the user to change the state of the company. After a company is edited, the function saves the updated \doxylink{struct_companies}{Companies} struct to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that stores all activity branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to edit. 
+
+The function will print a message and return if there are no active activity branches. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00132}{132}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8c_a2b67d5b5f301f80678ee3f060a24c7ef}\label{companies_8c_a2b67d5b5f301f80678ee3f060a24c7ef} 
+\index{companies.c@{companies.c}!list\_companies@{list\_companies}}
+\index{list\_companies@{list\_companies}!companies.c@{companies.c}}
+\doxysubsubsection{\texorpdfstring{list\_companies()}{list\_companies()}}
+{\footnotesize\ttfamily void list\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Lists the companies in the \doxylink{struct_companies}{Companies} struct. 
+
+This function lists all existing companies in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to list. For each company, the function prints the company\textquotesingle{}s information, the total number of comments, and the average of the ratings.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct that stores all companies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to list. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00227}{227}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+
+\Hypertarget{companies_8c_a807c63babb17c2df948c5153ebfa5062}\label{companies_8c_a807c63babb17c2df948c5153ebfa5062} 
+\index{companies.c@{companies.c}!ocul\_del\_companies@{ocul\_del\_companies}}
+\index{ocul\_del\_companies@{ocul\_del\_companies}!companies.c@{companies.c}}
+\doxysubsubsection{\texorpdfstring{ocul\_del\_companies()}{ocul\_del\_companies()}}
+{\footnotesize\ttfamily void ocul\+\_\+del\+\_\+companies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Hides or deletes comments from companies in the \doxylink{struct_companies}{Companies} struct. 
+
+This function hides or deletes comments from an existing company in the \doxylink{struct_companies}{Companies} struct. The function checks if there are companies before attempting to hide or delete comments. If the company has comments, the function allows the user to choose between hiding or deleting a comment. If the user chooses to delete a comment, the function asks for confirmation before proceeding with the deletion. If the user chooses to hide a comment, the function allows the user to choose between hiding or unhiding the comment. After a comment is hidden or deleted, the function saves the updated \doxylink{struct_companies}{Companies} struct to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em branchs} & A pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that stores all activity branches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print a message and return if there are no companies to hide/delete comments. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{companies_8c_source_l00270}{270}} of file \mbox{\hyperlink{companies_8c_source}{companies.\+c}}.
+

@@ -1,0 +1,238 @@
+\doxysection{inputs\+\_\+comp.\+c File Reference}
+\hypertarget{inputs__comp_8c}{}\label{inputs__comp_8c}\index{inputs\_comp.c@{inputs\_comp.c}}
+
+
+File \doxylink{inputs__comp_8c}{inputs\+\_\+comp.\+c} with all the inputs of the companies.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{inputs__comp_8c_a53d7a6d24b48d5e3a65d4c0760922808}{exist\+\_\+comm}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Checks if there are comments in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__comp_8c_ac4d180d381826d64c37877b68822a6ed}{exist\+\_\+classi}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Checks if there is at least one company with ratings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__comp_8c_ab9ed4f87fe2758c9b7c51c9a715a6e44}{validation\+\_\+cod\+\_\+postal}} (char \texorpdfstring{$\ast$}{*}cod\+\_\+postal)
+\begin{DoxyCompactList}\small\item\em Checks if the postal code entered by the user is valid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__comp_8c_aeb4557427b837ea635abab806d272075}{information\+\_\+company}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int pos)
+\begin{DoxyCompactList}\small\item\em Displays information of a specific company. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__comp_8c_a5ef260d83d72ce5d32fc202e35e40c0f}{valids\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Checks if there is at least 1 active branch of activity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__comp_8c_ab01784e37c867e9521cc5ae6e0770641}{validation\+\_\+branch}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs, char \texorpdfstring{$\ast$}{*}name\+\_\+branch, int pos\+\_\+comp)
+\begin{DoxyCompactList}\small\item\em Validates whether the branch of activity entered by the user exists. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__comp_8c_aed7dbe8e695a6e833c8593578dcd4ff8}{fields\+\_\+company}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs, int pos)
+\begin{DoxyCompactList}\small\item\em Store and validates information about a specific company. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File \doxylink{inputs__comp_8c}{inputs\+\_\+comp.\+c} with all the inputs of the companies. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+In the \doxylink{inputs__comp_8c}{inputs\+\_\+comp.\+c} file, all the inputs used in the companies options are present. 
+
+Definition in file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputs__comp_8c_ac4d180d381826d64c37877b68822a6ed}\label{inputs__comp_8c_ac4d180d381826d64c37877b68822a6ed} 
+\index{inputs\_comp.c@{inputs\_comp.c}!exist\_classi@{exist\_classi}}
+\index{exist\_classi@{exist\_classi}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{exist\_classi()}{exist\_classi()}}
+{\footnotesize\ttfamily int exist\+\_\+classi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Checks if there is at least one company with ratings. 
+
+Checks if there are classifications in the \doxylink{struct_companies}{Companies} struct.
+
+This function goes through all the companies in the \doxylink{struct_companies}{Companies} struct. If it finds a company that has one or more ratings, it returns 0. If none of the companies have ratings, it returns 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct that contains all the companies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if there is at least one company with one or more ratings, otherwise it returns 1. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00051}{51}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+\Hypertarget{inputs__comp_8c_a53d7a6d24b48d5e3a65d4c0760922808}\label{inputs__comp_8c_a53d7a6d24b48d5e3a65d4c0760922808} 
+\index{inputs\_comp.c@{inputs\_comp.c}!exist\_comm@{exist\_comm}}
+\index{exist\_comm@{exist\_comm}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{exist\_comm()}{exist\_comm()}}
+{\footnotesize\ttfamily int exist\+\_\+comm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Checks if there are comments in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if there are comments, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00031}{31}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+\Hypertarget{inputs__comp_8c_aed7dbe8e695a6e833c8593578dcd4ff8}\label{inputs__comp_8c_aed7dbe8e695a6e833c8593578dcd4ff8} 
+\index{inputs\_comp.c@{inputs\_comp.c}!fields\_company@{fields\_company}}
+\index{fields\_company@{fields\_company}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{fields\_company()}{fields\_company()}}
+{\footnotesize\ttfamily void fields\+\_\+company (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Store and validates information about a specific company. 
+
+Fills the fields of a company in the \doxylink{struct_companies}{Companies} struct.
+
+This function is used in the \textquotesingle{}add\+\_\+companies\textquotesingle{} and \textquotesingle{}edit\+\_\+companies\textquotesingle{} voids, where its main objective is to take advantage of the common fields of these options and reduce the size of the code. This function collects various pieces of information about a company, validates them, and stores them in the \doxylink{struct_companies}{Companies} struct. It prompts the user to enter the company\textquotesingle{}s name, category, branch of activity, address (street, locality and postal code), and state (active or inactive). It also validates the branch of activity and postal code using the \textquotesingle{}validation\+\_\+branch\textquotesingle{} and \textquotesingle{}validation\+\_\+cod\+\_\+postal\textquotesingle{} functions, respectively. If the entered branch of activity or postal code is not valid, it will continue to prompt the user to enter a valid one. After all the information is collected and validated, it calls the \textquotesingle{}information\+\_\+company\textquotesingle{} function to display the information of the newly created company.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct that contains all companies. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that contains all branches of activity. \\
+\hline
+{\em pos} & The position of the company in the \doxylink{struct_companies}{Companies} struct that should be updated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00215}{215}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+\Hypertarget{inputs__comp_8c_aeb4557427b837ea635abab806d272075}\label{inputs__comp_8c_aeb4557427b837ea635abab806d272075} 
+\index{inputs\_comp.c@{inputs\_comp.c}!information\_company@{information\_company}}
+\index{information\_company@{information\_company}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{information\_company()}{information\_company()}}
+{\footnotesize\ttfamily void information\+\_\+company (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Displays information of a specific company. 
+
+Displays information about a company.
+
+This function takes the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct and a position index. It prints detailed information about the company at the provided position. The information includes the NIF, the name, the category, the field of activity, the address (street, locality, postal code), and the status of the company (Active or Inactive).
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} data struct. \\
+\hline
+{\em pos} & The position of the company in the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00110}{110}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+\Hypertarget{inputs__comp_8c_ab01784e37c867e9521cc5ae6e0770641}\label{inputs__comp_8c_ab01784e37c867e9521cc5ae6e0770641} 
+\index{inputs\_comp.c@{inputs\_comp.c}!validation\_branch@{validation\_branch}}
+\index{validation\_branch@{validation\_branch}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{validation\_branch()}{validation\_branch()}}
+{\footnotesize\ttfamily int validation\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs,  }\item[{char \texorpdfstring{$\ast$}{*}}]{name\+\_\+branch,  }\item[{int}]{pos\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Validates whether the branch of activity entered by the user exists. 
+
+Validates a branch in the \doxylink{struct_companies}{Companies} struct.
+
+This function checks if the provided branch of activity exists in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct (strcmp(name\+\_\+branch, branchs.\+branch\mbox{[}i\mbox{]}.name\+\_\+branch) == 0) and if it is active (branchs.\+branch\mbox{[}i\mbox{]}.state == ACTIVE). If it finds a branch of activity that matches the provided name and is active, it assigns this branch to the company at the provided position in the \doxylink{struct_companies}{Companies} strcut and returns the index of the branch. If the branch of activity is not found, it prints a message indicating that the branch does not exist or is inactive and returns -\/1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the struct \doxylink{struct_companies}{Companies} that contains all companies. \\
+\hline
+{\em branchs} & The struct \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} that contains all branches of activity. \\
+\hline
+{\em name\+\_\+branch} & The name of the branch of activity provided by the user as a string. \\
+\hline
+{\em pos\+\_\+comp} & The position of the company in the \doxylink{struct_companies}{Companies} strcut that should be validated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the index of the branch if the branch of activity is valid, otherwise it returns -\/1. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00188}{188}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+\Hypertarget{inputs__comp_8c_ab9ed4f87fe2758c9b7c51c9a715a6e44}\label{inputs__comp_8c_ab9ed4f87fe2758c9b7c51c9a715a6e44} 
+\index{inputs\_comp.c@{inputs\_comp.c}!validation\_cod\_postal@{validation\_cod\_postal}}
+\index{validation\_cod\_postal@{validation\_cod\_postal}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{validation\_cod\_postal()}{validation\_cod\_postal()}}
+{\footnotesize\ttfamily int validation\+\_\+cod\+\_\+postal (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{cod\+\_\+postal }\end{DoxyParamCaption})}
+
+
+
+Checks if the postal code entered by the user is valid. 
+
+Validates the postal code.
+
+This function checks if the provided postal code meets the necessary criteria. The valid postal code must have 8 characters, where it cannot contain spaces between them, the first 4 characters and the last 3 are numbers, and there must be a hyphen between the fourth and fifth character.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod\+\_\+postal} & The postal code provided by the user as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if the postal code is valid, otherwise it returns 1 and prints an appropriate error message. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00070}{70}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+
+\Hypertarget{inputs__comp_8c_a5ef260d83d72ce5d32fc202e35e40c0f}\label{inputs__comp_8c_a5ef260d83d72ce5d32fc202e35e40c0f} 
+\index{inputs\_comp.c@{inputs\_comp.c}!valids\_branch@{valids\_branch}}
+\index{valids\_branch@{valids\_branch}!inputs\_comp.c@{inputs\_comp.c}}
+\doxysubsubsection{\texorpdfstring{valids\_branch()}{valids\_branch()}}
+{\footnotesize\ttfamily int valids\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Checks if there is at least 1 active branch of activity. 
+
+Validates the branches in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.
+
+This function goes through all branches of activity in the \textquotesingle{}\doxylink{struct_branch___activity}{Branch\+\_\+\+Activity}\textquotesingle{} struct. If it finds an active branch of activity (branchs.\+branch\mbox{[}i\mbox{]}.state == ACTIVE), it returns 0. If none of the branches of activity are active, it prints a message indicating that there are no active branches and returns 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The \textquotesingle{}\doxylink{struct_branch___activity}{Branch\+\_\+\+Activity}\textquotesingle{} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 if there is at least one active branch of activity, otherwise it returns 1. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__comp_8c_source_l00162}{162}} of file \mbox{\hyperlink{inputs__comp_8c_source}{inputs\+\_\+comp.\+c}}.
+

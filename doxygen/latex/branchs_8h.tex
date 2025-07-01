@@ -1,0 +1,290 @@
+\doxysection{branchs.\+h File Reference}
+\hypertarget{branchs_8h}{}\label{branchs_8h}\index{branchs.h@{branchs.h}}
+
+
+Header file with all the structs of the program and functions for the management of branchs.  
+
+
+{\ttfamily \#include "{}companies.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{branchs_8h_ac7d3d9782bb040ef0ab697dabb4bb303}{MSG\+\_\+\+INSERT\+\_\+\+NAME\+\_\+\+BRANCH}}~"{}Introduza o nome do ramo -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{branchs_8h_a4afda0336ef3e3954674c0f1b1eeffd2}{MSG\+\_\+\+EL\+\_\+\+CNF}}~"{}Tem certeza que deseja eliminar o \%s \%s? "{}
+\item 
+\#define \mbox{\hyperlink{branchs_8h_a945ad054d93f24cd86ebabb61a81887c}{INEX\+\_\+\+BRANCH}}~"{}O ramo de atividade introduzido não existe!\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{branchs_8h_a84ca4a0addf71147f78b3e5922be27ff}{MSG\+\_\+\+IMP\+\_\+\+OPERATION\+\_\+\+INSERT\+\_\+\+BRANCH}}~"{}Ainda não foi criado nenhum ramo, logo não é possivel \%s nenhum ramo!\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{branchs_8h_ae070bb69136b2c23e08ea67d62ef2460}{BRANCH\+\_\+\+NOT\+\_\+\+FOUND}}~"{}O ramo não foi encontrado!"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{branchs_8h_a7bc34e3657d9e7b9dfffa6b08ac6f33a}{add\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Adds a new branch of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{branchs_8h_a1eb3a9ef5d5f96373507b4fd77e28f74}{delete\+\_\+branchs}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Deletes an existing branch of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{branchs_8h_a6a296c4fbb7285a85667222f379aed43}{edit\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Edits an existing branch of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{branchs_8h_a0ea5f43d0f34f34f6d637b39f3a4f033}{branch\+\_\+list}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Lists all branches of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{branchs_8h_a6c0b87b9cf61a42ed609ee1cab750f0c}{consult\+\_\+branch}} (\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs)
+\begin{DoxyCompactList}\small\item\em Consults a specific branch of activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file with all the structs of the program and functions for the management of branchs. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+In this header file, you can find all the defined functions and texts, used in the \doxylink{branchs_8c}{branchs.\+c} file 
+
+Definition in file \mbox{\hyperlink{branchs_8h_source}{branchs.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{branchs_8h_ae070bb69136b2c23e08ea67d62ef2460}\label{branchs_8h_ae070bb69136b2c23e08ea67d62ef2460} 
+\index{branchs.h@{branchs.h}!BRANCH\_NOT\_FOUND@{BRANCH\_NOT\_FOUND}}
+\index{BRANCH\_NOT\_FOUND@{BRANCH\_NOT\_FOUND}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{BRANCH\_NOT\_FOUND}{BRANCH\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#define BRANCH\+\_\+\+NOT\+\_\+\+FOUND~"{}O ramo não foi encontrado!"{}}
+
+Defines the message to standardize the mesage that the branch was not found. 
+
+Definition at line \mbox{\hyperlink{branchs_8h_source_l00022}{22}} of file \mbox{\hyperlink{branchs_8h_source}{branchs.\+h}}.
+
+\Hypertarget{branchs_8h_a945ad054d93f24cd86ebabb61a81887c}\label{branchs_8h_a945ad054d93f24cd86ebabb61a81887c} 
+\index{branchs.h@{branchs.h}!INEX\_BRANCH@{INEX\_BRANCH}}
+\index{INEX\_BRANCH@{INEX\_BRANCH}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{INEX\_BRANCH}{INEX\_BRANCH}}
+{\footnotesize\ttfamily \#define INEX\+\_\+\+BRANCH~"{}O ramo de atividade introduzido não existe!\textbackslash{}n"{}}
+
+Defines the message that the branch introduced doesn\textquotesingle{}t exist. 
+
+Definition at line \mbox{\hyperlink{branchs_8h_source_l00020}{20}} of file \mbox{\hyperlink{branchs_8h_source}{branchs.\+h}}.
+
+\Hypertarget{branchs_8h_a4afda0336ef3e3954674c0f1b1eeffd2}\label{branchs_8h_a4afda0336ef3e3954674c0f1b1eeffd2} 
+\index{branchs.h@{branchs.h}!MSG\_EL\_CNF@{MSG\_EL\_CNF}}
+\index{MSG\_EL\_CNF@{MSG\_EL\_CNF}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_EL\_CNF}{MSG\_EL\_CNF}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+EL\+\_\+\+CNF~"{}Tem certeza que deseja eliminar o \%s \%s? "{}}
+
+Defines the message to request the user\textquotesingle{}s when confirming the deletion of an item in the program.\+The placeholders s s are replaced by the specific details of the item during runtime. 
+
+Definition at line \mbox{\hyperlink{branchs_8h_source_l00019}{19}} of file \mbox{\hyperlink{branchs_8h_source}{branchs.\+h}}.
+
+\Hypertarget{branchs_8h_a84ca4a0addf71147f78b3e5922be27ff}\label{branchs_8h_a84ca4a0addf71147f78b3e5922be27ff} 
+\index{branchs.h@{branchs.h}!MSG\_IMP\_OPERATION\_INSERT\_BRANCH@{MSG\_IMP\_OPERATION\_INSERT\_BRANCH}}
+\index{MSG\_IMP\_OPERATION\_INSERT\_BRANCH@{MSG\_IMP\_OPERATION\_INSERT\_BRANCH}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_IMP\_OPERATION\_INSERT\_BRANCH}{MSG\_IMP\_OPERATION\_INSERT\_BRANCH}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+IMP\+\_\+\+OPERATION\+\_\+\+INSERT\+\_\+\+BRANCH~"{}Ainda não foi criado nenhum ramo, logo não é possivel \%s nenhum ramo!\textbackslash{}n"{}}
+
+Defines the message to standardize the error message when trying to perform operations on branches before any branches have been created. 
+
+Definition at line \mbox{\hyperlink{branchs_8h_source_l00021}{21}} of file \mbox{\hyperlink{branchs_8h_source}{branchs.\+h}}.
+
+\Hypertarget{branchs_8h_ac7d3d9782bb040ef0ab697dabb4bb303}\label{branchs_8h_ac7d3d9782bb040ef0ab697dabb4bb303} 
+\index{branchs.h@{branchs.h}!MSG\_INSERT\_NAME\_BRANCH@{MSG\_INSERT\_NAME\_BRANCH}}
+\index{MSG\_INSERT\_NAME\_BRANCH@{MSG\_INSERT\_NAME\_BRANCH}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_NAME\_BRANCH}{MSG\_INSERT\_NAME\_BRANCH}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+NAME\+\_\+\+BRANCH~"{}Introduza o nome do ramo -\/-\/$>$"{}}
+
+Defines the message to request the name branch. 
+
+Definition at line \mbox{\hyperlink{branchs_8h_source_l00018}{18}} of file \mbox{\hyperlink{branchs_8h_source}{branchs.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{branchs_8h_a7bc34e3657d9e7b9dfffa6b08ac6f33a}\label{branchs_8h_a7bc34e3657d9e7b9dfffa6b08ac6f33a} 
+\index{branchs.h@{branchs.h}!add\_branch@{add\_branch}}
+\index{add\_branch@{add\_branch}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{add\_branch()}{add\_branch()}}
+{\footnotesize\ttfamily void add\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Adds a new branch of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+This function allows adding a new branch of activity. If the current number of branches equals the size of the allocated memory for branches, the function doubles the size of the allocated memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function does not return anything, but modifies the struct passed as a parameter. 
+
+The function assumes that the pointer passed as a parameter is valid and is not NULL. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{branchs_8c_source_l00037}{37}} of file \mbox{\hyperlink{branchs_8c_source}{branchs.\+c}}.
+
+\Hypertarget{branchs_8h_a0ea5f43d0f34f34f6d637b39f3a4f033}\label{branchs_8h_a0ea5f43d0f34f34f6d637b39f3a4f033} 
+\index{branchs.h@{branchs.h}!branch\_list@{branch\_list}}
+\index{branch\_list@{branch\_list}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{branch\_list()}{branch\_list()}}
+{\footnotesize\ttfamily void branch\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Lists all branches of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+Lists all branches of activity.
+
+This function iterates over all the branches in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. If there are no branches, it prints a message indicating that branches need to be inserted before they can be listed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will print the total number of branches and then list each branch one by one. 
+
+For each branch, it will print the branch number and then call the information\+\_\+branch function to print the details of the branch. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{branchs_8c_source_l00179}{179}} of file \mbox{\hyperlink{branchs_8c_source}{branchs.\+c}}.
+
+\Hypertarget{branchs_8h_a6c0b87b9cf61a42ed609ee1cab750f0c}\label{branchs_8h_a6c0b87b9cf61a42ed609ee1cab750f0c} 
+\index{branchs.h@{branchs.h}!consult\_branch@{consult\_branch}}
+\index{consult\_branch@{consult\_branch}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{consult\_branch()}{consult\_branch()}}
+{\footnotesize\ttfamily void consult\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Consults a specific branch of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+Consults a specific branch of activity.
+
+This function allows the user to consult the details of a branch. The user is prompted to enter the name of the branch they wish to consult. If the branch is found, its details are printed. The function will continue to prompt the user to consult branches until the user chooses to stop.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will prompt the user to enter the name of the branch they wish to consult. 
+
+If the branch is found, it will print the details of the branch by calling the information\+\_\+branch function. 
+
+The function will continue to prompt the user to consult branches until the user chooses to stop. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{branchs_8c_source_l00204}{204}} of file \mbox{\hyperlink{branchs_8c_source}{branchs.\+c}}.
+
+\Hypertarget{branchs_8h_a1eb3a9ef5d5f96373507b4fd77e28f74}\label{branchs_8h_a1eb3a9ef5d5f96373507b4fd77e28f74} 
+\index{branchs.h@{branchs.h}!delete\_branchs@{delete\_branchs}}
+\index{delete\_branchs@{delete\_branchs}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{delete\_branchs()}{delete\_branchs()}}
+{\footnotesize\ttfamily void delete\+\_\+branchs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Deletes an existing branch of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+Deletes an existing branch of activity.
+
+This function allows deleting an existing branch of activity. If the branch is not being used by any company, it can be deleted. Otherwise, the function will not delete the branch. If deleted, it shifts the array to remove the branch and updates the branch count.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function does not return anything, but modifies the struct passed as parameters. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{branchs_8c_source_l00070}{70}} of file \mbox{\hyperlink{branchs_8c_source}{branchs.\+c}}.
+
+\Hypertarget{branchs_8h_a6a296c4fbb7285a85667222f379aed43}\label{branchs_8h_a6a296c4fbb7285a85667222f379aed43} 
+\index{branchs.h@{branchs.h}!edit\_branch@{edit\_branch}}
+\index{edit\_branch@{edit\_branch}!branchs.h@{branchs.h}}
+\doxysubsubsection{\texorpdfstring{edit\_branch()}{edit\_branch()}}
+{\footnotesize\ttfamily void edit\+\_\+branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Edits an existing branch of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+Edits an existing branch of activity.
+
+This function allows the user to edit the details of a branch. If the branch is not being used by any company, all details of the branch can be edited. However, if the branch is being used by a company, only the state of the branch can be edited.
+
+
+\begin{DoxyParams}{Parameters}
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function will prompt the user to enter the name of the branch they wish to edit. 
+
+If the branch is found and is not being used by any company, the user will be asked to confirm their decision to edit the branch. 
+
+If confirmed, the user can then edit the name and other details of the branch. 
+
+If the branch is being used by a company, the user will only be able to edit the state of the branch. 
+
+The function will continue to prompt the user to edit branches until the user chooses to stop. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{branchs_8c_source_l00120}{120}} of file \mbox{\hyperlink{branchs_8c_source}{branchs.\+c}}.
+

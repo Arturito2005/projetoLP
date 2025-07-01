@@ -1,0 +1,77 @@
+\doxysection{main.\+c}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{op__admins_8h}{op\_admins.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{op__user_8h}{op\_user.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{companies_8h}{companies.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{branchs_8h}{branchs.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__user_8h}{inputs\_user.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__comp_8h}{inputs\_comp.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__geral_8h}{inputs\_geral.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__file__memory_8h}{inputs\_file\_memory.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}\mbox{\hyperlink{main_8c_a0c2ee18e90882b485177a754e59000b9}{00033}}\ \textcolor{preprocessor}{\#define\ MIN\_OP\_MAIN\ 1\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}\mbox{\hyperlink{main_8c_ae70eff7d9a3953e5977235a47e5d3074}{00034}}\ \textcolor{preprocessor}{\#define\ MAX\_OP\_MAIN\ 4\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}\mbox{\hyperlink{main_8c_a6a1f528e57a82930f2b9f614616d8bbb}{00036}}\ \textcolor{preprocessor}{\#define\ MSG\_MENU\_MAIN\ "{}Introduza\ uma\ opção\ (1:\ Administrador/\ 2:\ Utilizador/\ 3:\ Guardar\ dados/\ 4:\ Sair\ da\ aplicação)\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}\mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00061}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{int}\ op\ =\ 0,\ op\_adm\ =\ 0,\ op\_util\ =\ 0,\ op\_cat\ =\ 0,\ op\_branch\ =\ 0,\ op\_report\ =\ 0,\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{struct_companies}{Companies}}\ companies\ =\ \{.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}}\ =\ 0,\ .size\_company\ =\ 1\};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ branchs\ =\ \{.\mbox{\hyperlink{struct_branch___activity_a8727bf695ca5db02207cb20d08f8797b}{cont\_branch}}\ =\ 0,\ .size\_branch\ =\ 1\};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{struct_search__comp}{Search\_comp}}\ \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}}\ =\ \{.\mbox{\hyperlink{struct_search__comp_a82494171f02faf01e14a3eaf40429f2d}{cont\_name}}\ =\ 0,\ .cont\_category\ =\ 0,\ .cont\_loc\ =\ 0\};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_a50dfabc824a8692a181638a22c35b06e}{load\_file}}(\&companies,\ \&branchs,\ \&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{while}\ (op\ !=\ 4\ \&\&\ op\_adm\ !=\ 5\ \&\&\ op\_util\ !=\ 5\ \&\&\ op\_cat\ !=\ 8\ \&\&\ op\_report\ !=\ 5\ \&\&\ op\_branch\ !=\ 7)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Menu\ principal\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ op\ =\ \mbox{\hyperlink{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}{getInt}}(\mbox{\hyperlink{main_8c_a0c2ee18e90882b485177a754e59000b9}{MIN\_OP\_MAIN}},\ \mbox{\hyperlink{main_8c_ae70eff7d9a3953e5977235a47e5d3074}{MAX\_OP\_MAIN}},\ \mbox{\hyperlink{main_8c_a6a1f528e57a82930f2b9f614616d8bbb}{MSG\_MENU\_MAIN}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (op)\ \{\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{op__admins_8c_a13eb975900573e45a0c65c20ed81600f}{menu\_admin}}(\&op\_adm,\ \&op\_cat,\ \&op\_branch,\ \&op\_report,\ \&companies,\ \&branchs,\ \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}}\ >\ 0\ \&\&\ \mbox{\hyperlink{inputs__geral_8c_a54c9da5d332c065776bc17c8072f4e09}{valid\_comp}}(companies)\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{op__user_8c_a05ea2c2b5232892cc1cfd6c7ad9b908e}{menu\_user}}(\&op\_util,\ \&companies,\ \&branchs,\ \&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ainda\ não\ existem\ empresas,\ ou\ as\ empresas\ estão\ inativas!\ Logo\ não\ é\ possível\ aceder\ as\ opções\ do\ utilizador!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f}{save\_file\_comp}}(\&companies);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86}{save\_file\_branchs}}(\&branchs);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047}{save\_search\_comp}}(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Opção\ inválida!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100\ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_a79732699653e0d318db1767fd777696f}{save\_file\_comp}}(\&companies);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00103}00103\ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_a6442270bbcaf1f5b37c99b4726838e86}{save\_file\_branchs}}(\&branchs);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00104}00104\ \ \ \ \ \mbox{\hyperlink{inputs__file__memory_8c_af0319a334b810b5ffc04577ab6009047}{save\_search\_comp}}(\&\mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00105}00105\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ free(companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a2d9adf82d5d6038a1df117377cf9039a}{comment}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ free(companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00110}00110\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00111}00111\ \ \ \ \ free(companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00112}00112\ \ \ \ \ free(branchs.\mbox{\hyperlink{struct_branch___activity_a58fd773c9dd03ffc93373111a0ae0e81}{branch}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00113}00113\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{return}\ (EXIT\_SUCCESS);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00115}00115\ \}}
+
+\end{DoxyCode}

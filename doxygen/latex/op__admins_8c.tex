@@ -1,0 +1,183 @@
+\doxysection{op\+\_\+admins.\+c File Reference}
+\hypertarget{op__admins_8c}{}\label{op__admins_8c}\index{op\_admins.c@{op\_admins.c}}
+
+
+File \doxylink{op__admins_8c}{op\+\_\+admins.\+c}, contains the admin menu and its sub-\/menus.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}op\+\_\+admins.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+{\ttfamily \#include "{}reports.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{op__admins_8c_ae5adb1b1b690f1aec7795ad71ca78c33}{manage\+\_\+cat}} (int \texorpdfstring{$\ast$}{*}op\+\_\+cat, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Company catalog management menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__admins_8c_a529621795c92f1caa4997c4415db0fab}{manage\+\_\+branch}} (int \texorpdfstring{$\ast$}{*}op\+\_\+branch, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Manages the operations related to branches of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__admins_8c_a97db7d971404c81efced0af5fc47671d}{view\+\_\+reports}} (int \texorpdfstring{$\ast$}{*}op\+\_\+report, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Reports menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__admins_8c_a13eb975900573e45a0c65c20ed81600f}{menu\+\_\+admin}} (int \texorpdfstring{$\ast$}{*}op\+\_\+adm, int \texorpdfstring{$\ast$}{*}op\+\_\+cat, int \texorpdfstring{$\ast$}{*}op\+\_\+branch, int \texorpdfstring{$\ast$}{*}op\+\_\+report, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Administrator\textquotesingle{}s menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File \doxylink{op__admins_8c}{op\+\_\+admins.\+c}, contains the admin menu and its sub-\/menus. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+This file contains the administrator’s menu and its corresponding sub-\/menus (Company catalog menu, branches menu and reports menu) 
+
+Definition in file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{op__admins_8c_a529621795c92f1caa4997c4415db0fab}\label{op__admins_8c_a529621795c92f1caa4997c4415db0fab} 
+\index{op\_admins.c@{op\_admins.c}!manage\_branch@{manage\_branch}}
+\index{manage\_branch@{manage\_branch}!op\_admins.c@{op\_admins.c}}
+\doxysubsubsection{\texorpdfstring{manage\_branch()}{manage\_branch()}}
+{\footnotesize\ttfamily void manage\+\_\+branch (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+branch,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Manages the operations related to branches of activity. 
+
+Manages the branches of activity.
+
+The operations include adding a branch, deleting a branch, editing a branch, listing all branches, and consulting a specific branch. The operations are performed by a menu based in the user option, it starts with a while cicle, that have all the options to perform various operations related to branchs of activity, go back to the previous menu, and finish the program.
+
+The first option allow the user to add a branch of activity The second option allow the user to delete a branch of activity The third option allow the user to edit a branch of activity The fourth option allow the user to list all the existing branchs of activity The fifth option allow the user to list all the existing branchs of activity The sixth option allow the user to go back to the previous menu The seventh option allow the user to end the program If the user enters a different number, the program print option invalid and repeat the while cicle
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+branch} & Pointer to an integer that represents the operation chosen by the user. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} structure that represents the branches of activity. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} structure that represents the companies. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00104}{104}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+\Hypertarget{op__admins_8c_ae5adb1b1b690f1aec7795ad71ca78c33}\label{op__admins_8c_ae5adb1b1b690f1aec7795ad71ca78c33} 
+\index{op\_admins.c@{op\_admins.c}!manage\_cat@{manage\_cat}}
+\index{manage\_cat@{manage\_cat}!op\_admins.c@{op\_admins.c}}
+\doxysubsubsection{\texorpdfstring{manage\_cat()}{manage\_cat()}}
+{\footnotesize\ttfamily void manage\+\_\+cat (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+cat,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Company catalog management menu. 
+
+Manages the catalog of companies and branches of activity.
+
+This function provides a menu to manage the company catalog.
+
+This option contains a while loop, which only ends when the user selects the option to exit the program or return to the previous menu (administrator menu). Within the while loop, a message is presented for the menu options and then the user is asked to enter an option. Option 1 allows the creation of a company, option 2 allows the deletion of a company, option 3 allows editing a company, option 4 allows listing all created companies, option 5 consults the data of a company, option 6 deletes/hides a comment from a company, options 6 and 7 end the while loop, with option 6 returning to the administrator menu and 7 ending the program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+cat} & Pointer to an integer that stores the catalog menu choice. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct that contains the data of all companies. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that contains the data of all branches. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00038}{38}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+\Hypertarget{op__admins_8c_a13eb975900573e45a0c65c20ed81600f}\label{op__admins_8c_a13eb975900573e45a0c65c20ed81600f} 
+\index{op\_admins.c@{op\_admins.c}!menu\_admin@{menu\_admin}}
+\index{menu\_admin@{menu\_admin}!op\_admins.c@{op\_admins.c}}
+\doxysubsubsection{\texorpdfstring{menu\_admin()}{menu\_admin()}}
+{\footnotesize\ttfamily void menu\+\_\+admin (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+adm,  }\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+cat,  }\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+branch,  }\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+report,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Administrator\textquotesingle{}s menu. 
+
+Manages the admin menu.
+
+This function provides 3 distinct reports on the user\textquotesingle{}s use of the options.
+
+This option contains a while loop, which only ends when the user selects the option to exit the program or return to the previous menu (administrator\textquotesingle{}s menu). Within the while loop, a message is displayed for the administrator\textquotesingle{}s menu options and then the user is asked to enter an option. Option 1 redirects the user to the company catalog management menu, option 2 redirects the user to the activity branch management menu and option 3 redirects the user to the reports menu. Options 4 and 5 end the while loop, with option 4 returning to the main menu and option 5 closing the program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+adm} & Pointer to the administrator\textquotesingle{}s option. \\
+\hline
+{\em op\+\_\+cat} & Pointer to the category option. \\
+\hline
+{\em op\+\_\+branch} & Pointer to the activity branch option. \\
+\hline
+{\em op\+\_\+report} & Pointer to the reports option. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em search\+\_\+comp} & \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The user can only access the reports menu if there is at least one company with its active status, or if a search for a company has already been carried out by the user\textquotesingle{}s option. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00237}{237}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+\Hypertarget{op__admins_8c_a97db7d971404c81efced0af5fc47671d}\label{op__admins_8c_a97db7d971404c81efced0af5fc47671d} 
+\index{op\_admins.c@{op\_admins.c}!view\_reports@{view\_reports}}
+\index{view\_reports@{view\_reports}!op\_admins.c@{op\_admins.c}}
+\doxysubsubsection{\texorpdfstring{view\_reports()}{view\_reports()}}
+{\footnotesize\ttfamily void view\+\_\+reports (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+report,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Reports menu. 
+
+Views the reports of companies and searches.
+
+This function provides 3 distinct reports on the user\textquotesingle{}s use of the options.
+
+This option contains a while loop, which only ends when the user selects the option to exit the program or return to the previous menu (administrator menu). Within the while loop, a message is presented for the menu options and then the user is asked to enter an option. Option 1 creates a report on the classification of companies, option 2 creates a report on the comments of companies, option 3 creates a report on the search options of companies, options 4 and 5 end the while loop, with option 4 returning to the administrator menu and 5 ending the program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+report} & Pointer to an integer that stores the user\textquotesingle{}s report menu choice. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct that contains the data of all companies. \\
+\hline
+{\em search\+\_\+comp} & \doxylink{struct_search__comp}{Search\+\_\+comp} struct, which contains the total counters of each company search option.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is only possible to access the classification report if there is at least one company with one or more ratings. 
+
+It is only possible to access the comments report if there is at least one company with one or more comments. 
+
+It is only possible to access the search report if the user has already searched for at least one company. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00167}{167}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+

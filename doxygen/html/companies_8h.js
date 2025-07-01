@@ -1,0 +1,57 @@
+var companies_8h =
+[
+    [ "Search_comp", "struct_search__comp.html", "struct_search__comp" ],
+    [ "Data_User", "struct_data___user.html", "struct_data___user" ],
+    [ "Classification", "struct_classification.html", "struct_classification" ],
+    [ "Comments", "struct_comments.html", "struct_comments" ],
+    [ "Data_Branch", "struct_data___branch.html", "struct_data___branch" ],
+    [ "Branch_Activity", "struct_branch___activity.html", "struct_branch___activity" ],
+    [ "Data_companies", "struct_data__companies.html", "struct_data__companies" ],
+    [ "Companies", "struct_companies.html", "struct_companies" ],
+    [ "ERROR_MSG_NIF_NOT_FIND", "companies_8h.html#a5d46e62c74f86a4859b634bca1ab2617", null ],
+    [ "MAX_CATEGORY", "companies_8h.html#a48a7acb6850168cf4ee361f21741951f", null ],
+    [ "MAX_VALUE_NIF", "companies_8h.html#ae13e239eb58852372039e69c548e4d51", null ],
+    [ "MIN_CATEGORY", "companies_8h.html#a1c7fa236130f79df5237a12640ed43d2", null ],
+    [ "MIN_VALUE_NIF", "companies_8h.html#a948086a7ecc0d1e8547fefc1f6300a48", null ],
+    [ "MSG_INSERT_CATEGORY_COMPANY", "companies_8h.html#a5671e84f02e81bac726ec80c83837560", null ],
+    [ "MSG_INSERT_COD_POSTAL_COMPANY", "companies_8h.html#a968f4c1f8293fd89ce16fbaa2181fc6f", null ],
+    [ "MSG_INSERT_LOC_COMPANY", "companies_8h.html#a510c274fe3a5daa840608bd5f6b417a8", null ],
+    [ "MSG_INSERT_NAME_COMAPNY", "companies_8h.html#aabc323b2b215d845015811c849190aa7", null ],
+    [ "MSG_INSERT_NIF_COMPANY", "companies_8h.html#a00f3f39f888ac40959d84025ff5cb928", null ],
+    [ "MSG_INSERT_ROAD_COMPANY", "companies_8h.html#abfa672abc204d6863b6de84540a76b58", null ],
+    [ "MSG_INSERT_STATE_COMPANY", "companies_8h.html#a76c7337d985d5b07de46d7ab038327e0", null ],
+    [ "POS_COMENT", "companies_8h.html#a5a6115e6b4b122c14c6f1d3393cbdf54", null ],
+    [ "SIZE_CATEGORY", "companies_8h.html#ae5f5b5d78d6c085d8ad94144100142c4", null ],
+    [ "SIZE_COD_POS", "companies_8h.html#a755ed272b0176e22c933b4623f80271f", null ],
+    [ "SIZE_EMAIL", "companies_8h.html#a5c8530d423a8a17bc84937d5f568e55f", null ],
+    [ "SIZE_LOC", "companies_8h.html#aca1cde1c4cb1defdd1c509d20dacf279", null ],
+    [ "SIZE_MAX_EMAIL", "companies_8h.html#a39dbd54c443fa719ad1fc9129154810c", null ],
+    [ "SIZE_MIN_EMAIL", "companies_8h.html#aefed403d5a68a9f73fe66b784d3e49bb", null ],
+    [ "SIZE_NAME_BRANCH", "companies_8h.html#a6768bf6f369cbebbd1f38341a84e4026", null ],
+    [ "SIZE_NAME_COMP", "companies_8h.html#a0535c9c0b5831c0ab2bb413a11f508a7", null ],
+    [ "SIZE_ROAD", "companies_8h.html#aab174c65bed8df778a7abef8da5599b8", null ],
+    [ "SIZE_TEXT", "companies_8h.html#a030cb2fa4e90214b6a9ea5b9d8135afb", null ],
+    [ "SIZE_TITLE", "companies_8h.html#a3d277f5a5dec260aa85c464f96800b9e", null ],
+    [ "SIZE_USER", "companies_8h.html#a47c9e0048d1aada7c32107a2ca81eda5", null ],
+    [ "categories", "companies_8h.html#a6f5cbf57c3ca5e6c08887516b0b20359", [
+      [ "MICRO", "companies_8h.html#a6f5cbf57c3ca5e6c08887516b0b20359a44fead913cf8397fe4cf15b7c8962a8f", null ],
+      [ "SMALL_BUSINESS", "companies_8h.html#a6f5cbf57c3ca5e6c08887516b0b20359ade3826ee8c45faa2a6eb354ae1620640", null ],
+      [ "PME", "companies_8h.html#a6f5cbf57c3ca5e6c08887516b0b20359a6d2e0d14bacd7aea16f4739b89d4b463", null ],
+      [ "BIG_COMPANY", "companies_8h.html#a6f5cbf57c3ca5e6c08887516b0b20359a1a3d07ca49173a7075bbca7ffe07d10b", null ],
+      [ "LIMITED_SOCIETY", "companies_8h.html#a6f5cbf57c3ca5e6c08887516b0b20359a48383f0ddd960740834865bbb010c226", null ]
+    ] ],
+    [ "Hide", "companies_8h.html#a6ddf544a529a7b2b424dc981b1e28a5a", [
+      [ "HIDE", "companies_8h.html#a6ddf544a529a7b2b424dc981b1e28a5aa882790f9beae78847942fc92a067ad46", null ],
+      [ "NOT_HIDE", "companies_8h.html#a6ddf544a529a7b2b424dc981b1e28a5aab2dcb868aa4a6f4a6a60f691f808bb66", null ]
+    ] ],
+    [ "State", "companies_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8", [
+      [ "ACTIVE", "companies_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a33cf1d8ef1d06ee698a7fabf40eb3a7f", null ],
+      [ "INACTIVE", "companies_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6", null ]
+    ] ],
+    [ "add_companies", "companies_8h.html#ad19e13f0866de5cc825e1bced7bbba38", null ],
+    [ "consult_companies", "companies_8h.html#a829c4a3d78689c474b342fe868113082", null ],
+    [ "delete_companies", "companies_8h.html#a0eca070a14cc9422f420177bd9eff0ce", null ],
+    [ "edit_companies", "companies_8h.html#a7ad630e5ccf562fc1dd91402eecd7fcb", null ],
+    [ "list_companies", "companies_8h.html#a2b67d5b5f301f80678ee3f060a24c7ef", null ],
+    [ "ocul_del_companies", "companies_8h.html#a807c63babb17c2df948c5153ebfa5062", null ]
+];

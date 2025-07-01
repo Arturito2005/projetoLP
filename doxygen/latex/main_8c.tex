@@ -1,0 +1,115 @@
+\doxysection{main.\+c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
+
+
+This C program allows the management of companies and user reviews and comments.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}op\+\_\+admins.\+h"{}}\newline
+{\ttfamily \#include "{}op\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}companies.\+h"{}}\newline
+{\ttfamily \#include "{}branchs.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+file\+\_\+memory.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a0c2ee18e90882b485177a754e59000b9}{MIN\+\_\+\+OP\+\_\+\+MAIN}}~1
+\item 
+\#define \mbox{\hyperlink{main_8c_ae70eff7d9a3953e5977235a47e5d3074}{MAX\+\_\+\+OP\+\_\+\+MAIN}}~4
+\item 
+\#define \mbox{\hyperlink{main_8c_a6a1f528e57a82930f2b9f614616d8bbb}{MSG\+\_\+\+MENU\+\_\+\+MAIN}}~"{}Introduza uma opção (1\+: Administrador/ 2\+: Utilizador/ 3\+: Guardar dados/ 4\+: Sair da aplicação) -\/-\/$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main file of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This C program allows the management of companies and user reviews and comments. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights Reserved. MIT Licensed.
+\end{DoxyCopyright}
+
+
+This program consists of managing companies, and their respective branches of activity, by the administrator, in addition to allowing users to search, rate, and comment on companies. In addition to managing companies, administrators also have access to 3 distinct reports on the use of user options by them, where one of the reports is about the ratings assigned to companies, another about the comments and even about which search option was most used.
+
+\begin{DoxyNote}{Note}
+The management of companies and branches of activity is carried out through a CRUD system (Create, Read, Update, Delete) 
+\end{DoxyNote}
+
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8c_ae70eff7d9a3953e5977235a47e5d3074}\label{main_8c_ae70eff7d9a3953e5977235a47e5d3074} 
+\index{main.c@{main.c}!MAX\_OP\_MAIN@{MAX\_OP\_MAIN}}
+\index{MAX\_OP\_MAIN@{MAX\_OP\_MAIN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_OP\_MAIN}{MAX\_OP\_MAIN}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+OP\+\_\+\+MAIN~4}
+
+Defines the value of the last option of the main menu. 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00034}{34}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a0c2ee18e90882b485177a754e59000b9}\label{main_8c_a0c2ee18e90882b485177a754e59000b9} 
+\index{main.c@{main.c}!MIN\_OP\_MAIN@{MIN\_OP\_MAIN}}
+\index{MIN\_OP\_MAIN@{MIN\_OP\_MAIN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_OP\_MAIN}{MIN\_OP\_MAIN}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+OP\+\_\+\+MAIN~1}
+
+Defines the value of the first option of the main menu. 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00033}{33}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a6a1f528e57a82930f2b9f614616d8bbb}\label{main_8c_a6a1f528e57a82930f2b9f614616d8bbb} 
+\index{main.c@{main.c}!MSG\_MENU\_MAIN@{MSG\_MENU\_MAIN}}
+\index{MSG\_MENU\_MAIN@{MSG\_MENU\_MAIN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MSG\_MENU\_MAIN}{MSG\_MENU\_MAIN}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+MENU\+\_\+\+MAIN~"{}Introduza uma opção (1\+: Administrador/ 2\+: Utilizador/ 3\+: Guardar dados/ 4\+: Sair da aplicação) -\/-\/$>$"{}}
+
+Defines the text of the main menu of the program. 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00036}{36}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main file of the program. 
+
+In main, all the integer variables of the program\textquotesingle{}s menu options are declared\+: op, op\+\_\+adm, op\+\_\+util, op\+\_\+cat, op\+\_\+branch and op\+\_\+report, along with the integer variable i. The structs and their counters and size are also initialized\+: the \doxylink{struct_companies}{Companies} struct companies, with its field cont\+\_\+comp at 0 and size\+\_\+company at 1, the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct branchs with its cont\+\_\+branc at 0 and size\+\_\+branch at 1 and the \doxylink{struct_search__comp}{Search\+\_\+comp} struct search\+\_\+comp and its fields cont\+\_\+name at 0, cont\+\_\+category at 0 and cont\+\_\+loc at 0. After initializing the variables, the void load\+\_\+file is executed which allocates memory for some variables of the companies and branchs structs, in addition to loading all the data stored in the file of the companies, branchs and search\+\_\+comp structs. After load\+\_\+files, a while loop is initialized that only ends when the option to exit the program is selected in any of the menus of the application. Within the while loop, a message appears warning that we are in the main menu and shows all the options of it, in addition to asking the user to enter one of the 4 menu options. After entering the option, a switch is executed that if the selected option is 1 the user is directed to the menu of the administrator, if the option is 2 it is directed to the option of the users, if it is 3 all the data stored in the 3 previously mentioned structs are saved in a file, and if the option 4 is selected the program is closed, but before closing the program all the information of the program is saved in a file and all the dynamically allocated memory is freed.
+
+\begin{DoxyReturn}{Returns}
+int Returns EXIT\+\_\+\+SUCCESS upon successful execution. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00061}{61}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

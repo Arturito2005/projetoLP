@@ -1,0 +1,162 @@
+\doxysection{op\+\_\+user.\+c File Reference}
+\hypertarget{op__user_8c}{}\label{op__user_8c}\index{op\_user.c@{op\_user.c}}
+
+
+\doxylink{op__user_8c}{op\+\_\+user.\+c} file, User menu and companies management functions.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}op\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+file\+\_\+memory.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}search\+\_\+comps)
+\begin{DoxyCompactList}\small\item\em Searches for companies in the \doxylink{struct_companies}{Companies} struct based on user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__user_8c_a47c38afe61c61beb8a41bd5affe5c7c8}{rank\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Ranks companies in the \doxylink{struct_companies}{Companies} struct based on user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__user_8c_a7124714a85be46e67c3d7ab7b980d1ec}{comment\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Allows users to comment on companies in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__user_8c_a05ea2c2b5232892cc1cfd6c7ad9b908e}{menu\+\_\+user}} (int \texorpdfstring{$\ast$}{*}op\+\_\+user, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}search\+\_\+comps)
+\begin{DoxyCompactList}\small\item\em Displays a menu for the user and performs actions based on the user\textquotesingle{}s choice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{op__user_8c}{op\+\_\+user.\+c} file, User menu and companies management functions. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed. 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+This \doxylink{op__user_8c}{op\+\_\+user.\+c} file contains the user menu and all its options (Search company, Rate company and Comment company) 
+
+Definition in file \mbox{\hyperlink{op__user_8c_source}{op\+\_\+user.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{op__user_8c_a7124714a85be46e67c3d7ab7b980d1ec}\label{op__user_8c_a7124714a85be46e67c3d7ab7b980d1ec} 
+\index{op\_user.c@{op\_user.c}!comment\_comp@{comment\_comp}}
+\index{comment\_comp@{comment\_comp}!op\_user.c@{op\_user.c}}
+\doxysubsubsection{\texorpdfstring{comment\_comp()}{comment\_comp()}}
+{\footnotesize\ttfamily void comment\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Allows users to comment on companies in the \doxylink{struct_companies}{Companies} struct. 
+
+Function to comment on companies.
+
+This function prompts the user to comment on a company. If the company and its branch are both active, it allows the user to comment on the company. The comment information is then saved to a file. If the company or its branch is inactive, it prints an error message. If there are no companies, it prints a message indicating that companies need to be created before they can be commented on.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the insert\+\_\+nif, read\+String, validation\+\_\+email, information\+\_\+comments, repet\+\_\+option, and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__user_8c_source_l00130}{130}} of file \mbox{\hyperlink{op__user_8c_source}{op\+\_\+user.\+c}}.
+
+\Hypertarget{op__user_8c_a05ea2c2b5232892cc1cfd6c7ad9b908e}\label{op__user_8c_a05ea2c2b5232892cc1cfd6c7ad9b908e} 
+\index{op\_user.c@{op\_user.c}!menu\_user@{menu\_user}}
+\index{menu\_user@{menu\_user}!op\_user.c@{op\_user.c}}
+\doxysubsubsection{\texorpdfstring{menu\_user()}{menu\_user()}}
+{\footnotesize\ttfamily void menu\+\_\+user (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+user,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}}]{search\+\_\+comps }\end{DoxyParamCaption})}
+
+
+
+Displays a menu for the user and performs actions based on the user\textquotesingle{}s choice. 
+
+Function to display the user menu and handle user operations.
+
+This function welcomes the user and prompts them to choose an option from the menu. Depending on the option chosen, it calls the appropriate function to search for companies, rank companies, or comment on companies. If the user chooses to return to the main menu, it prints a message and exits the loop. If the user enters an invalid option, it prints an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+user} & Pointer to an integer that holds the user\textquotesingle{}s menu choice. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em search\+\_\+comps} & Pointer to the \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the get\+Int and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__user_8c_source_l00190}{190}} of file \mbox{\hyperlink{op__user_8c_source}{op\+\_\+user.\+c}}.
+
+\Hypertarget{op__user_8c_a47c38afe61c61beb8a41bd5affe5c7c8}\label{op__user_8c_a47c38afe61c61beb8a41bd5affe5c7c8} 
+\index{op\_user.c@{op\_user.c}!rank\_comp@{rank\_comp}}
+\index{rank\_comp@{rank\_comp}!op\_user.c@{op\_user.c}}
+\doxysubsubsection{\texorpdfstring{rank\_comp()}{rank\_comp()}}
+{\footnotesize\ttfamily void rank\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Ranks companies in the \doxylink{struct_companies}{Companies} struct based on user input. 
+
+Function to rank companies.
+
+This function prompts the user to rank a company. If the company and its branch are both active, it allows the user to rank the company. The ranking information is then saved to a file. If the company or its branch is inactive, it prints an error message. If there are no companies, it prints a message indicating that companies need to be inserted before they can be ranked.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the insert\+\_\+nif, fields\+\_\+user, get\+Int, information\+\_\+classi, repet\+\_\+option, and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__user_8c_source_l00082}{82}} of file \mbox{\hyperlink{op__user_8c_source}{op\+\_\+user.\+c}}.
+
+\Hypertarget{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}\label{op__user_8c_a9893a99c08dfe5046e293645a92d0f34} 
+\index{op\_user.c@{op\_user.c}!search\_comp@{search\_comp}}
+\index{search\_comp@{search\_comp}!op\_user.c@{op\_user.c}}
+\doxysubsubsection{\texorpdfstring{search\_comp()}{search\_comp()}}
+{\footnotesize\ttfamily void search\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \texorpdfstring{$\ast$}{*}}]{search\+\_\+comps }\end{DoxyParamCaption})}
+
+
+
+Searches for companies in the \doxylink{struct_companies}{Companies} struct based on user input. 
+
+Function to search for companies.
+
+This function prompts the user to choose a search option. Depending on the option chosen, it calls the appropriate function to search for companies by name, category, or locality. It keeps track of the number of searches performed for each option in the \doxylink{struct_search__comp}{Search\+\_\+comp} struct. After each search, it saves the updated \doxylink{struct_search__comp}{Search\+\_\+comp} struct. to a file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em search\+\_\+comps} & Pointer to the \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the get\+Int function to get the search option from the user, and the repet\+\_\+option function to ask the user if they want to perform another search. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__user_8c_source_l00033}{33}} of file \mbox{\hyperlink{op__user_8c_source}{op\+\_\+user.\+c}}.
+

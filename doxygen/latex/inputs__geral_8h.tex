@@ -1,0 +1,863 @@
+\doxysection{inputs\+\_\+geral.\+h File Reference}
+\hypertarget{inputs__geral_8h}{}\label{inputs__geral_8h}\index{inputs\_geral.h@{inputs\_geral.h}}
+
+
+Header file inputs general.  
+
+
+{\ttfamily \#include "{}companies.\+h"{}}\newline
+{\ttfamily \#include "{}branchs.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a35a8a571b374cc7adae7fe767b8f39f0}{INVALID\+\_\+\+VALUE}}~"{}O número que introduziu não é válido (Introduza um numero de \%d a \%d)!\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a73d785e3416bde27fd672215b239d24d}{MSG\+\_\+\+INSERT\+\_\+\+NIF}}~"{}Introduza o nif da empresa -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_ac0110c765db69c9ab502a230cf651c91}{MSG\+\_\+\+REP\+\_\+\+INSERT}}~"{}inserir"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_ac3f4a95c9d71891c4506b6b5ce0dae10}{MSG\+\_\+\+REP\+\_\+\+EDIT}}~"{}editar"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a8ff45dc740ec3611521bcd4b4fb6ec91}{MSG\+\_\+\+REP\+\_\+\+CONSULT}}~"{}consultar"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_ab5c2e85eeed313f21e47dd6d6a8028c5}{MSG\+\_\+\+REP\+\_\+\+DELET}}~"{}apagar"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_aff8e2ecb55e422a776841a3cfb8bc9e5}{MSG\+\_\+\+REP\+\_\+\+RANK}}~"{}outra classificação"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_acdadc1ddc8d2e657fce7cfc9beb52b56}{MSG\+\_\+\+REP\+\_\+\+COMMENT}}~"{}outro comentario"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_acdd0c5d84b24a347dfa113b63f4a0d17}{MSG\+\_\+\+REP\+\_\+\+COMPANY}}~"{}outra empresa"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_ae56335535f048fc2a89fc147eb7bfac2}{MSG\+\_\+\+REP\+\_\+\+BRANCH}}~"{}outro ramo"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a37d8c32b9b2cea7c63947d3b1f866a57}{MSG\+\_\+\+REP\+\_\+\+GENERAL}}~"{}Deseja \%s \%s (S\+: Sim/ N\+: Não)? -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a2d4c299514262e9be642bd1474037d6a}{MSG\+\_\+\+REP\+\_\+\+CONFIRME}}~"{}S\+: Sim/ N\+: Não -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_afbf08fd15631527e239b514c3766ca6d}{MSG\+\_\+\+COMP\+\_\+\+WITH\+\_\+\+COMMENTARY\+\_\+\+DEL}}~"{}Não é possível eliminar a empresa \%s, porque a mesma já possui \%d comentarios de utilizadores!\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_af283e5e11cedb011f72eb12acf918a14}{MSG\+\_\+\+COMP\+\_\+\+WITH\+\_\+\+COMMENTARY\+\_\+\+ED}}~"{}Só é possível editar o estado da empresa \%s, porque a mesma já possui \%d comentarios de utilizadores!\textbackslash{}n "{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a38c25be29f9b729e29f5c07672034d2b}{MSG\+\_\+\+REP\+\_\+\+OP\+\_\+\+OCULT\+\_\+\+DEL\+\_\+\+COMMENT}}~"{}Pretende eliminar ou ocultar comentario (Eliminar\+: 1/ Ocultar\+: 2)-\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a261e6bfcdb8ab0dc7cede3dd9d5d4454}{MSG\+\_\+\+POS\+\_\+\+COMMENT}}~"{}Introduza o id do comentario -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_ad4c8fceb2eff1e017f0471a6d7132ddc}{MSG\+\_\+\+HIDE\+\_\+\+COMMENT}}~"{}Estado do comentaio -\/-\/$>$ \%s"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a24844dce9a67370a536083987cdd36a6}{MSG\+\_\+\+OP\+\_\+\+HIDE\+\_\+\+COMMENT}}~"{}Deseja ocultar ou desocultar o comentario (0\+: Ocultar / 1\+:Desocultar)? -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a25821f8b5284520bfdf0bf19e89152a9}{VALUE\+\_\+\+HIDE}}~0
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a754cbe7ec5e72988a300def0395a0b2f}{VALUE\+\_\+\+NOT\+\_\+\+HIDE}}~1
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a314deecc2d4c2ecfc90c147b5b08dca4}{MSG\+\_\+\+INSERT\+\_\+\+USER\+\_\+\+NAME}}~"{}Introduza o nome do utilizador -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_afa8ed37cccd576727deb6204f1041616}{MSG\+\_\+\+INSERT\+\_\+\+EMAIL\+\_\+\+USER}}~"{}Introduza o email do utilizador -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a20de4bc2b286cd8440615da3aa9837cf}{MSG\+\_\+\+INSERT\+\_\+\+TITLE\+\_\+\+COMMENT}}~"{}Introduza o titulo do comentario -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a4d60c057217442b6bb50a80002576843}{MSG\+\_\+\+INSER\+\_\+\+TEXT\+\_\+\+COMMENT}}~"{}Introduza o texto do comentario -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a1a874331884a5f958db72c4445b94eed}{MSG\+\_\+\+INSERT\+\_\+\+CLASSI}}~"{}Introduza a calssificação da empresas -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_af9613ce149536349fd47dea87b2b8612}{MSG\+\_\+\+IMP\+\_\+\+OPERATION\+\_\+\+INSERT\+\_\+\+COMP}}~"{}Ainda não foi criada nenhuma empresa, logo não é possivel \%s nenhuma empresa!\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a695dd637b37252af2a517ba8bae8d2c4}{STATE\+\_\+\+ACTIVE}}~"{}Estado -\/-\/$>$ Ativa\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a5dcbfcad8d6ba73bbf6fe2d08f3e3ae4}{STATE\+\_\+\+INACTIVE}}~"{}Estado -\/-\/$>$ Inativa\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{inputs__geral_8h_a26e3d4c1f6b64bd9e3f7632324fd177f}{POS\+\_\+\+CLASSI}}~companies-\/$>$company\mbox{[}pos\+\_\+nif\mbox{]}.cont\+\_\+classi
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Cleans the input buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8h_ac240ef6f312f499b9aff0e6381d97a08}{uppercase}} (char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em Converts a string to uppercase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8h_aa39cd337ece72af0da3f7df09c522ef8}{remove\+\_\+extra\+\_\+spaces}} (char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em Removes extra spaces from a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8h_a23b09558cc791d82d0251b8cc10ae288}{read\+String}} (char \texorpdfstring{$\ast$}{*}string, unsigned int size, char \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Reads a string from the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_aa7b5b8a79d5ded97fc99955d1f827833}{get\+Int}} (int min\+Value, int max\+Value, char \texorpdfstring{$\ast$}{*}msg)
+\begin{DoxyCompactList}\small\item\em Gets an integer from the user. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{inputs__geral_8h_a8fb1767df1e71af64fc13e5fbf4c6330}{get\+Char}} ()
+\begin{DoxyCompactList}\small\item\em Gets a character from the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_a54c9da5d332c065776bc17c8072f4e09}{valid\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Validates a company in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_ad01a8234298ac2cb534c4dae6972e7a9}{active\+\_\+comp}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Checks if a company is active in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_a8e531ac33ef5023c7152d14ec1c0110a}{repet\+\_\+option}} (int op, char \texorpdfstring{$\ast$}{*}option, char \texorpdfstring{$\ast$}{*}structs)
+\begin{DoxyCompactList}\small\item\em Repeats an option. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_a152492680c654c18912dfeb86b85ce4a}{branch\+\_\+active}} (int id, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} branchs, int pos\+\_\+nif)
+\begin{DoxyCompactList}\small\item\em Checks if a branch is active in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_ad64d0b2161e4465d62f46f0b19219303}{compare\+\_\+nif}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int nif\+\_\+v)
+\begin{DoxyCompactList}\small\item\em Compares a NIF with the NIFs in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__geral_8h_aa9773f113f7a06f5c99507805648425a}{insert\+\_\+nif}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Inserts a NIF into the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8h_a32bc1f93b697b28b628b105a0f02fd43}{fields\+\_\+user}} (\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, int pos\+\_\+nif, int pos)
+\begin{DoxyCompactList}\small\item\em Fills the fields of a user in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__geral_8h_a1f7f728a4390e44779fa92ef11737a0e}{information\+\_\+classi}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int pos\+\_\+nif, int pos)
+\begin{DoxyCompactList}\small\item\em Displays information about a classification in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file inputs general. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 amd 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+This header file stores all the defined messages, values, and functions, from the \doxylink{inputs__geral_8c}{inputs\+\_\+geral.\+c} file. 
+
+Definition in file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{inputs__geral_8h_a35a8a571b374cc7adae7fe767b8f39f0}\label{inputs__geral_8h_a35a8a571b374cc7adae7fe767b8f39f0} 
+\index{inputs\_geral.h@{inputs\_geral.h}!INVALID\_VALUE@{INVALID\_VALUE}}
+\index{INVALID\_VALUE@{INVALID\_VALUE}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_VALUE}{INVALID\_VALUE}}
+{\footnotesize\ttfamily \#define INVALID\+\_\+\+VALUE~"{}O número que introduziu não é válido (Introduza um numero de \%d a \%d)!\textbackslash{}n"{}}
+
+Defines the message to inform that the entered number is not valid. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00019}{19}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_afbf08fd15631527e239b514c3766ca6d}\label{inputs__geral_8h_afbf08fd15631527e239b514c3766ca6d} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_COMP\_WITH\_COMMENTARY\_DEL@{MSG\_COMP\_WITH\_COMMENTARY\_DEL}}
+\index{MSG\_COMP\_WITH\_COMMENTARY\_DEL@{MSG\_COMP\_WITH\_COMMENTARY\_DEL}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_COMP\_WITH\_COMMENTARY\_DEL}{MSG\_COMP\_WITH\_COMMENTARY\_DEL}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+COMP\+\_\+\+WITH\+\_\+\+COMMENTARY\+\_\+\+DEL~"{}Não é possível eliminar a empresa \%s, porque a mesma já possui \%d comentarios de utilizadores!\textbackslash{}n"{}}
+
+Defines the message to inform that it\textquotesingle{}s not possible to delete the company because it already has user comments. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00035}{35}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_af283e5e11cedb011f72eb12acf918a14}\label{inputs__geral_8h_af283e5e11cedb011f72eb12acf918a14} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_COMP\_WITH\_COMMENTARY\_ED@{MSG\_COMP\_WITH\_COMMENTARY\_ED}}
+\index{MSG\_COMP\_WITH\_COMMENTARY\_ED@{MSG\_COMP\_WITH\_COMMENTARY\_ED}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_COMP\_WITH\_COMMENTARY\_ED}{MSG\_COMP\_WITH\_COMMENTARY\_ED}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+COMP\+\_\+\+WITH\+\_\+\+COMMENTARY\+\_\+\+ED~"{}Só é possível editar o estado da empresa \%s, porque a mesma já possui \%d comentarios de utilizadores!\textbackslash{}n "{}}
+
+Defines the message to inform that it\textquotesingle{}s only possible to edit the company status because it already has user comments. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00036}{36}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_ad4c8fceb2eff1e017f0471a6d7132ddc}\label{inputs__geral_8h_ad4c8fceb2eff1e017f0471a6d7132ddc} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_HIDE\_COMMENT@{MSG\_HIDE\_COMMENT}}
+\index{MSG\_HIDE\_COMMENT@{MSG\_HIDE\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_HIDE\_COMMENT}{MSG\_HIDE\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+HIDE\+\_\+\+COMMENT~"{}Estado do comentaio -\/-\/$>$ \%s"{}}
+
+Defines the message to display the comment status. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00040}{40}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_af9613ce149536349fd47dea87b2b8612}\label{inputs__geral_8h_af9613ce149536349fd47dea87b2b8612} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_IMP\_OPERATION\_INSERT\_COMP@{MSG\_IMP\_OPERATION\_INSERT\_COMP}}
+\index{MSG\_IMP\_OPERATION\_INSERT\_COMP@{MSG\_IMP\_OPERATION\_INSERT\_COMP}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_IMP\_OPERATION\_INSERT\_COMP}{MSG\_IMP\_OPERATION\_INSERT\_COMP}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+IMP\+\_\+\+OPERATION\+\_\+\+INSERT\+\_\+\+COMP~"{}Ainda não foi criada nenhuma empresa, logo não é possivel \%s nenhuma empresa!\textbackslash{}n"{}}
+
+Defines the message to inform that no company has been created yet, so it\textquotesingle{}s not possible to perform certain operations. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00053}{53}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a4d60c057217442b6bb50a80002576843}\label{inputs__geral_8h_a4d60c057217442b6bb50a80002576843} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_INSER\_TEXT\_COMMENT@{MSG\_INSER\_TEXT\_COMMENT}}
+\index{MSG\_INSER\_TEXT\_COMMENT@{MSG\_INSER\_TEXT\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSER\_TEXT\_COMMENT}{MSG\_INSER\_TEXT\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSER\+\_\+\+TEXT\+\_\+\+COMMENT~"{}Introduza o texto do comentario -\/-\/$>$"{}}
+
+Defines the message to request the comment text. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00049}{49}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a1a874331884a5f958db72c4445b94eed}\label{inputs__geral_8h_a1a874331884a5f958db72c4445b94eed} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_INSERT\_CLASSI@{MSG\_INSERT\_CLASSI}}
+\index{MSG\_INSERT\_CLASSI@{MSG\_INSERT\_CLASSI}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_CLASSI}{MSG\_INSERT\_CLASSI}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+CLASSI~"{}Introduza a calssificação da empresas -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s classification. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00051}{51}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_afa8ed37cccd576727deb6204f1041616}\label{inputs__geral_8h_afa8ed37cccd576727deb6204f1041616} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_INSERT\_EMAIL\_USER@{MSG\_INSERT\_EMAIL\_USER}}
+\index{MSG\_INSERT\_EMAIL\_USER@{MSG\_INSERT\_EMAIL\_USER}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_EMAIL\_USER}{MSG\_INSERT\_EMAIL\_USER}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+EMAIL\+\_\+\+USER~"{}Introduza o email do utilizador -\/-\/$>$"{}}
+
+Defines the message to request the user\textquotesingle{}s email. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00047}{47}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a73d785e3416bde27fd672215b239d24d}\label{inputs__geral_8h_a73d785e3416bde27fd672215b239d24d} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_INSERT\_NIF@{MSG\_INSERT\_NIF}}
+\index{MSG\_INSERT\_NIF@{MSG\_INSERT\_NIF}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_NIF}{MSG\_INSERT\_NIF}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+NIF~"{}Introduza o nif da empresa -\/-\/$>$"{}}
+
+Defines the message to request the company\textquotesingle{}s NIF. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00020}{20}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a20de4bc2b286cd8440615da3aa9837cf}\label{inputs__geral_8h_a20de4bc2b286cd8440615da3aa9837cf} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_INSERT\_TITLE\_COMMENT@{MSG\_INSERT\_TITLE\_COMMENT}}
+\index{MSG\_INSERT\_TITLE\_COMMENT@{MSG\_INSERT\_TITLE\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_TITLE\_COMMENT}{MSG\_INSERT\_TITLE\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+TITLE\+\_\+\+COMMENT~"{}Introduza o titulo do comentario -\/-\/$>$"{}}
+
+Defines the message to request the comment title. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00048}{48}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a314deecc2d4c2ecfc90c147b5b08dca4}\label{inputs__geral_8h_a314deecc2d4c2ecfc90c147b5b08dca4} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_INSERT\_USER\_NAME@{MSG\_INSERT\_USER\_NAME}}
+\index{MSG\_INSERT\_USER\_NAME@{MSG\_INSERT\_USER\_NAME}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_INSERT\_USER\_NAME}{MSG\_INSERT\_USER\_NAME}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+INSERT\+\_\+\+USER\+\_\+\+NAME~"{}Introduza o nome do utilizador -\/-\/$>$"{}}
+
+Defines the message to request the user\textquotesingle{}s name. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00046}{46}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a24844dce9a67370a536083987cdd36a6}\label{inputs__geral_8h_a24844dce9a67370a536083987cdd36a6} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_OP\_HIDE\_COMMENT@{MSG\_OP\_HIDE\_COMMENT}}
+\index{MSG\_OP\_HIDE\_COMMENT@{MSG\_OP\_HIDE\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_OP\_HIDE\_COMMENT}{MSG\_OP\_HIDE\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+OP\+\_\+\+HIDE\+\_\+\+COMMENT~"{}Deseja ocultar ou desocultar o comentario (0\+: Ocultar / 1\+:Desocultar)? -\/-\/$>$"{}}
+
+Defines the message to request the user\textquotesingle{}s choice to hide or unhide a comment. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00041}{41}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a261e6bfcdb8ab0dc7cede3dd9d5d4454}\label{inputs__geral_8h_a261e6bfcdb8ab0dc7cede3dd9d5d4454} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_POS\_COMMENT@{MSG\_POS\_COMMENT}}
+\index{MSG\_POS\_COMMENT@{MSG\_POS\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_POS\_COMMENT}{MSG\_POS\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+POS\+\_\+\+COMMENT~"{}Introduza o id do comentario -\/-\/$>$"{}}
+
+Defines the message to request the comment ID. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00039}{39}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_ae56335535f048fc2a89fc147eb7bfac2}\label{inputs__geral_8h_ae56335535f048fc2a89fc147eb7bfac2} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_BRANCH@{MSG\_REP\_BRANCH}}
+\index{MSG\_REP\_BRANCH@{MSG\_REP\_BRANCH}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_BRANCH}{MSG\_REP\_BRANCH}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+BRANCH~"{}outro ramo"{}}
+
+Defines the message for another branch. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00030}{30}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_acdadc1ddc8d2e657fce7cfc9beb52b56}\label{inputs__geral_8h_acdadc1ddc8d2e657fce7cfc9beb52b56} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_COMMENT@{MSG\_REP\_COMMENT}}
+\index{MSG\_REP\_COMMENT@{MSG\_REP\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_COMMENT}{MSG\_REP\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+COMMENT~"{}outro comentario"{}}
+
+Defines the message for another comment. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00028}{28}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_acdd0c5d84b24a347dfa113b63f4a0d17}\label{inputs__geral_8h_acdd0c5d84b24a347dfa113b63f4a0d17} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_COMPANY@{MSG\_REP\_COMPANY}}
+\index{MSG\_REP\_COMPANY@{MSG\_REP\_COMPANY}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_COMPANY}{MSG\_REP\_COMPANY}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+COMPANY~"{}outra empresa"{}}
+
+Defines the message for another company. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00029}{29}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a2d4c299514262e9be642bd1474037d6a}\label{inputs__geral_8h_a2d4c299514262e9be642bd1474037d6a} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_CONFIRME@{MSG\_REP\_CONFIRME}}
+\index{MSG\_REP\_CONFIRME@{MSG\_REP\_CONFIRME}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_CONFIRME}{MSG\_REP\_CONFIRME}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+CONFIRME~"{}S\+: Sim/ N\+: Não -\/-\/$>$"{}}
+
+Defines the message for user confirmation. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00033}{33}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a8ff45dc740ec3611521bcd4b4fb6ec91}\label{inputs__geral_8h_a8ff45dc740ec3611521bcd4b4fb6ec91} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_CONSULT@{MSG\_REP\_CONSULT}}
+\index{MSG\_REP\_CONSULT@{MSG\_REP\_CONSULT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_CONSULT}{MSG\_REP\_CONSULT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+CONSULT~"{}consultar"{}}
+
+Defines the message for the \textquotesingle{}consult\textquotesingle{} option. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00024}{24}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_ab5c2e85eeed313f21e47dd6d6a8028c5}\label{inputs__geral_8h_ab5c2e85eeed313f21e47dd6d6a8028c5} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_DELET@{MSG\_REP\_DELET}}
+\index{MSG\_REP\_DELET@{MSG\_REP\_DELET}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_DELET}{MSG\_REP\_DELET}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+DELET~"{}apagar"{}}
+
+Defines the message for the \textquotesingle{}delete\textquotesingle{} option. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00025}{25}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_ac3f4a95c9d71891c4506b6b5ce0dae10}\label{inputs__geral_8h_ac3f4a95c9d71891c4506b6b5ce0dae10} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_EDIT@{MSG\_REP\_EDIT}}
+\index{MSG\_REP\_EDIT@{MSG\_REP\_EDIT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_EDIT}{MSG\_REP\_EDIT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+EDIT~"{}editar"{}}
+
+Defines the message for the \textquotesingle{}edit\textquotesingle{} option. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00023}{23}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a37d8c32b9b2cea7c63947d3b1f866a57}\label{inputs__geral_8h_a37d8c32b9b2cea7c63947d3b1f866a57} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_GENERAL@{MSG\_REP\_GENERAL}}
+\index{MSG\_REP\_GENERAL@{MSG\_REP\_GENERAL}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_GENERAL}{MSG\_REP\_GENERAL}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+GENERAL~"{}Deseja \%s \%s (S\+: Sim/ N\+: Não)? -\/-\/$>$"{}}
+
+Defines the general message template for user confirmation. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00032}{32}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_ac0110c765db69c9ab502a230cf651c91}\label{inputs__geral_8h_ac0110c765db69c9ab502a230cf651c91} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_INSERT@{MSG\_REP\_INSERT}}
+\index{MSG\_REP\_INSERT@{MSG\_REP\_INSERT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_INSERT}{MSG\_REP\_INSERT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+INSERT~"{}inserir"{}}
+
+Defines the message for the \textquotesingle{}insert\textquotesingle{} option. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00022}{22}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a38c25be29f9b729e29f5c07672034d2b}\label{inputs__geral_8h_a38c25be29f9b729e29f5c07672034d2b} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_OP\_OCULT\_DEL\_COMMENT@{MSG\_REP\_OP\_OCULT\_DEL\_COMMENT}}
+\index{MSG\_REP\_OP\_OCULT\_DEL\_COMMENT@{MSG\_REP\_OP\_OCULT\_DEL\_COMMENT}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_OP\_OCULT\_DEL\_COMMENT}{MSG\_REP\_OP\_OCULT\_DEL\_COMMENT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+OP\+\_\+\+OCULT\+\_\+\+DEL\+\_\+\+COMMENT~"{}Pretende eliminar ou ocultar comentario (Eliminar\+: 1/ Ocultar\+: 2)-\/-\/$>$"{}}
+
+Defines the message to request the user\textquotesingle{}s choice to delete or hide a comment. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00038}{38}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_aff8e2ecb55e422a776841a3cfb8bc9e5}\label{inputs__geral_8h_aff8e2ecb55e422a776841a3cfb8bc9e5} 
+\index{inputs\_geral.h@{inputs\_geral.h}!MSG\_REP\_RANK@{MSG\_REP\_RANK}}
+\index{MSG\_REP\_RANK@{MSG\_REP\_RANK}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REP\_RANK}{MSG\_REP\_RANK}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REP\+\_\+\+RANK~"{}outra classificação"{}}
+
+Defines the message for another classification. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00027}{27}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a26e3d4c1f6b64bd9e3f7632324fd177f}\label{inputs__geral_8h_a26e3d4c1f6b64bd9e3f7632324fd177f} 
+\index{inputs\_geral.h@{inputs\_geral.h}!POS\_CLASSI@{POS\_CLASSI}}
+\index{POS\_CLASSI@{POS\_CLASSI}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{POS\_CLASSI}{POS\_CLASSI}}
+{\footnotesize\ttfamily \#define POS\+\_\+\+CLASSI~companies-\/$>$company\mbox{[}pos\+\_\+nif\mbox{]}.cont\+\_\+classi}
+
+Defines the position of the company\textquotesingle{}s classification in the struct. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00058}{58}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a695dd637b37252af2a517ba8bae8d2c4}\label{inputs__geral_8h_a695dd637b37252af2a517ba8bae8d2c4} 
+\index{inputs\_geral.h@{inputs\_geral.h}!STATE\_ACTIVE@{STATE\_ACTIVE}}
+\index{STATE\_ACTIVE@{STATE\_ACTIVE}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{STATE\_ACTIVE}{STATE\_ACTIVE}}
+{\footnotesize\ttfamily \#define STATE\+\_\+\+ACTIVE~"{}Estado -\/-\/$>$ Ativa\textbackslash{}n"{}}
+
+Defines the message to display the active status. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00055}{55}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a5dcbfcad8d6ba73bbf6fe2d08f3e3ae4}\label{inputs__geral_8h_a5dcbfcad8d6ba73bbf6fe2d08f3e3ae4} 
+\index{inputs\_geral.h@{inputs\_geral.h}!STATE\_INACTIVE@{STATE\_INACTIVE}}
+\index{STATE\_INACTIVE@{STATE\_INACTIVE}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{STATE\_INACTIVE}{STATE\_INACTIVE}}
+{\footnotesize\ttfamily \#define STATE\+\_\+\+INACTIVE~"{}Estado -\/-\/$>$ Inativa\textbackslash{}n"{}}
+
+Defines the message to display the inactive status. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00056}{56}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a25821f8b5284520bfdf0bf19e89152a9}\label{inputs__geral_8h_a25821f8b5284520bfdf0bf19e89152a9} 
+\index{inputs\_geral.h@{inputs\_geral.h}!VALUE\_HIDE@{VALUE\_HIDE}}
+\index{VALUE\_HIDE@{VALUE\_HIDE}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{VALUE\_HIDE}{VALUE\_HIDE}}
+{\footnotesize\ttfamily \#define VALUE\+\_\+\+HIDE~0}
+
+Defines the value for hiding a comment. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00043}{43}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+\Hypertarget{inputs__geral_8h_a754cbe7ec5e72988a300def0395a0b2f}\label{inputs__geral_8h_a754cbe7ec5e72988a300def0395a0b2f} 
+\index{inputs\_geral.h@{inputs\_geral.h}!VALUE\_NOT\_HIDE@{VALUE\_NOT\_HIDE}}
+\index{VALUE\_NOT\_HIDE@{VALUE\_NOT\_HIDE}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{VALUE\_NOT\_HIDE}{VALUE\_NOT\_HIDE}}
+{\footnotesize\ttfamily \#define VALUE\+\_\+\+NOT\+\_\+\+HIDE~1}
+
+Defines the value for not hiding a comment. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8h_source_l00044}{44}} of file \mbox{\hyperlink{inputs__geral_8h_source}{inputs\+\_\+geral.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputs__geral_8h_ad01a8234298ac2cb534c4dae6972e7a9}\label{inputs__geral_8h_ad01a8234298ac2cb534c4dae6972e7a9} 
+\index{inputs\_geral.h@{inputs\_geral.h}!active\_comp@{active\_comp}}
+\index{active\_comp@{active\_comp}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{active\_comp()}{active\_comp()}}
+{\footnotesize\ttfamily int active\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Checks if a company is active in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the company is active, 0 otherwise.
+\end{DoxyReturn}
+Checks if a company is active in the \doxylink{struct_companies}{Companies} struct.
+
+This function goes through the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct and counts how many are inactive. If all companies are inactive, the function returns 1, otherwise, it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies, to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if all companies are inactive, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00194}{194}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a152492680c654c18912dfeb86b85ce4a}\label{inputs__geral_8h_a152492680c654c18912dfeb86b85ce4a} 
+\index{inputs\_geral.h@{inputs\_geral.h}!branch\_active@{branch\_active}}
+\index{branch\_active@{branch\_active}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{branch\_active()}{branch\_active()}}
+{\footnotesize\ttfamily int branch\+\_\+active (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}}}]{branchs,  }\item[{int}]{pos\+\_\+nif }\end{DoxyParamCaption})}
+
+
+
+Checks if a branch is active in the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the branch. \\
+\hline
+{\em branchs} & The \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em pos\+\_\+nif} & The position of the NIF in the struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the branch is active, 0 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}\label{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d} 
+\index{inputs\_geral.h@{inputs\_geral.h}!cleanInputBuffer@{cleanInputBuffer}}
+\index{cleanInputBuffer@{cleanInputBuffer}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{cleanInputBuffer()}{cleanInputBuffer()}}
+{\footnotesize\ttfamily void clean\+Input\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans the input buffer. 
+
+Cleans the input buffer.
+
+This function reads and discards all remaining characters in the input buffer. 
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00028}{28}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_ad64d0b2161e4465d62f46f0b19219303}\label{inputs__geral_8h_ad64d0b2161e4465d62f46f0b19219303} 
+\index{inputs\_geral.h@{inputs\_geral.h}!compare\_nif@{compare\_nif}}
+\index{compare\_nif@{compare\_nif}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{compare\_nif()}{compare\_nif()}}
+{\footnotesize\ttfamily int compare\+\_\+nif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{nif\+\_\+v }\end{DoxyParamCaption})}
+
+
+
+Compares a NIF with the NIFs in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em nif\+\_\+v} & The NIF to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the NIF is found, 0 otherwise.
+\end{DoxyReturn}
+Compares a NIF with the NIFs in the \doxylink{struct_companies}{Companies} struct.
+
+It uses a loop to go through the entire \doxylink{struct_companies}{Companies} struct to check if the NIF of any of the companies stored in the struct is equal to the NIF entered by the user. If they are equal, it prints a message indicating that the entered NIF belongs to the company and returns the index \textquotesingle{}i\textquotesingle{} of the company in the struct. If "{}nif\+\_\+v"{} is not equal to the NIF of the current company and the loop has reached the last company in the struct, it prints an error message indicating that the NIF was not found and returns -\/1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies. \\
+\hline
+{\em nif\+\_\+v} & The NIF to be compared with the NIFs of the companies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the company if the NIF is found, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00269}{269}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a32bc1f93b697b28b628b105a0f02fd43}\label{inputs__geral_8h_a32bc1f93b697b28b628b105a0f02fd43} 
+\index{inputs\_geral.h@{inputs\_geral.h}!fields\_user@{fields\_user}}
+\index{fields\_user@{fields\_user}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{fields\_user()}{fields\_user()}}
+{\footnotesize\ttfamily void fields\+\_\+user (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{int}]{pos\+\_\+nif,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Fills the fields of a user in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em pos\+\_\+nif} & The position of the NIF in the struct. \\
+\hline
+{\em pos} & The position of the user in the struct.\\
+\hline
+\end{DoxyParams}
+Fills the fields of a user in the \doxylink{struct_companies}{Companies} struct.
+
+It first enters a do-\/while loop where it calls the "{}read\+String"{} function to read the user\textquotesingle{}s email. The loop continues until the "{}validation\+\_\+email"{} function returns 0, indicating that the entered email is valid. After the loop, it calls the "{}read\+String"{} function again to read the username. Both the username and the email are stored in the \doxylink{struct_companies}{Companies} struct in the \doxylink{struct_classification}{Classification} comp\+\_\+class field 
+\begin{DoxyParams}{Parameters}
+{\em companies} & A pointer to the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies. \\
+\hline
+{\em pos\+\_\+nif} & The position of the specific company in the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct. \\
+\hline
+{\em pos} & The position of the specific user in the company. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00309}{309}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a8fb1767df1e71af64fc13e5fbf4c6330}\label{inputs__geral_8h_a8fb1767df1e71af64fc13e5fbf4c6330} 
+\index{inputs\_geral.h@{inputs\_geral.h}!getChar@{getChar}}
+\index{getChar@{getChar}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{getChar()}{getChar()}}
+{\footnotesize\ttfamily char get\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a character from the user. 
+
+\begin{DoxyReturn}{Returns}
+char The character entered by the user.
+\end{DoxyReturn}
+Gets a character from the user.
+
+This function reads a character from stdin and stores it in the value variable. Then, the \doxylink{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer()} function is called to clear the input buffer. The function returns the read character.
+
+\begin{DoxyReturn}{Returns}
+The character read from the user. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00154}{154}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_aa7b5b8a79d5ded97fc99955d1f827833}\label{inputs__geral_8h_aa7b5b8a79d5ded97fc99955d1f827833} 
+\index{inputs\_geral.h@{inputs\_geral.h}!getInt@{getInt}}
+\index{getInt@{getInt}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{getInt()}{getInt()}}
+{\footnotesize\ttfamily int get\+Int (\begin{DoxyParamCaption}\item[{int}]{min\+Value,  }\item[{int}]{max\+Value,  }\item[{char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Gets an integer from the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Value} & The minimum valid value. \\
+\hline
+{\em max\+Value} & The maximum valid value. \\
+\hline
+{\em msg} & The message to display before getting the integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The integer entered by the user.
+\end{DoxyReturn}
+Gets an integer from the user.
+
+This function displays a message to the user, reads an integer value from stdin and checks if the value is within the specified range. If the reading fails or if the read value is outside the range, an error message is displayed and the reading is repeated. The function continues to read until a valid value is provided by the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Value} & The minimum value that the user can enter. \\
+\hline
+{\em max\+Value} & The maximum value that the user can enter. \\
+\hline
+{\em msg} & The message to be displayed to the user before reading the input. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer value read from the user. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00134}{134}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a1f7f728a4390e44779fa92ef11737a0e}\label{inputs__geral_8h_a1f7f728a4390e44779fa92ef11737a0e} 
+\index{inputs\_geral.h@{inputs\_geral.h}!information\_classi@{information\_classi}}
+\index{information\_classi@{information\_classi}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{information\_classi()}{information\_classi()}}
+{\footnotesize\ttfamily void information\+\_\+classi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{pos\+\_\+nif,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Displays information about a classification in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct that stores all companies. \\
+\hline
+{\em pos\+\_\+nif} & The position of the NIF in the struct. \\
+\hline
+{\em pos} & The position of the classification in the struct.\\
+\hline
+\end{DoxyParams}
+Displays information about a classification in the \doxylink{struct_companies}{Companies} struct.
+
+This function prints the user\textquotesingle{}s name and the rating of a specific company. The rating and the user\textquotesingle{}s name are identified by the position of the company in the array of ratings (comp\+\_\+class) of the struct companies.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all companies. \\
+\hline
+{\em pos\+\_\+nif} & Position of the company in the \textquotesingle{}companies\textquotesingle{} struct. \\
+\hline
+{\em pos} & Position of the rating in the array of ratings (comp\+\_\+class) of the struct companies. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00327}{327}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_aa9773f113f7a06f5c99507805648425a}\label{inputs__geral_8h_aa9773f113f7a06f5c99507805648425a} 
+\index{inputs\_geral.h@{inputs\_geral.h}!insert\_nif@{insert\_nif}}
+\index{insert\_nif@{insert\_nif}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{insert\_nif()}{insert\_nif()}}
+{\footnotesize\ttfamily int insert\+\_\+nif (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Inserts a NIF into the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the position of the inserted NIF in the struct.
+\end{DoxyReturn}
+Inserts a NIF into the \doxylink{struct_companies}{Companies} struct.
+
+Then, it calls the "{}get\+Int"{} function to prompt the user to enter a NIF. Finally, it calls the "{}compare\+\_\+nif"{} function with \textquotesingle{}companies\textquotesingle{} and \textquotesingle{}nif\textquotesingle{} as parameters and returns the result of the compare\+\_\+nif function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the company if the NIF is found, -\/1 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00290}{290}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a23b09558cc791d82d0251b8cc10ae288}\label{inputs__geral_8h_a23b09558cc791d82d0251b8cc10ae288} 
+\index{inputs\_geral.h@{inputs\_geral.h}!readString@{readString}}
+\index{readString@{readString}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{readString()}{readString()}}
+{\footnotesize\ttfamily void read\+String (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{string,  }\item[{unsigned int}]{size,  }\item[{char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+
+
+Reads a string from the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to read into. \\
+\hline
+{\em size} & The size of the string. \\
+\hline
+{\em msg} & The message to display before reading the string.\\
+\hline
+\end{DoxyParams}
+Reads a string from the user.
+
+This function displays a message to the user, reads a string from stdin and stores it in the string variable. If the read string ends with a newline character, it is replaced by a null character. If the read string does not end with a newline character, the \doxylink{inputs__geral_8h_a11ac4d3ec555747d95fee8ae7aa18b5d}{clean\+Input\+Buffer()} function is called to clear the input buffer. If the read string is empty, a message is displayed to the user and the reading is repeated. Finally, the \doxylink{inputs__geral_8h_aa39cd337ece72af0da3f7df09c522ef8}{remove\+\_\+extra\+\_\+spaces()} function is called to remove any extra spaces from the read string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string in which the user\textquotesingle{}s input should be stored. The string is passed by reference, therefore, the changes made in the function will affect the original string. \\
+\hline
+{\em size} & The maximum number of characters to be read, including the final null character. \\
+\hline
+{\em msg} & The message to be displayed to the user before reading the input. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00102}{102}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_aa39cd337ece72af0da3f7df09c522ef8}\label{inputs__geral_8h_aa39cd337ece72af0da3f7df09c522ef8} 
+\index{inputs\_geral.h@{inputs\_geral.h}!remove\_extra\_spaces@{remove\_extra\_spaces}}
+\index{remove\_extra\_spaces@{remove\_extra\_spaces}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{remove\_extra\_spaces()}{remove\_extra\_spaces()}}
+{\footnotesize\ttfamily void remove\+\_\+extra\+\_\+spaces (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+Removes extra spaces from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to process.\\
+\hline
+\end{DoxyParams}
+This function goes through the string and removes all extra spaces. It removes spaces at the beginning of the string, at the end of the string, and multiple spaces between words.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string from which extra spaces should be removed. The string is passed by reference, therefore, the changes made in the function will affect the original string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00059}{59}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a8e531ac33ef5023c7152d14ec1c0110a}\label{inputs__geral_8h_a8e531ac33ef5023c7152d14ec1c0110a} 
+\index{inputs\_geral.h@{inputs\_geral.h}!repet\_option@{repet\_option}}
+\index{repet\_option@{repet\_option}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{repet\_option()}{repet\_option()}}
+{\footnotesize\ttfamily int repet\+\_\+option (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{char \texorpdfstring{$\ast$}{*}}]{option,  }\item[{char \texorpdfstring{$\ast$}{*}}]{structs }\end{DoxyParamCaption})}
+
+
+
+Repeats an option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The option to repeat. \\
+\hline
+{\em option} & The option string. \\
+\hline
+{\em structs} & The struct string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the option is repeated, 0 otherwise.
+\end{DoxyReturn}
+Repeats an option.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operation code to determine the type of message to be printed. \\
+\hline
+{\em option} & A pointer to a character string representing the option. \\
+\hline
+{\em structs} & A pointer to a character string representing the structs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the repetition character is \textquotesingle{}S\textquotesingle{}, 1 if it is \textquotesingle{}N\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00223}{223}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_ac240ef6f312f499b9aff0e6381d97a08}\label{inputs__geral_8h_ac240ef6f312f499b9aff0e6381d97a08} 
+\index{inputs\_geral.h@{inputs\_geral.h}!uppercase@{uppercase}}
+\index{uppercase@{uppercase}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{uppercase()}{uppercase()}}
+{\footnotesize\ttfamily void uppercase (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+Converts a string to uppercase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to convert.\\
+\hline
+\end{DoxyParams}
+This function goes through each character of the string. If the first character of each word in the string is lowercase, it is converted to uppercase. (e.\+g., it receives "{}joao pedro"{} and transforms it into "{}\+Joao Pedro"{})
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & The string to be converted to uppercase. The string is passed by reference, therefore, the changes made in the function will affect the original string. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00040}{40}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+
+\Hypertarget{inputs__geral_8h_a54c9da5d332c065776bc17c8072f4e09}\label{inputs__geral_8h_a54c9da5d332c065776bc17c8072f4e09} 
+\index{inputs\_geral.h@{inputs\_geral.h}!valid\_comp@{valid\_comp}}
+\index{valid\_comp@{valid\_comp}!inputs\_geral.h@{inputs\_geral.h}}
+\doxysubsubsection{\texorpdfstring{valid\_comp()}{valid\_comp()}}
+{\footnotesize\ttfamily int valid\+\_\+comp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Validates a company in the \doxylink{struct_companies}{Companies} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 1 if the company is valid, 0 otherwise.
+\end{DoxyReturn}
+Validates a company in the \doxylink{struct_companies}{Companies} struct.
+
+This function goes through the \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct and counts how many are inactive or have their branches also inactive. If all companies are inactive or have an inactive branch, the function returns 1, otherwise, it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \textquotesingle{}\doxylink{struct_companies}{Companies}\textquotesingle{} struct that contains all created companies, to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if all companies are inactive or have an inactive branch, 0 otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputs__geral_8c_source_l00170}{170}} of file \mbox{\hyperlink{inputs__geral_8c_source}{inputs\+\_\+geral.\+c}}.
+

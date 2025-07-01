@@ -1,0 +1,222 @@
+\doxysection{inputs\+\_\+user.\+c File Reference}
+\hypertarget{inputs__user_8c}{}\label{inputs__user_8c}\index{inputs\_user.c@{inputs\_user.c}}
+
+
+File \doxylink{inputs__user_8c}{inputs\+\_\+user.\+c} with all the inputs of the user\textquotesingle{}s options.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}inputs\+\_\+user.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+comp.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+branch.\+h"{}}\newline
+{\ttfamily \#include "{}inputs\+\_\+geral.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inputs__user_8c_a48e796d8baf46a04fa52577fcf2763b6}{information\+\_\+comments}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int pos\+\_\+nif, int pos\+\_\+comment)
+\begin{DoxyCompactList}\small\item\em Prints the information of a comment at a given position in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__user_8c_a5f5162b04d24d6b8cb11479f62097bed}{validation\+\_\+pos\+\_\+comment}} (\mbox{\hyperlink{struct_companies}{Companies}} companies, int pos\+\_\+nif, int id\+\_\+comment)
+\begin{DoxyCompactList}\small\item\em Validates the position of a comment in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{inputs__user_8c_a159c6aeade09bb5510e1a5dbe3742ddb}{validation\+\_\+email}} (char \texorpdfstring{$\ast$}{*}email)
+\begin{DoxyCompactList}\small\item\em Validates an email address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__user_8c_a36c4d29ff059bd5a820d227ba1865e42}{consult\+\_\+comp\+\_\+name}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Consults the information of a company by its name in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__user_8c_a0269163fe9248d19d7a2cfb65626c68d}{consult\+\_\+comp\+\_\+category}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Consults the information of companies by their category in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{inputs__user_8c_a90943b041d900f71756d25f4efdc7382}{consult\+\_\+comp\+\_\+locality}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Consults the information of companies by their locality in the \doxylink{struct_companies}{Companies} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File \doxylink{inputs__user_8c}{inputs\+\_\+user.\+c} with all the inputs of the user\textquotesingle{}s options. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed. 
+\end{DoxyCopyright}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1
+\end{DoxyVersion}
+
+
+In the \doxylink{inputs__user_8c}{inputs\+\_\+user.\+c} file, all the inputs used in the user options are present. 
+
+Definition in file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputs__user_8c_a0269163fe9248d19d7a2cfb65626c68d}\label{inputs__user_8c_a0269163fe9248d19d7a2cfb65626c68d} 
+\index{inputs\_user.c@{inputs\_user.c}!consult\_comp\_category@{consult\_comp\_category}}
+\index{consult\_comp\_category@{consult\_comp\_category}!inputs\_user.c@{inputs\_user.c}}
+\doxysubsubsection{\texorpdfstring{consult\_comp\_category()}{consult\_comp\_category()}}
+{\footnotesize\ttfamily void consult\+\_\+comp\+\_\+category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Consults the information of companies by their category in the \doxylink{struct_companies}{Companies} struct. 
+
+Consults the categories of the companies.
+
+This function prompts the user to enter a category. It then iterates over all the companies in the \doxylink{struct_companies}{Companies} struct and compares the given category with the category of each company. If a match is found and the company and its branch are both active, it prints the company\textquotesingle{}s information, all its comments, and all its classifications. If no match is found, it prints an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the get\+Int and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__user_8c_source_l00185}{185}} of file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+
+\Hypertarget{inputs__user_8c_a90943b041d900f71756d25f4efdc7382}\label{inputs__user_8c_a90943b041d900f71756d25f4efdc7382} 
+\index{inputs\_user.c@{inputs\_user.c}!consult\_comp\_locality@{consult\_comp\_locality}}
+\index{consult\_comp\_locality@{consult\_comp\_locality}!inputs\_user.c@{inputs\_user.c}}
+\doxysubsubsection{\texorpdfstring{consult\_comp\_locality()}{consult\_comp\_locality()}}
+{\footnotesize\ttfamily void consult\+\_\+comp\+\_\+locality (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Consults the information of companies by their locality in the \doxylink{struct_companies}{Companies} struct. 
+
+Consults the localities of the companies.
+
+This function prompts the user to enter a locality. It then iterates over all the companies in the \doxylink{struct_companies}{Companies} struct and compares the given locality with the locality of each company. If a match is found and the company and its branch are both active, it prints the company\textquotesingle{}s information, all its comments, and all its classifications. If no match is found, it prints an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the read\+String, strcmp, and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__user_8c_source_l00224}{224}} of file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+
+\Hypertarget{inputs__user_8c_a36c4d29ff059bd5a820d227ba1865e42}\label{inputs__user_8c_a36c4d29ff059bd5a820d227ba1865e42} 
+\index{inputs\_user.c@{inputs\_user.c}!consult\_comp\_name@{consult\_comp\_name}}
+\index{consult\_comp\_name@{consult\_comp\_name}!inputs\_user.c@{inputs\_user.c}}
+\doxysubsubsection{\texorpdfstring{consult\_comp\_name()}{consult\_comp\_name()}}
+{\footnotesize\ttfamily void consult\+\_\+comp\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Consults the information of a company by its name in the \doxylink{struct_companies}{Companies} struct. 
+
+Consults the names of the companies.
+
+This function prompts the user to enter the name of a company. It then iterates over all the companies in the \doxylink{struct_companies}{Companies} struct and compares the given company name with the name of each company. If a match is found and the company and its branch are both active, it prints the company\textquotesingle{}s information, all its comments, and all its classifications. If no match is found, it prints an error message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the strcmp and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__user_8c_source_l00146}{146}} of file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+
+\Hypertarget{inputs__user_8c_a48e796d8baf46a04fa52577fcf2763b6}\label{inputs__user_8c_a48e796d8baf46a04fa52577fcf2763b6} 
+\index{inputs\_user.c@{inputs\_user.c}!information\_comments@{information\_comments}}
+\index{information\_comments@{information\_comments}!inputs\_user.c@{inputs\_user.c}}
+\doxysubsubsection{\texorpdfstring{information\_comments()}{information\_comments()}}
+{\footnotesize\ttfamily void information\+\_\+comments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{pos\+\_\+nif,  }\item[{int}]{pos\+\_\+comment }\end{DoxyParamCaption})}
+
+
+
+Prints the information of a comment at a given position in the \doxylink{struct_companies}{Companies} struct. 
+
+Prints the information of the comment at the given position in a company.
+
+This function prints the username of the user who made the comment, the title of the comment, and the text of the comment. The information is retrieved from the \doxylink{struct_companies}{Companies} struct.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em pos\+\_\+nif} & The position of the company in the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em pos\+\_\+comment} & The position of the comment in the company\textquotesingle{}s comment array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function uses the printf function to print the comment information. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__user_8c_source_l00035}{35}} of file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+
+\Hypertarget{inputs__user_8c_a159c6aeade09bb5510e1a5dbe3742ddb}\label{inputs__user_8c_a159c6aeade09bb5510e1a5dbe3742ddb} 
+\index{inputs\_user.c@{inputs\_user.c}!validation\_email@{validation\_email}}
+\index{validation\_email@{validation\_email}!inputs\_user.c@{inputs\_user.c}}
+\doxysubsubsection{\texorpdfstring{validation\_email()}{validation\_email()}}
+{\footnotesize\ttfamily int validation\+\_\+email (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{email }\end{DoxyParamCaption})}
+
+
+
+Validates an email address. 
+
+This function checks if the given email address is valid according to certain rules. The rules include the length of the email, the characters used, the position of \textquotesingle{}@\textquotesingle{}, and the use of \textquotesingle{}.\textquotesingle{}. If the email is not valid, it prints an error message and returns 1. If the email is valid, it returns 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The email address to be validated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 if the email is valid, and 1 otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function uses the strlen and printf functions from the standard library. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__user_8c_source_l00079}{79}} of file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+
+\Hypertarget{inputs__user_8c_a5f5162b04d24d6b8cb11479f62097bed}\label{inputs__user_8c_a5f5162b04d24d6b8cb11479f62097bed} 
+\index{inputs\_user.c@{inputs\_user.c}!validation\_pos\_comment@{validation\_pos\_comment}}
+\index{validation\_pos\_comment@{validation\_pos\_comment}!inputs\_user.c@{inputs\_user.c}}
+\doxysubsubsection{\texorpdfstring{validation\_pos\_comment()}{validation\_pos\_comment()}}
+{\footnotesize\ttfamily int validation\+\_\+pos\+\_\+comment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies,  }\item[{int}]{pos\+\_\+nif,  }\item[{int}]{id\+\_\+comment }\end{DoxyParamCaption})}
+
+
+
+Validates the position of a comment in the \doxylink{struct_companies}{Companies} struct. 
+
+Validates the position of a comment in a company.
+
+This function iterates over all the comments of a company in the \doxylink{struct_companies}{Companies} struct and compares the given comment ID with the ID of each comment. If a match is found, it returns 0. If no match is found, it prints an error message and returns 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em pos\+\_\+nif} & The position of the company in the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em id\+\_\+comment} & The ID of the comment to be validated.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns 0 if the comment ID is found, and 1 otherwise.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function uses the printf function to print the error message when the comment ID is not found. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{inputs__user_8c_source_l00055}{55}} of file \mbox{\hyperlink{inputs__user_8c_source}{inputs\+\_\+user.\+c}}.
+

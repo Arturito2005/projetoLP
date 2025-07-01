@@ -1,0 +1,164 @@
+\doxysection{reports.\+h File Reference}
+\hypertarget{reports_8h}{}\label{reports_8h}\index{reports.h@{reports.h}}
+
+
+Header file reports.  
+
+
+{\ttfamily \#include "{}companies.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reports_8h_aa55c2b7e4d0dabc9047d5298eb7bb0e8}{MSG\+\_\+\+REPORT2\+\_\+\+COMMENTS\+\_\+\+COMPANY\+\_\+\+LESS\+\_\+\+OR\+\_\+\+MORE}}~"{}A empresa \%s é a empresa que possui \%s comentarios, com \%d comentarios! Sendo eles\+:\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{reports_8h_a85cc263fbc23659ed64e844eda53fcd5}{MSG\+\_\+\+REPORT2\+\_\+\+COMMENTS\+\_\+\+COMPANY\+\_\+\+LESS\+\_\+\+EQUAL\+\_\+0}}~"{}A empresa \%s é a empresa que possui menos comentarios, com \%d comentarios!\textbackslash{}n"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{reports_8h_a287bd9bc8f725e6c6fd7085ebf9cd7b0}{report\+\_\+classi}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Generates a report on company classifications. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{reports_8h_a2cc0736d7ff17063012b0c8a44e3e4d2}{report\+\_\+comment}} (\mbox{\hyperlink{struct_companies}{Companies}} companies)
+\begin{DoxyCompactList}\small\item\em Generates a report on company comments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{reports_8h_a42f0992548d8cdab0a4807a47b5bd2e7}{report\+\_\+search}} (\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Generates a report on company searches. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file reports. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+This header file has the functions and messages defined, used in \doxylink{reports_8c}{reports.\+c} 
+
+Definition in file \mbox{\hyperlink{reports_8h_source}{reports.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{reports_8h_a85cc263fbc23659ed64e844eda53fcd5}\label{reports_8h_a85cc263fbc23659ed64e844eda53fcd5} 
+\index{reports.h@{reports.h}!MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_EQUAL\_0@{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_EQUAL\_0}}
+\index{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_EQUAL\_0@{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_EQUAL\_0}!reports.h@{reports.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_EQUAL\_0}{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_EQUAL\_0}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REPORT2\+\_\+\+COMMENTS\+\_\+\+COMPANY\+\_\+\+LESS\+\_\+\+EQUAL\+\_\+0~"{}A empresa \%s é a empresa que possui menos comentarios, com \%d comentarios!\textbackslash{}n"{}}
+
+Defines the message to report a company with zero or less comments. 
+
+Definition at line \mbox{\hyperlink{reports_8h_source_l00019}{19}} of file \mbox{\hyperlink{reports_8h_source}{reports.\+h}}.
+
+\Hypertarget{reports_8h_aa55c2b7e4d0dabc9047d5298eb7bb0e8}\label{reports_8h_aa55c2b7e4d0dabc9047d5298eb7bb0e8} 
+\index{reports.h@{reports.h}!MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_OR\_MORE@{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_OR\_MORE}}
+\index{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_OR\_MORE@{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_OR\_MORE}!reports.h@{reports.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_OR\_MORE}{MSG\_REPORT2\_COMMENTS\_COMPANY\_LESS\_OR\_MORE}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+REPORT2\+\_\+\+COMMENTS\+\_\+\+COMPANY\+\_\+\+LESS\+\_\+\+OR\+\_\+\+MORE~"{}A empresa \%s é a empresa que possui \%s comentarios, com \%d comentarios! Sendo eles\+:\textbackslash{}n"{}}
+
+Defines the message to report a company with less or more comments. 
+
+Definition at line \mbox{\hyperlink{reports_8h_source_l00018}{18}} of file \mbox{\hyperlink{reports_8h_source}{reports.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{reports_8h_a287bd9bc8f725e6c6fd7085ebf9cd7b0}\label{reports_8h_a287bd9bc8f725e6c6fd7085ebf9cd7b0} 
+\index{reports.h@{reports.h}!report\_classi@{report\_classi}}
+\index{report\_classi@{report\_classi}!reports.h@{reports.h}}
+\doxysubsubsection{\texorpdfstring{report\_classi()}{report\_classi()}}
+{\footnotesize\ttfamily void report\+\_\+classi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Generates a report on company classifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+Generates a report on company classifications.
+
+This function calculates the average rating of each company and identifies the company(s) with the highest and lowest average ratings. It then prints a report detailing the average ratings of all companies and highlighting the company(s) with the highest and lowest averages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & struct \doxylink{struct_companies}{Companies} that contains all the companies and their ratings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If there is only one company, the function will simply calculate and print its average rating. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{reports_8c_source_l00038}{38}} of file \mbox{\hyperlink{reports_8c_source}{reports.\+c}}.
+
+\Hypertarget{reports_8h_a2cc0736d7ff17063012b0c8a44e3e4d2}\label{reports_8h_a2cc0736d7ff17063012b0c8a44e3e4d2} 
+\index{reports.h@{reports.h}!report\_comment@{report\_comment}}
+\index{report\_comment@{report\_comment}!reports.h@{reports.h}}
+\doxysubsubsection{\texorpdfstring{report\_comment()}{report\_comment()}}
+{\footnotesize\ttfamily void report\+\_\+comment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_companies}{Companies}}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Generates a report on company comments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em companies} & The \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+Generates a report on company comments.
+
+This function calculates the total number of comments for each company and identifies the company(s) with the highest and lowest number of comments. It then creates a report detailing the total number of comments of all companies and highlighting the company(s) with the highest and lowest number of comments. At the beginning of the report, it shows the data of all companies with comments and all the comments of them. 
+\begin{DoxyParams}{Parameters}
+{\em companies} & Struct \doxylink{struct_companies}{Companies}, which contains the information of all companies and their respective comments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If there is only one company, the function will simply print its comments. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{reports_8c_source_l00145}{145}} of file \mbox{\hyperlink{reports_8c_source}{reports.\+c}}.
+
+\Hypertarget{reports_8h_a42f0992548d8cdab0a4807a47b5bd2e7}\label{reports_8h_a42f0992548d8cdab0a4807a47b5bd2e7} 
+\index{reports.h@{reports.h}!report\_search@{report\_search}}
+\index{report\_search@{report\_search}!reports.h@{reports.h}}
+\doxysubsubsection{\texorpdfstring{report\_search()}{report\_search()}}
+{\footnotesize\ttfamily void report\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Generates a report on company searches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+\_\+comp} & The \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+Generates a report on company searches.
+
+It calculates the total number of times the user searched for a company, and then shows how many times each search method was used.
+
+Then it compares how many times each option was used and shows the most and least used option(s) or if both were used the same number of times. 
+\begin{DoxyParams}{Parameters}
+{\em search\+\_\+comp} & Struct \doxylink{struct_search__comp}{Search\+\_\+comp}, which contains the counter for each search method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If only one search method was used in total, that method will be presented. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{reports_8c_source_l00243}{243}} of file \mbox{\hyperlink{reports_8c_source}{reports.\+c}}.
+

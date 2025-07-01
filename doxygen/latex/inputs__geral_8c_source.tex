@@ -1,0 +1,196 @@
+\doxysection{inputs\+\_\+geral.\+c}
+\hypertarget{inputs__geral_8c_source}{}\label{inputs__geral_8c_source}\mbox{\hyperlink{inputs__geral_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__geral_8h}{inputs\_geral.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__user_8h}{inputs\_user.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inputs__comp_8h}{inputs\_comp.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00021}00021\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ i;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00028}\mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}()\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{char}\ ch;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{while}\ ((ch\ =\ getchar())\ !=\ \textcolor{charliteral}{'\(\backslash\)n'}\ \&\&\ ch\ !=\ EOF);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00040}\mbox{\hyperlink{inputs__geral_8c_ac240ef6f312f499b9aff0e6381d97a08}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8c_ac240ef6f312f499b9aff0e6381d97a08}{uppercase}}(\textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string})\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}[0]\ >\ 97\ \&\&\ \textcolor{keywordtype}{string}[0]\ <\ 122)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[0]\ =\ \textcolor{keywordtype}{string}[0]\ -\/\ 32;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ strlen(\textcolor{keywordtype}{string});\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}[i]\ ==\ \textcolor{charliteral}{'\ '}\ \&\&\ (\textcolor{keywordtype}{string}[i\ +\ 1]\ >=\ 97\ \&\&\ \textcolor{keywordtype}{string}[i\ +\ 1]\ <=\ 122))\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[i\ +\ 1]\ =\ \textcolor{keywordtype}{string}[i\ +\ 1]\ -\/\ 32;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00049}00049\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00059}\mbox{\hyperlink{inputs__geral_8c_aa39cd337ece72af0da3f7df09c522ef8}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8c_aa39cd337ece72af0da3f7df09c522ef8}{remove\_extra\_spaces}}(\textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string})\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00060}00060\ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ strlen(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keywordtype}{string}[0]\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[i]\ =\ \textcolor{keywordtype}{string}[i\ +\ 1];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ size-\/-\/;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}[size]\ ==\ \textcolor{charliteral}{'\ '}\ ||\ \textcolor{keywordtype}{string}[size]\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (size\ >\ 0\ \&\&\ \textcolor{keywordtype}{string}[size\ -\/\ 1]\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ size-\/-\/;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}[i]\ ==\ \textcolor{charliteral}{'\ '}\ \&\&\ \textcolor{keywordtype}{string}[i+1]\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ y\ =\ i;\ y\ <\ size;\ y++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[y]\ =\ \textcolor{keywordtype}{string}[y\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ size-\/-\/;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ i-\/-\/;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00084}00084\ \ \ \ \ \}\ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00085}00085\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{string}[size]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00102}\mbox{\hyperlink{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288}{00102}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288}{readString}}(\textcolor{keywordtype}{char}\ *\textcolor{keywordtype}{string},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ size,\ \textcolor{keywordtype}{char}\ *msg)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00104}00104\ \ \ \ \ \ \ \ \ printf(msg);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fgets(\textcolor{keywordtype}{string},\ size,\ stdin)\ !=\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len\ =\ strlen(\textcolor{keywordtype}{string})\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}[len]\ ==\ \textcolor{charliteral}{'\(\backslash\)n'})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[len]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00113}00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strlen(\textcolor{keywordtype}{string})\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Por\ favor\ preencha\ o\ campo\ solicitado!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00116}00116\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00117}00117\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (strlen(\textcolor{keywordtype}{string})\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00118}00118\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_aa39cd337ece72af0da3f7df09c522ef8}{remove\_extra\_spaces}}(\textcolor{keywordtype}{string});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00120}00120\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00134}\mbox{\hyperlink{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}{00134}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}{getInt}}(\textcolor{keywordtype}{int}\ minValue,\ \textcolor{keywordtype}{int}\ maxValue,\ \textcolor{keywordtype}{char}\ *msg)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00135}00135\ \ \ \ \ \textcolor{keywordtype}{int}\ value;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00136}00136\ \ \ \ \ printf(msg);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00137}00137\ \ \ \ \ \textcolor{keywordflow}{while}\ (scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&value)\ !=\ 1\ ||\ value\ <\ minValue\ ||\ value\ >\ maxValue)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ printf(\mbox{\hyperlink{inputs__geral_8h_a35a8a571b374cc7adae7fe767b8f39f0}{INVALID\_VALUE}},\ minValue,\ maxValue);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ printf(msg);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00141}00141\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00142}00142\ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00144}00144\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00154}\mbox{\hyperlink{inputs__geral_8c_a8fb1767df1e71af64fc13e5fbf4c6330}{00154}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{inputs__geral_8c_a8fb1767df1e71af64fc13e5fbf4c6330}{getChar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00155}00155\ \ \ \ \ \textcolor{keywordtype}{char}\ value;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00156}00156\ \ \ \ \ value\ =\ getchar();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00157}00157\ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_a11ac4d3ec555747d95fee8ae7aa18b5d}{cleanInputBuffer}}();\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00158}00158\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00170}\mbox{\hyperlink{inputs__geral_8c_a54c9da5d332c065776bc17c8072f4e09}{00170}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8c_a54c9da5d332c065776bc17c8072f4e09}{valid\_comp}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00171}00171\ \ \ \ \ \textcolor{keywordtype}{int}\ invalid\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a876b486d3a5241a126bd5751c5f70f79}{state}}\ ==\ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}{INACTIVE}}\ ||\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_aa5dc2bfa3731e0eab22f0cee27e461a4}{branch}}.\mbox{\hyperlink{struct_data___branch_a876b486d3a5241a126bd5751c5f70f79}{state}}\ ==\ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}{INACTIVE}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ invalid++;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00177}00177\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00178}00178\ \ \ \ \ \textcolor{keywordflow}{if}\ (invalid\ ==\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00180}00180\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00181}00181\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00182}00182\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00183}00183\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00194}\mbox{\hyperlink{inputs__geral_8c_ad01a8234298ac2cb534c4dae6972e7a9}{00194}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8c_ad01a8234298ac2cb534c4dae6972e7a9}{active\_comp}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00195}00195\ \ \ \ \ \textcolor{keywordtype}{int}\ invalid\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a876b486d3a5241a126bd5751c5f70f79}{state}}\ ==\ \mbox{\hyperlink{companies_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3ff8ba88da6f8947ab7c22b7825c6bb6}{INACTIVE}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ invalid++;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00200}00200\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00201}00201\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00202}00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (invalid\ ==\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00204}00204\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00205}00205\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00206}00206\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00207}00207\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00223}\mbox{\hyperlink{inputs__geral_8c_a8e531ac33ef5023c7152d14ec1c0110a}{00223}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8c_a8e531ac33ef5023c7152d14ec1c0110a}{repet\_option}}(\textcolor{keywordtype}{int}\ op,\ \textcolor{keywordtype}{char}\ *option,\ \textcolor{keywordtype}{char}\ *structs)\ \{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00224}00224\ \ \ \ \ \textcolor{keywordtype}{char}\ rep\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00225}00225\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (op)\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\mbox{\hyperlink{inputs__geral_8h_a2d4c299514262e9be642bd1474037d6a}{MSG\_REP\_CONFIRME}});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\mbox{\hyperlink{inputs__geral_8h_a37d8c32b9b2cea7c63947d3b1f866a57}{MSG\_REP\_GENERAL}},\ option,\ structs);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00238}00238\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00239}00239\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00240}00240\ \ \ \ \ \ \ \ \ rep\ =\ \mbox{\hyperlink{inputs__geral_8c_a8fb1767df1e71af64fc13e5fbf4c6330}{getChar}}();}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00241}00241\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00242}00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rep\ >\ 97\ \&\&\ rep\ <\ 122)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ rep\ =\ rep\ -\/\ 32;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00244}00244\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (rep\ !=\ \textcolor{charliteral}{'s'}\ \&\&\ rep\ !=\ \textcolor{charliteral}{'S'}\ \&\&\ rep\ !=\ \textcolor{charliteral}{'N'}\ \&\&\ rep\ !=\ \textcolor{charliteral}{'n'})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Opção\ Inválida\ (Introduza\ S\ ou\ s\ para\ Sim\ e\ N\ ou\ n\ para\ Não)!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00246}00246\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00247}00247\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rep\ ==\ \textcolor{charliteral}{'S'})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (rep\ ==\ \textcolor{charliteral}{'N'})\{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00252}00252\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00253}00253\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (rep\ !=\ \textcolor{charliteral}{'S'}\ ||\ rep\ !=\ \textcolor{charliteral}{'N'});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00254}00254\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00269}\mbox{\hyperlink{inputs__geral_8c_ad64d0b2161e4465d62f46f0b19219303}{00269}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8c_ad64d0b2161e4465d62f46f0b19219303}{compare\_nif}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies,\ \textcolor{keywordtype}{int}\ nif\_v)\ \{\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{for}\ (i\ =\ 0;\ i\ <\ companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nif\_v\ ==\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_ad68c6985dce5a3d709f854778dedee19}{nif}})\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ Nif\ \%d,\ que\ introduziu,\ pretence\ à\ empresa\ \%s\(\backslash\)n"{}},\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_ad68c6985dce5a3d709f854778dedee19}{nif}},\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_a6e9d0a39153a271cd95192c505da10be}{name\_compa}});\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00274}00274\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (nif\_v\ !=\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[i].\mbox{\hyperlink{struct_data__companies_ad68c6985dce5a3d709f854778dedee19}{nif}}\ \&\&\ (i\ ==\ (companies.\mbox{\hyperlink{struct_companies_a16f617ae28ce688a602f9d992b92c615}{cont\_comp}}\ -\/\ 1)))\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\mbox{\hyperlink{companies_8h_a5d46e62c74f86a4859b634bca1ab2617}{ERROR\_MSG\_NIF\_NOT\_FIND}},\ nif\_v);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00277}00277\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00278}00278\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00279}00279\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00290}\mbox{\hyperlink{inputs__geral_8c_aa9773f113f7a06f5c99507805648425a}{00290}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{inputs__geral_8c_aa9773f113f7a06f5c99507805648425a}{insert\_nif}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies)\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00291}00291\ \ \ \ \ \textcolor{keywordtype}{int}\ nif\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00293}00293\ \ \ \ \ nif\ =\ \mbox{\hyperlink{inputs__geral_8c_aa7b5b8a79d5ded97fc99955d1f827833}{getInt}}(\mbox{\hyperlink{companies_8h_a948086a7ecc0d1e8547fefc1f6300a48}{MIN\_VALUE\_NIF}},\ \mbox{\hyperlink{companies_8h_ae13e239eb58852372039e69c548e4d51}{MAX\_VALUE\_NIF}},\ \mbox{\hyperlink{companies_8h_a00f3f39f888ac40959d84025ff5cb928}{MSG\_INSERT\_NIF\_COMPANY}});\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00295}00295\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{inputs__geral_8c_ad64d0b2161e4465d62f46f0b19219303}{compare\_nif}}(companies,\ nif);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00296}00296\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00309}\mbox{\hyperlink{inputs__geral_8c_a32bc1f93b697b28b628b105a0f02fd43}{00309}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8c_a32bc1f93b697b28b628b105a0f02fd43}{fields\_user}}(\mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \textcolor{keywordtype}{int}\ pos\_nif,\ \textcolor{keywordtype}{int}\ pos)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00310}00310\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00311}00311\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288}{readString}}(companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[pos\_nif].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}[pos].\mbox{\hyperlink{struct_classification_a22a3044a20940ca1113c81ecd0e92aef}{data\_user}}.\mbox{\hyperlink{struct_data___user_a9acc9746c08a2ad3aef45ba3d77fc5bc}{email\_user}},\ \mbox{\hyperlink{companies_8h_a5c8530d423a8a17bc84937d5f568e55f}{SIZE\_EMAIL}},\ \mbox{\hyperlink{inputs__geral_8h_afa8ed37cccd576727deb6204f1041616}{MSG\_INSERT\_EMAIL\_USER}});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00312}00312\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{inputs__user_8c_a159c6aeade09bb5510e1a5dbe3742ddb}{validation\_email}}(companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[pos\_nif].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}[pos].\mbox{\hyperlink{struct_classification_a22a3044a20940ca1113c81ecd0e92aef}{data\_user}}.\mbox{\hyperlink{struct_data___user_a9acc9746c08a2ad3aef45ba3d77fc5bc}{email\_user}})\ ==\ 1);}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00313}00313\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00314}00314\ \ \ \ \ \mbox{\hyperlink{inputs__geral_8c_a23b09558cc791d82d0251b8cc10ae288}{readString}}(companies-\/>\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[pos\_nif].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}[pos].\mbox{\hyperlink{struct_classification_a22a3044a20940ca1113c81ecd0e92aef}{data\_user}}.\mbox{\hyperlink{struct_data___user_a318afdc48dc02309bc2e63ba070a5cfc}{user\_name}},\ \mbox{\hyperlink{companies_8h_a47c9e0048d1aada7c32107a2ca81eda5}{SIZE\_USER}},\ \mbox{\hyperlink{inputs__geral_8h_a314deecc2d4c2ecfc90c147b5b08dca4}{MSG\_INSERT\_USER\_NAME}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00315}00315\ \}}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00327}\mbox{\hyperlink{inputs__geral_8c_a1f7f728a4390e44779fa92ef11737a0e}{00327}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{inputs__geral_8c_a1f7f728a4390e44779fa92ef11737a0e}{information\_classi}}(\mbox{\hyperlink{struct_companies}{Companies}}\ companies,\ \textcolor{keywordtype}{int}\ pos\_nif,\ \textcolor{keywordtype}{int}\ pos)\ \{}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00328}00328\ \ \ \ \ printf(\textcolor{stringliteral}{"{}User\ -\/-\/>\ \%s\(\backslash\)n"{}},\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[pos\_nif].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}[pos].\mbox{\hyperlink{struct_classification_a22a3044a20940ca1113c81ecd0e92aef}{data\_user}}.\mbox{\hyperlink{struct_data___user_a318afdc48dc02309bc2e63ba070a5cfc}{user\_name}});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00329}00329\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Classificação\ -\/-\/>\ \%d\(\backslash\)n"{}},\ companies.\mbox{\hyperlink{struct_companies_a0c051274bcabaf2c00e1571d8a79207c}{company}}[pos\_nif].\mbox{\hyperlink{struct_data__companies_a0683ad2c665e8c160b22ccfd117ea8ca}{comp\_class}}[pos].\mbox{\hyperlink{struct_classification_a40f3e25fe8c516c8026cc6c3b6908e12}{class}});}
+\DoxyCodeLine{\Hypertarget{inputs__geral_8c_source_l00330}00330\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['save_5ffile_5fbranchs_0',['save_file_branchs',['../inputs__file__memory_8c.html#a6442270bbcaf1f5b37c99b4726838e86',1,'save_file_branchs(Branch_Activity *branchs):&#160;inputs_file_memory.c'],['../inputs__file__memory_8h.html#a6442270bbcaf1f5b37c99b4726838e86',1,'save_file_branchs(Branch_Activity *branchs):&#160;inputs_file_memory.c']]],
+  ['save_5ffile_5fcomp_1',['save_file_comp',['../inputs__file__memory_8c.html#a79732699653e0d318db1767fd777696f',1,'save_file_comp(Companies *companies):&#160;inputs_file_memory.c'],['../inputs__file__memory_8h.html#a79732699653e0d318db1767fd777696f',1,'save_file_comp(Companies *companies):&#160;inputs_file_memory.c']]],
+  ['save_5fsearch_5fcomp_2',['save_search_comp',['../inputs__file__memory_8c.html#af0319a334b810b5ffc04577ab6009047',1,'save_search_comp(Search_comp *search_comp):&#160;inputs_file_memory.c'],['../inputs__file__memory_8h.html#af0319a334b810b5ffc04577ab6009047',1,'save_search_comp(Search_comp *search_comp):&#160;inputs_file_memory.c']]],
+  ['search_5fbranch_5fpos_3',['search_branch_pos',['../inputs__branch_8c.html#a6db633f2e5ee3121dfed621a23e700dd',1,'search_branch_pos(Branch_Activity branchs, char *name_branch):&#160;inputs_branch.c'],['../inputs__branch_8h.html#a6db633f2e5ee3121dfed621a23e700dd',1,'search_branch_pos(Branch_Activity branchs, char *name_branch):&#160;inputs_branch.c']]],
+  ['search_5fcomp_4',['search_comp',['../op__user_8c.html#a9893a99c08dfe5046e293645a92d0f34',1,'search_comp(Companies *companies, Search_comp *search_comps):&#160;op_user.c'],['../op__user_8h.html#a9893a99c08dfe5046e293645a92d0f34',1,'search_comp(Companies *companies, Search_comp *search_comps):&#160;op_user.c']]]
+];

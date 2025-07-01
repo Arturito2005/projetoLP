@@ -1,0 +1,374 @@
+\doxysection{op\+\_\+admins.\+h File Reference}
+\hypertarget{op__admins_8h}{}\label{op__admins_8h}\index{op\_admins.h@{op\_admins.h}}
+
+
+Header file inputs options admins.  
+
+
+{\ttfamily \#include "{}companies.\+h"{}}\newline
+{\ttfamily \#include "{}op\+\_\+user.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a6ba563613c07b025d5d28d78f3ccb7aa}{MIN\+\_\+\+OP\+\_\+\+CAT}}~1
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_adde5d5b3a4455bb59c71b41bf47c544e}{MAX\+\_\+\+OP\+\_\+\+CAT}}~8
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a4bd4cd49fc00a511c5ee2fd8ca553409}{MIN\+\_\+\+OP\+\_\+\+MENU\+\_\+\+BRANCH}}~1
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_ab930764c2f5ae8bd2579509c8254e3eb}{MAX\+\_\+\+OP\+\_\+\+MENU\+\_\+\+BRANCH}}~7
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_aab7667a141798fa81e80245ff917ec19}{MIN\+\_\+\+OP\+\_\+\+REPORT}}~1
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_af36192361bf007c4c2779564b005baf1}{MAX\+\_\+\+OP\+\_\+\+REPORT}}~5
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a5e336439f1726d5cfbe0c042ab5d4dfd}{MIN\+\_\+\+OP\+\_\+\+MENU\+\_\+\+ADMIN}}~1
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a2da533d5ac95492d5f5b316200db90f4}{MAX\+\_\+\+OP\+\_\+\+MENU\+\_\+\+ADMIN}}~5
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a20bf0b1278cd110b8199880417ae7cae}{MSG\+\_\+\+MENU\+\_\+\+CATALOG}}~"{}Introduza uma opcao (1\+: Adicionar empresa/ 2\+: Apagar/ 3\+: Editar/ 4\+: Listar/ 5\+: Consultar/ 6\+: Ocultrar/eliminar comentario/7\+: Voltar/ 8\+: Sair) -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a61d589dc9e985ad32378ca0808fc132c}{MSG\+\_\+\+MENU\+\_\+\+BRANCH}}~"{}Introduza uma opcao (1\+: Adicionar ramo/ 2\+: Apagar ramo/ 3\+: Editar ramo/ 4\+: Listar ramos/ 5\+: Consultar ramo/ 6\+: Voltar/ 7\+: Sair)-\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_ac816ce8b80205ba1d7c66fdf7e152b5f}{MSG\+\_\+\+MENU\+\_\+\+REPORT}}~"{}Introduza uma opção (1\+: Relatorio Classificação/ 2\+: Relatorio Comentario/ 3\+: Relatorio pesquisa utililizador/ 4\+: Voltar/ 5\+: Sair) -\/-\/$>$"{}
+\item 
+\#define \mbox{\hyperlink{op__admins_8h_a2c80bb0345724ccb0e3394a8e4b0e2d8}{MSG\+\_\+\+MENU\+\_\+\+ADMIN}}~"{}Introduza uma opção (1\+: Gerir catálogo da empresa/ 2\+: Gerir ramos de atividade/ 3\+: Visualizar relatórios/ 4\+: Voltar/ 5\+: Sair) -\/-\/$>$"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{op__admins_8h_ae5adb1b1b690f1aec7795ad71ca78c33}{manage\+\_\+cat}} (int \texorpdfstring{$\ast$}{*}op\+\_\+cat, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs)
+\begin{DoxyCompactList}\small\item\em Manages the catalog of companies and branches of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__admins_8h_a529621795c92f1caa4997c4415db0fab}{manage\+\_\+branch}} (int \texorpdfstring{$\ast$}{*}op\+\_\+branch, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies)
+\begin{DoxyCompactList}\small\item\em Manages the branches of activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__admins_8h_a97db7d971404c81efced0af5fc47671d}{view\+\_\+reports}} (int \texorpdfstring{$\ast$}{*}op\+\_\+report, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Views the reports of companies and searches. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{op__admins_8h_a13eb975900573e45a0c65c20ed81600f}{menu\+\_\+admin}} (int \texorpdfstring{$\ast$}{*}op\+\_\+adm, int \texorpdfstring{$\ast$}{*}op\+\_\+cat, int \texorpdfstring{$\ast$}{*}op\+\_\+branch, int \texorpdfstring{$\ast$}{*}op\+\_\+report, \mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}companies, \mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}branchs, \mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}} \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\+\_\+comp}})
+\begin{DoxyCompactList}\small\item\em Manages the admin menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file inputs options admins. 
+
+\begin{DoxyAuthor}{Author}
+Students\+: 8230138 and 8230127 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/10-\/2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (C) ESTG 2023. All Rights MIT Licensed.
+\end{DoxyCopyright}
+
+
+This header file stores all the defined messages, values, and functions, from the \doxylink{op__admins_8c}{op\+\_\+admins.\+c} file. 
+
+Definition in file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{op__admins_8h_adde5d5b3a4455bb59c71b41bf47c544e}\label{op__admins_8h_adde5d5b3a4455bb59c71b41bf47c544e} 
+\index{op\_admins.h@{op\_admins.h}!MAX\_OP\_CAT@{MAX\_OP\_CAT}}
+\index{MAX\_OP\_CAT@{MAX\_OP\_CAT}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_OP\_CAT}{MAX\_OP\_CAT}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+OP\+\_\+\+CAT~8}
+
+Defines the maximum value for the catalog option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00020}{20}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a2da533d5ac95492d5f5b316200db90f4}\label{op__admins_8h_a2da533d5ac95492d5f5b316200db90f4} 
+\index{op\_admins.h@{op\_admins.h}!MAX\_OP\_MENU\_ADMIN@{MAX\_OP\_MENU\_ADMIN}}
+\index{MAX\_OP\_MENU\_ADMIN@{MAX\_OP\_MENU\_ADMIN}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_OP\_MENU\_ADMIN}{MAX\_OP\_MENU\_ADMIN}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+OP\+\_\+\+MENU\+\_\+\+ADMIN~5}
+
+Defines the maximum value for the admin menu option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00029}{29}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_ab930764c2f5ae8bd2579509c8254e3eb}\label{op__admins_8h_ab930764c2f5ae8bd2579509c8254e3eb} 
+\index{op\_admins.h@{op\_admins.h}!MAX\_OP\_MENU\_BRANCH@{MAX\_OP\_MENU\_BRANCH}}
+\index{MAX\_OP\_MENU\_BRANCH@{MAX\_OP\_MENU\_BRANCH}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_OP\_MENU\_BRANCH}{MAX\_OP\_MENU\_BRANCH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+OP\+\_\+\+MENU\+\_\+\+BRANCH~7}
+
+Defines the maximum value for the branch menu option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00023}{23}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_af36192361bf007c4c2779564b005baf1}\label{op__admins_8h_af36192361bf007c4c2779564b005baf1} 
+\index{op\_admins.h@{op\_admins.h}!MAX\_OP\_REPORT@{MAX\_OP\_REPORT}}
+\index{MAX\_OP\_REPORT@{MAX\_OP\_REPORT}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_OP\_REPORT}{MAX\_OP\_REPORT}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+OP\+\_\+\+REPORT~5}
+
+Defines the maximum value for the report option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00026}{26}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a6ba563613c07b025d5d28d78f3ccb7aa}\label{op__admins_8h_a6ba563613c07b025d5d28d78f3ccb7aa} 
+\index{op\_admins.h@{op\_admins.h}!MIN\_OP\_CAT@{MIN\_OP\_CAT}}
+\index{MIN\_OP\_CAT@{MIN\_OP\_CAT}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_OP\_CAT}{MIN\_OP\_CAT}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+OP\+\_\+\+CAT~1}
+
+Defines the minimum value for the catalog option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00019}{19}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a5e336439f1726d5cfbe0c042ab5d4dfd}\label{op__admins_8h_a5e336439f1726d5cfbe0c042ab5d4dfd} 
+\index{op\_admins.h@{op\_admins.h}!MIN\_OP\_MENU\_ADMIN@{MIN\_OP\_MENU\_ADMIN}}
+\index{MIN\_OP\_MENU\_ADMIN@{MIN\_OP\_MENU\_ADMIN}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_OP\_MENU\_ADMIN}{MIN\_OP\_MENU\_ADMIN}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+OP\+\_\+\+MENU\+\_\+\+ADMIN~1}
+
+Defines the minimum value for the admin menu option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00028}{28}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a4bd4cd49fc00a511c5ee2fd8ca553409}\label{op__admins_8h_a4bd4cd49fc00a511c5ee2fd8ca553409} 
+\index{op\_admins.h@{op\_admins.h}!MIN\_OP\_MENU\_BRANCH@{MIN\_OP\_MENU\_BRANCH}}
+\index{MIN\_OP\_MENU\_BRANCH@{MIN\_OP\_MENU\_BRANCH}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_OP\_MENU\_BRANCH}{MIN\_OP\_MENU\_BRANCH}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+OP\+\_\+\+MENU\+\_\+\+BRANCH~1}
+
+Defines the minimum value for the branch menu option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00022}{22}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_aab7667a141798fa81e80245ff917ec19}\label{op__admins_8h_aab7667a141798fa81e80245ff917ec19} 
+\index{op\_admins.h@{op\_admins.h}!MIN\_OP\_REPORT@{MIN\_OP\_REPORT}}
+\index{MIN\_OP\_REPORT@{MIN\_OP\_REPORT}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_OP\_REPORT}{MIN\_OP\_REPORT}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+OP\+\_\+\+REPORT~1}
+
+Defines the minimum value for the report option. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00025}{25}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a2c80bb0345724ccb0e3394a8e4b0e2d8}\label{op__admins_8h_a2c80bb0345724ccb0e3394a8e4b0e2d8} 
+\index{op\_admins.h@{op\_admins.h}!MSG\_MENU\_ADMIN@{MSG\_MENU\_ADMIN}}
+\index{MSG\_MENU\_ADMIN@{MSG\_MENU\_ADMIN}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_MENU\_ADMIN}{MSG\_MENU\_ADMIN}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+MENU\+\_\+\+ADMIN~"{}Introduza uma opção (1\+: Gerir catálogo da empresa/ 2\+: Gerir ramos de atividade/ 3\+: Visualizar relatórios/ 4\+: Voltar/ 5\+: Sair) -\/-\/$>$"{}}
+
+Defines the message for the admin menu. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00034}{34}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a61d589dc9e985ad32378ca0808fc132c}\label{op__admins_8h_a61d589dc9e985ad32378ca0808fc132c} 
+\index{op\_admins.h@{op\_admins.h}!MSG\_MENU\_BRANCH@{MSG\_MENU\_BRANCH}}
+\index{MSG\_MENU\_BRANCH@{MSG\_MENU\_BRANCH}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_MENU\_BRANCH}{MSG\_MENU\_BRANCH}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+MENU\+\_\+\+BRANCH~"{}Introduza uma opcao (1\+: Adicionar ramo/ 2\+: Apagar ramo/ 3\+: Editar ramo/ 4\+: Listar ramos/ 5\+: Consultar ramo/ 6\+: Voltar/ 7\+: Sair)-\/-\/$>$"{}}
+
+Defines the message for the branch menu. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00032}{32}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_a20bf0b1278cd110b8199880417ae7cae}\label{op__admins_8h_a20bf0b1278cd110b8199880417ae7cae} 
+\index{op\_admins.h@{op\_admins.h}!MSG\_MENU\_CATALOG@{MSG\_MENU\_CATALOG}}
+\index{MSG\_MENU\_CATALOG@{MSG\_MENU\_CATALOG}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_MENU\_CATALOG}{MSG\_MENU\_CATALOG}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+MENU\+\_\+\+CATALOG~"{}Introduza uma opcao (1\+: Adicionar empresa/ 2\+: Apagar/ 3\+: Editar/ 4\+: Listar/ 5\+: Consultar/ 6\+: Ocultrar/eliminar comentario/7\+: Voltar/ 8\+: Sair) -\/-\/$>$"{}}
+
+Defines the message for the catalog menu. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00031}{31}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+\Hypertarget{op__admins_8h_ac816ce8b80205ba1d7c66fdf7e152b5f}\label{op__admins_8h_ac816ce8b80205ba1d7c66fdf7e152b5f} 
+\index{op\_admins.h@{op\_admins.h}!MSG\_MENU\_REPORT@{MSG\_MENU\_REPORT}}
+\index{MSG\_MENU\_REPORT@{MSG\_MENU\_REPORT}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_MENU\_REPORT}{MSG\_MENU\_REPORT}}
+{\footnotesize\ttfamily \#define MSG\+\_\+\+MENU\+\_\+\+REPORT~"{}Introduza uma opção (1\+: Relatorio Classificação/ 2\+: Relatorio Comentario/ 3\+: Relatorio pesquisa utililizador/ 4\+: Voltar/ 5\+: Sair) -\/-\/$>$"{}}
+
+Defines the message for the report menu. 
+
+Definition at line \mbox{\hyperlink{op__admins_8h_source_l00033}{33}} of file \mbox{\hyperlink{op__admins_8h_source}{op\+\_\+admins.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{op__admins_8h_a529621795c92f1caa4997c4415db0fab}\label{op__admins_8h_a529621795c92f1caa4997c4415db0fab} 
+\index{op\_admins.h@{op\_admins.h}!manage\_branch@{manage\_branch}}
+\index{manage\_branch@{manage\_branch}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{manage\_branch()}{manage\_branch()}}
+{\footnotesize\ttfamily void manage\+\_\+branch (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+branch,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies }\end{DoxyParamCaption})}
+
+
+
+Manages the branches of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+branch} & A pointer to the branch option. \\
+\hline
+{\em branchs} & A pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct.\\
+\hline
+\end{DoxyParams}
+Manages the branches of activity.
+
+The operations include adding a branch, deleting a branch, editing a branch, listing all branches, and consulting a specific branch. The operations are performed by a menu based in the user option, it starts with a while cicle, that have all the options to perform various operations related to branchs of activity, go back to the previous menu, and finish the program.
+
+The first option allow the user to add a branch of activity The second option allow the user to delete a branch of activity The third option allow the user to edit a branch of activity The fourth option allow the user to list all the existing branchs of activity The fifth option allow the user to list all the existing branchs of activity The sixth option allow the user to go back to the previous menu The seventh option allow the user to end the program If the user enters a different number, the program print option invalid and repeat the while cicle
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+branch} & Pointer to an integer that represents the operation chosen by the user. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} structure that represents the branches of activity. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} structure that represents the companies. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00104}{104}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+\Hypertarget{op__admins_8h_ae5adb1b1b690f1aec7795ad71ca78c33}\label{op__admins_8h_ae5adb1b1b690f1aec7795ad71ca78c33} 
+\index{op\_admins.h@{op\_admins.h}!manage\_cat@{manage\_cat}}
+\index{manage\_cat@{manage\_cat}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{manage\_cat()}{manage\_cat()}}
+{\footnotesize\ttfamily void manage\+\_\+cat (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+cat,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs }\end{DoxyParamCaption})}
+
+
+
+Manages the catalog of companies and branches of activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+cat} & A pointer to the catalog option. \\
+\hline
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & A pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct.\\
+\hline
+\end{DoxyParams}
+Manages the catalog of companies and branches of activity.
+
+This function provides a menu to manage the company catalog.
+
+This option contains a while loop, which only ends when the user selects the option to exit the program or return to the previous menu (administrator menu). Within the while loop, a message is presented for the menu options and then the user is asked to enter an option. Option 1 allows the creation of a company, option 2 allows the deletion of a company, option 3 allows editing a company, option 4 allows listing all created companies, option 5 consults the data of a company, option 6 deletes/hides a comment from a company, options 6 and 7 end the while loop, with option 6 returning to the administrator menu and 7 ending the program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+cat} & Pointer to an integer that stores the catalog menu choice. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct that contains the data of all companies. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct that contains the data of all branches. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00038}{38}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+\Hypertarget{op__admins_8h_a13eb975900573e45a0c65c20ed81600f}\label{op__admins_8h_a13eb975900573e45a0c65c20ed81600f} 
+\index{op\_admins.h@{op\_admins.h}!menu\_admin@{menu\_admin}}
+\index{menu\_admin@{menu\_admin}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{menu\_admin()}{menu\_admin()}}
+{\footnotesize\ttfamily void menu\+\_\+admin (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+adm,  }\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+cat,  }\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+branch,  }\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+report,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_branch___activity}{Branch\+\_\+\+Activity}} \texorpdfstring{$\ast$}{*}}]{branchs,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Manages the admin menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+adm} & A pointer to the admin menu option. \\
+\hline
+{\em op\+\_\+cat} & A pointer to the catalog option. \\
+\hline
+{\em op\+\_\+branch} & A pointer to the branch option. \\
+\hline
+{\em op\+\_\+report} & A pointer to the report option. \\
+\hline
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & A pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em search\+\_\+comp} & The \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+Manages the admin menu.
+
+This function provides 3 distinct reports on the user\textquotesingle{}s use of the options.
+
+This option contains a while loop, which only ends when the user selects the option to exit the program or return to the previous menu (administrator\textquotesingle{}s menu). Within the while loop, a message is displayed for the administrator\textquotesingle{}s menu options and then the user is asked to enter an option. Option 1 redirects the user to the company catalog management menu, option 2 redirects the user to the activity branch management menu and option 3 redirects the user to the reports menu. Options 4 and 5 end the while loop, with option 4 returning to the main menu and option 5 closing the program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+adm} & Pointer to the administrator\textquotesingle{}s option. \\
+\hline
+{\em op\+\_\+cat} & Pointer to the category option. \\
+\hline
+{\em op\+\_\+branch} & Pointer to the activity branch option. \\
+\hline
+{\em op\+\_\+report} & Pointer to the reports option. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em branchs} & Pointer to the \doxylink{struct_branch___activity}{Branch\+\_\+\+Activity} struct. \\
+\hline
+{\em search\+\_\+comp} & \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The user can only access the reports menu if there is at least one company with its active status, or if a search for a company has already been carried out by the user\textquotesingle{}s option. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00237}{237}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+
+\Hypertarget{op__admins_8h_a97db7d971404c81efced0af5fc47671d}\label{op__admins_8h_a97db7d971404c81efced0af5fc47671d} 
+\index{op\_admins.h@{op\_admins.h}!view\_reports@{view\_reports}}
+\index{view\_reports@{view\_reports}!op\_admins.h@{op\_admins.h}}
+\doxysubsubsection{\texorpdfstring{view\_reports()}{view\_reports()}}
+{\footnotesize\ttfamily void view\+\_\+reports (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{op\+\_\+report,  }\item[{\mbox{\hyperlink{struct_companies}{Companies}} \texorpdfstring{$\ast$}{*}}]{companies,  }\item[{\mbox{\hyperlink{struct_search__comp}{Search\+\_\+comp}}}]{search\+\_\+comp }\end{DoxyParamCaption})}
+
+
+
+Views the reports of companies and searches. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+report} & A pointer to the report option. \\
+\hline
+{\em companies} & A pointer to the \doxylink{struct_companies}{Companies} struct. \\
+\hline
+{\em search\+\_\+comp} & The \doxylink{struct_search__comp}{Search\+\_\+comp} struct.\\
+\hline
+\end{DoxyParams}
+Views the reports of companies and searches.
+
+This function provides 3 distinct reports on the user\textquotesingle{}s use of the options.
+
+This option contains a while loop, which only ends when the user selects the option to exit the program or return to the previous menu (administrator menu). Within the while loop, a message is presented for the menu options and then the user is asked to enter an option. Option 1 creates a report on the classification of companies, option 2 creates a report on the comments of companies, option 3 creates a report on the search options of companies, options 4 and 5 end the while loop, with option 4 returning to the administrator menu and 5 ending the program.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op\+\_\+report} & Pointer to an integer that stores the user\textquotesingle{}s report menu choice. \\
+\hline
+{\em companies} & Pointer to the \doxylink{struct_companies}{Companies} struct that contains the data of all companies. \\
+\hline
+{\em search\+\_\+comp} & \doxylink{struct_search__comp}{Search\+\_\+comp} struct, which contains the total counters of each company search option.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+It is only possible to access the classification report if there is at least one company with one or more ratings. 
+
+It is only possible to access the comments report if there is at least one company with one or more comments. 
+
+It is only possible to access the search report if the user has already searched for at least one company. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{op__admins_8c_source_l00167}{167}} of file \mbox{\hyperlink{op__admins_8c_source}{op\+\_\+admins.\+c}}.
+

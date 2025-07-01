@@ -1,0 +1,34 @@
+\doxysection{op\+\_\+admins.\+h}
+\hypertarget{op__admins_8h_source}{}\label{op__admins_8h_source}\mbox{\hyperlink{op__admins_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00013}00013\ \textcolor{preprocessor}{\#ifndef\ ADMINS\_H}}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ ADMINS\_H}}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{companies_8h}{companies.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{op__user_8h}{op\_user.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00019}\mbox{\hyperlink{op__admins_8h_a6ba563613c07b025d5d28d78f3ccb7aa}{00019}}\ \textcolor{preprocessor}{\#define\ MIN\_OP\_CAT\ 1\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00020}\mbox{\hyperlink{op__admins_8h_adde5d5b3a4455bb59c71b41bf47c544e}{00020}}\ \textcolor{preprocessor}{\#define\ MAX\_OP\_CAT\ 8\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00022}\mbox{\hyperlink{op__admins_8h_a4bd4cd49fc00a511c5ee2fd8ca553409}{00022}}\ \textcolor{preprocessor}{\#define\ MIN\_OP\_MENU\_BRANCH\ 1\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00023}\mbox{\hyperlink{op__admins_8h_ab930764c2f5ae8bd2579509c8254e3eb}{00023}}\ \textcolor{preprocessor}{\#define\ MAX\_OP\_MENU\_BRANCH\ 7\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00025}\mbox{\hyperlink{op__admins_8h_aab7667a141798fa81e80245ff917ec19}{00025}}\ \textcolor{preprocessor}{\#define\ MIN\_OP\_REPORT\ 1\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00026}\mbox{\hyperlink{op__admins_8h_af36192361bf007c4c2779564b005baf1}{00026}}\ \textcolor{preprocessor}{\#define\ MAX\_OP\_REPORT\ 5\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00028}\mbox{\hyperlink{op__admins_8h_a5e336439f1726d5cfbe0c042ab5d4dfd}{00028}}\ \textcolor{preprocessor}{\#define\ MIN\_OP\_MENU\_ADMIN\ 1\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00029}\mbox{\hyperlink{op__admins_8h_a2da533d5ac95492d5f5b316200db90f4}{00029}}\ \textcolor{preprocessor}{\#define\ MAX\_OP\_MENU\_ADMIN\ 5\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00031}\mbox{\hyperlink{op__admins_8h_a20bf0b1278cd110b8199880417ae7cae}{00031}}\ \textcolor{preprocessor}{\#define\ MSG\_MENU\_CATALOG\ "{}Introduza\ uma\ opcao\ (1:\ Adicionar\ empresa/\ 2:\ Apagar/\ 3:\ Editar/\ 4:\ Listar/\ 5:\ Consultar/\ 6:\ Ocultrar/eliminar\ comentario/7:\ Voltar/\ 8:\ Sair)\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00032}\mbox{\hyperlink{op__admins_8h_a61d589dc9e985ad32378ca0808fc132c}{00032}}\ \textcolor{preprocessor}{\#define\ MSG\_MENU\_BRANCH\ "{}Introduza\ uma\ opcao\ (1:\ Adicionar\ ramo/\ 2:\ Apagar\ ramo/\ 3:\ Editar\ ramo/\ 4:\ Listar\ ramos/\ 5:\ Consultar\ ramo/\ 6:\ Voltar/\ 7:\ Sair)-\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00033}\mbox{\hyperlink{op__admins_8h_ac816ce8b80205ba1d7c66fdf7e152b5f}{00033}}\ \textcolor{preprocessor}{\#define\ MSG\_MENU\_REPORT\ "{}Introduza\ uma\ opção\ (1:\ Relatorio\ Classificação/\ 2:\ Relatorio\ Comentario/\ 3:\ Relatorio\ pesquisa\ utililizador/\ 4:\ Voltar/\ 5:\ Sair)\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00034}\mbox{\hyperlink{op__admins_8h_a2c80bb0345724ccb0e3394a8e4b0e2d8}{00034}}\ \textcolor{preprocessor}{\#define\ MSG\_MENU\_ADMIN\ "{}Introduza\ uma\ opção\ (1:\ Gerir\ catálogo\ da\ empresa/\ 2:\ Gerir\ ramos\ de\ atividade/\ 3:\ Visualizar\ relatórios/\ 4:\ Voltar/\ 5:\ Sair)\ -\/-\/>"{}\ }}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00043}00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{op__admins_8h_ae5adb1b1b690f1aec7795ad71ca78c33}{manage\_cat}}(\textcolor{keywordtype}{int}\ *op\_cat,\ \mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs);}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00052}00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{op__admins_8h_a529621795c92f1caa4997c4415db0fab}{manage\_branch}}(\textcolor{keywordtype}{int}\ *op\_branch,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs,\ \mbox{\hyperlink{struct_companies}{Companies}}\ *companies);}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00061}00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{op__admins_8h_a97db7d971404c81efced0af5fc47671d}{view\_reports}}(\textcolor{keywordtype}{int}\ *op\_report,\ \mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_search__comp}{Search\_comp}}\ \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00074}00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{op__admins_8h_a13eb975900573e45a0c65c20ed81600f}{menu\_admin}}(\textcolor{keywordtype}{int}\ *op\_adm,\ \textcolor{keywordtype}{int}\ *op\_cat,\ \textcolor{keywordtype}{int}\ *op\_branch,\ \textcolor{keywordtype}{int}\ *op\_report,\ \mbox{\hyperlink{struct_companies}{Companies}}\ *companies,\ \mbox{\hyperlink{struct_branch___activity}{Branch\_Activity}}\ *branchs,\ \mbox{\hyperlink{struct_search__comp}{Search\_comp}}\ \mbox{\hyperlink{op__user_8c_a9893a99c08dfe5046e293645a92d0f34}{search\_comp}});}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00076}00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ADMINS\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{op__admins_8h_source_l00077}00077\ }
+
+\end{DoxyCode}
