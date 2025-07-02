@@ -1,3 +1,4 @@
+# Projeto LP
 ## English
 ### Introduction
 This repository contains my final project for the Programming Laboratory course. The project involves developing a business directory application that allows users to discover, rate, and interact with industrial and service companies located within a given geographic region.  
