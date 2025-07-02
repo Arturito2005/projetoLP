@@ -14,6 +14,6 @@ Neste repositorio está presente o meu trabalho final da UC Laboratório de Prog
 A docuemntação do projeto está em HTML, gerada pela Doxygen
 
 ### Linguagens e Ferramentas
-- **Linguagem utilizada**: C++  
+- **Linguagem programação**: C++  
 - **IDE**: NetBeans  
 - **Geração de documentação**: Doxygen  
